@@ -1,0 +1,20 @@
+{
+    "id": 23,
+    "title": "Birleşim 23 — Kesme Kuvveti Birleşimi",
+    "desc": "Bilindiği gibi kiriş ekleri, çelik yapıların kaçınılamaz önemli ayrıntılarındandır. Bu eklere, yapıda kullanılan kiriş açıklıklarının profil boylarından büyük olması durumunda veya kesilen profillerin değerlendirilmesi durumunda başvurulabileceği gibi, bazen de nakliye zorlukları sebebiyle kesilmek zorunda olan kirişlerin şantiyede tekrar eklenmesi durumlarında da başvurulabilmektedir. Kiriş ekleri, kirişin başlıkları ve gövdesinde tasarlanan ek elemanları sayesinde yapılabilmektedir. Gövde levhaları ve gövde ekinde bulunan birleşim araçları kesme kuvveti aktarırken, başlıklarda bulunan levha ve birleşim araçları başlığa etkiyen normal kuvveti aktarmakla yükümlüdürler. Bu normal kuvvet, eğilme momentinin kuvvet çiftine dönüştürülmesiyle elde edilen eksenel kuvvettir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma"
+    ],
+    "folder": "23",
+    "similar": [
+        24
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

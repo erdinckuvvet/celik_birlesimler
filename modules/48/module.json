@@ -1,0 +1,17 @@
+{
+    "id": 48,
+    "title": "Birleşim 48 — Eğilme Momenti Birleşimi",
+    "desc": "Birleşim 48, bir önceki bölümde verilen birleşimin devamı niteliğindedir. Önceki bölümde kesme kuvveti kapasitesi hesaplanan birleşimin, burada eğilme momenti kapasitesi araştırılacaktır. Bilindiği üzere, bulonların eksenine paralel zorlanma oluşturan eğilme momenti etkisinde, bulonların bir kısmı çekme kuvveti etkisinde kalırken, diğer bir kısmı basınç kuvveti etkisinde kalmaktadır. Çekme bölgesinde sadece bulonlar çalışırken, basınç bölgesinde birleşim levhaları çalışmaktadır. Bu durumda çekme ve basınç etkileri için tarafsız eksenin yeri hesaplanarak işlem yapılabileceği gibi yaklaşık olarak da hesap yapılabilir. Daha önceki örneklerde her iki uygulamaya da yer verilmiştir.",
+    "limits": [
+        "Bulonlarda çekme",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "48",
+    "similar": [
+        15
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

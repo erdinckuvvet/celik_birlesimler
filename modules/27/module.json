@@ -1,0 +1,21 @@
+{
+    "id": 27,
+    "title": "Birleşim 27 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 27, kolon ve kiriş arasında oluşturulan bir basit kesme kuvveti birleşimidir. Birleşimde, kirişin gövdesi kolonun gövdesine iki adet köşebent ve bulonlar kullanılarak birleştirilmiştir. Birleşimde kaynak kullanılmamıştır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma"
+    ],
+    "folder": "27",
+    "similar": [
+        4,
+        35
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

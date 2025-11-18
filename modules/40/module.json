@@ -1,0 +1,21 @@
+{
+    "id": 40,
+    "title": "Birleşim 40 — Kesme Kuvveti Birleşimi",
+    "desc": "Örnek açıklama.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "40",
+    "similar": [
+        "kontrol"
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

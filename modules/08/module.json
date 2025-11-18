@@ -1,0 +1,27 @@
+{
+    "id": 8,
+    "title": "Birleşim 8 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 8, iki I enkesitli kiriş arasında oluşturulmuş, kesme kuvveti aktaran basit bir kiriş-kiriş birleşimidir. Uygulamada sıklıkla tercih edilen bu birleşimde kirişler, düzlemleri dışında ve genellikle birbirlerine dik yaklaşırlar. Birleşimde iki adet köşebent, talî (ikincil) kirişin gövdesine bulonlarla birleştirilmiş, sonra köşebentler ana kirişin gövdesine kol uçları boyunca kaynaklanarak birleşim tamamlanmıştır. Bu birleşimde kaynaklar, genellikle atölyede yapılırken, bulonlar ise şantiyede yerine takılır. Birleşimde kullanılan kiriş kesit yükseklikleri birbirinden farklı olduğundan, talî kirişin başlıklarının kesilmesine gerek olmamıştır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kaymada akma",
+        "Kaymada kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "08",
+    "similar": [
+        1,
+        2,
+        19,
+        20,
+        21,
+        29,
+        36
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

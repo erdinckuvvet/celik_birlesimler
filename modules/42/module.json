@@ -1,0 +1,20 @@
+{
+    "id": 42,
+    "title": "Birleşim 42 — Kesme Kuvveti Birleşimi",
+    "desc": "Bu birleşim, bir kolonun gövdesine bağlanmış köşebent parçası üzerine oturan kolon-kiriş birleşimidir. Birleşimin misyonu, kirişte hesaplanan kesme kuvvetini kiriş alt başlığından kolona aktarmaktır. Kesme kuvveti aktarmakla görevli köşebentin bir benzeri de kiriş üst başlığında tasarlanarak, kirişin montajı sırasında kolayca pozisyonlanması temin edilmiş olmaktadır. Uygulaması son derece basit olan bu birleşim, kolon gövdesine birleşmelerde sıklıkla tercih edilmektedir.",
+    "limits": [
+        "Eğilme etkisinde akma",
+        "Eğilme etkisinde kırılma",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "42",
+    "similar": [
+        10
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

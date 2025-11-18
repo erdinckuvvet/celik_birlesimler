@@ -1,0 +1,19 @@
+{
+    "id": 37,
+    "title": "Birleşim 37 —  Kesme Kuvveti ve Moment Birleşimi",
+    "desc": "Bu birleşim bir kolon-temel birleşimidir. Kolon profili ile temel ara yüzü olan taban levhası I enkesitli kolona tüm çevresinden atölyede kaynaklanmıştır. Ankastre olarak tasarlanan birleşimlerde taban levhasındaki eğilmeleri sınırlandırmak için genellikle levha ile kolon arasına üçgen biçimli rijitlik levhaları tasarlanmaktadır. Bu levhalar, taban levhasına verdikleri eğilme katkısının yanında, kesme kuvveti aktarımında rol alan kaynak boyunu da uzatmaktadırlar. Mafsallı olarak tasarlanan birleşimlerde genellikle rijitlik levhaları kullanılmamaktadır. Taban levhası üzerine açılan delikler, betonarme temel betonu dökülürken beton içine yerleştirilen ankraj çubukları içindir. Kolondaki eğilme momenti kolonun kuvvetli veya zayıf ekseni etrafında olabilir. Bu birleşimde eğilme momenti kolon profilinin zayıf ekseni etrafındadır.",
+    "limits": [
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Bulonlarda çekme",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "37",
+    "similar": [
+        17
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

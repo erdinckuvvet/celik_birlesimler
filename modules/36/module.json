@@ -1,0 +1,28 @@
+{
+        "id": 36,
+        "title": "Birleşim 36 — Kesme Kuvveti Birleşimi",
+        "desc": "Basit bir kesme kuvveti birleşimi olarak tasarlanan Birleşim 36, iki adet köşebent kullanılarak oluşturulmuş bir kiriş-kiriş birleşimidir. Birleşimde kullanılan talî (ikincil) kirişin üst başlığının tamamı ile gövdesinden bir bölümü kesilerek çıkarılmıştır. Talî kirişin üst başlığı ana kirişe göre daha yüksekte konumlandırılmıştır. Ayrıca talî kirişin alt başlığı, bu örnekte gerekli olmasa da kesilerek çıkarılmıştır. Köşebentler tali kirişe atölyede kaynaklanmış, ana kirişe şantiyede bulonlar yardımıyla bağlanarak birleşim tamamlanmıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Yanal burulmalı burkulma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "36",
+        "similar": [
+            1,
+            2,
+            8,
+            19,
+            20,
+            21,
+            29
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    }

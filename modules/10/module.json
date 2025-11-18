@@ -1,0 +1,20 @@
+{
+    "id": 10,
+    "title": "Birleşim 10 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 10, kutu enkesitlere sahip bir kolon-kiriş birleşimidir. Birleşimde, kirişin kesme kuvveti aktarımını kolaylaştırmak amacıyla kolon yüzüne kaynakla bağlanana bir köşebent kullanılmıştır. Birleşimde, bir yüzü açık bırakılan kutu enkesitli kiriş, bu köşebentin üzerine oturacak şekilde yerleştirilir ve kiriş, kolon yüzüne kaynakla bağlanarak birleşim tamamlanır. Birleşim, dış ortam etkilerine maruz kalacaksa, açık kısımları uygun bir şekilde kapatılabilir.",
+    "limits": [
+        "Eğilme etkisinde akma",
+        "Eğilme etkisinde kırılma",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "10",
+    "similar": [
+        42
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "id": 11,
+    "title": "Birleşim 11 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 11, birleşim yapıları farklı olmakla birlikte fonksiyonel olarak Birleşim 5 ile aynıdır. Kutu enkesitli bir kiriş, T enkesitli düşey bir elemanın başlığına bulonlarla bağlanmıştır. Bulonlu birleşimin gerçekleştirilebilmesi için kutu enkesitli kirişin uç kısmına bir birleşim levhası kaynakla bağlanmıştır. Birleşimde T enkesitli eleman, tıpkı 5 ve 6 numaralı birleşimlerde olduğu gibi, kutu enkesitli kirişten aldığı yükü, üstünde bulunan başka bir kirişe aktaran yani kirişler arasında bir link vazifesi gören bir transfer elemanıdır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "11",
+    "similar": [
+        12,
+        "Notu: Tamamlayıcı Birlesimler: 6-5, 12-11 "
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

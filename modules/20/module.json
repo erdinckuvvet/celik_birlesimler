@@ -1,0 +1,27 @@
+{
+    "id": 20,
+    "title": "Birleşim 20 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 20, tek bir levha yardımıyla oluşturulmuş basit bir kesme kuvveti birleşimidir. Diğer birleşimlerin aksine bu birleşimde ikincil kiriş, ana kirişe dik olarak değil, yatayda belirli bir açı ile yaklaşmaktadır. Birleşim çoğunlukla, I enkesitli ana kirişin gövdesine atölyede kaynaklanan levhanın, sahada I enkesitli talî (ikincil) kirişe bulonlar ile bağlanmasıyla tamamlanmış olur.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "20",
+    "similar": [
+        1,
+        2,
+        8,
+        19,
+        21,
+        29,
+        36
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

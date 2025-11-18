@@ -1,0 +1,21 @@
+{
+    "id": 15,
+    "title": "Birleşim 15 — Moment Birleşimi",
+    "desc": "Birleşim 15, moment aktaran bir kolon-kiriş birleşimidir. Hem kolon hem de kirişin, I enkesitli elemanlardan seçildiği birleşimin ara yüzünde bir adet alın levhası kullanılmıştır. Levha, kiriş enkesitine çepeçevre kaynaklanmış, kolon başlığına ise bulonlarla bağlanmıştır. Sekiz adet bulon kullanılan birleşimde, eğilme momenti etkisiyle bulonların dördü çekme, diğer dördü de basınç bölgesinde kalmaktadır. Kiriş enkesitinin başlıkları çekme ve basınç bölgesinde yer alan bu dört bulona hizalanmıştır. Birleşimde kaynaklar genellikle atölye kaynağı olarak uygulanırken, bulonlar şantiyede takılabilmektedir.",
+    "limits": [
+        "Bulonlarda çekme",
+        "Kaynak dayanımı"
+    ],
+    "folder": "15",
+    "similar": [
+        24,
+        26,
+        34,
+        41,
+        42
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

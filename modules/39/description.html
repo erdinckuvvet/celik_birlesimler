@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modül 01</title>
+
+    <!-- Yerel modül stilleri -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- KaTeX (formül render) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"
+        data-delimiters='[{left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}]'>
+        </script>
+    <style>
+        /* Küçük alanlar için destek sınıfı */
+        .little_input {
+            width: 64px;
+        }
+
+        .row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        .inputs-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .inputs-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="grid">
+
+            <!-- GİRDİLER -->
+
+            <div class="card" name="kesitOzellikleri">
+                <!-- Ana Kiriş -->
+                <h3>Kesit Özellikleri</h3>
+                <div class="section-title">Ana Kiriş</div>
+                <div class="inputs-list">
+                    <div>
+                        <label for="anaProfil">Profil</label>
+                        <select id="anaProfil"></select>
+                    </div>
+                    <div>
+                        <label for="anaMalzeme">Malzeme Türü</label>
+                        <select id="anaMalzeme"></select>
+                    </div>
+                </div>
+
+                <!-- Tali Kiriş -->
+                <div class="section-title">Tali Kiriş</div>
+                <div class="inputs-list">
+                    <div>
+                        <label for="taliProfil">Profil</label>
+                        <select id="taliProfil"></select>
+                    </div>
+                    <div>
+                        <label for="taliMalzeme">Malzeme Türü</label>
+                        <select id="taliMalzeme"></select>
+                    </div>
+                </div>
+
+                <!-- Köşebent -->
+                <div class="section-title">Köşebent</div>
+                <div class="row">
+                    <div>
+                        <label for="kosebent_1">Ebatlar</label><br />
+                        <input id="kosebent_1" class="little_input" type="number" value="90"
+                            aria-label="Köşebent kol 1 (mm)">
+                        <input id="kosebent_2" class="little_input" type="number" value="90"
+                            aria-label="Köşebent kol 2 (mm)">
+                        <input id="kosebent_t" class="little_input" type="number" placeholder="t"
+                            aria-label="Köşebent et kalınlığı (mm)">
+                    </div>
+                    <div>
+                        <label for="kosebentMalzeme">Malzeme Türü</label><br />
+                        <select id="kosebentMalzeme"></select>
+                    </div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+                <!-- Genel parametreler -->
+                <label for="t">Et kalınlığı t (mm)</label>
+                <input id="t" type="number" min="0" step="0.1">
+
+                <label for="boltSelect">Bulon Tipi</label>
+                <select id="boltSelect"></select>
+
+                <label>Bulon Sınıfı</label>
+                <select id="boltClass"></select>
+
+                <label>Kaynak Kalınlığı a (mm)</label>
+                <input id="weld_a" type="number" value="6">
+
+                <label>Elektrod Mukavemeti F<sub>E</sub> (MPa)</label>
+                <input id="weld_FE" type="number" value="550">
+
+                <label>Dikiş Sayısı</label>
+                <input id="weld_count" type="number" value="2">
+
+
+                <label for="Ubs">Ubs</label>
+                <select id="Ubs">
+                    <option value="1">1.0</option>
+                    <option value="0.5">0.5</option>
+                </select>
+
+                <label for="phi">φ (Dayanım faktörü)</label>
+                <input id="phi" type="number" value="0.75" readonly>
+
+                <label>Dış merkezlik e<sub>x</sub> (mm)</label>
+                <input id="ex" type="number" value="45">
+
+                <label>φ<sub>b</sub> (Eğilme dayanım faktörü)</label>
+                <input id="phi_bend" type="number" value="0.90" step="0.05">
+
+                <hr style="margin:12px 0" />
+
+                <!-- Kesme / çekme yol verileri -->
+                <label for="shearWidths">Brüt kesme yolları genişlikleri (mm) lütfen virgülle ayırarak
+                    giriniz</label>
+                <input id="shearWidths" type="text" value="40,70,70" placeholder="örn: 40,70,70">
+
+                <label for="tensionWidth">Çekme yolu genişliği (mm)</label>
+                <input id="tensionWidth" type="number" value="45">
+
+                <div class="row">
+                    <div class="col">
+                        <label for="shearHoleCount">Kesme yolunda delik sayısı</label>
+                        <input id="shearHoleCount" type="number" value="2.5" step="0.5">
+                    </div>
+                    <div class="col">
+                        <label for="tensionHoleFactor">Çekme yolunda delik faktörü</label>
+                        <input id="tensionHoleFactor" type="number" value="0.5" step="0.1">
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:12px">
+                    <button id="calcBtn">Hesapla</button>
+                    <button id="resetBtn" class="secondary">Sıfırla</button>
+                </div>
+            </div>
+
+            <!-- SONUÇLAR -->
+            <div class="card">
+                <h3>Birleşim Hesapları</h3>
+                <h4>Blok Kırılma Sınır Durumu (13.4.3)</h4>
+                <div id="resultsArea">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.
+                    </div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+
+                <h4>Bulon Deliği Ezilme Kuvveti Dayanımı (13.3.13)</h4>
+                <div id="resultsArea2">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars2" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps2" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results2" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.</div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+
+                <h4>Bulonların Kesme Kuvveti Dayanımı (13.3.9)</h4>
+                <div id="resultsArea3">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars3" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps3" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results3" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.</div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+
+                <h4>Kayma Etkisinde Akma (13.4.2)</h4>
+                <div id="resultsArea4">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars4" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps4" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results4" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.</div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+
+                <h4>Kayma Etkisinde Kırılma (13.4.2)</h4>
+                <div id="resultsArea5">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars5" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps5" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results5" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.</div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+
+                <h4>Eğilmede Akma Sınır Durumu (13.4.5)</h4>
+                <div id="resultsArea6">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars6" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps6" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results6" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.</div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+
+                <h4>Eğilmede Kırılma Sınır Durumu (13.4.5)</h4>
+                <div id="resultsArea7">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars7" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps7" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results7" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.</div>
+                </div>
+
+                <hr style="margin:12px 0" />
+
+
+                <h4>Kaynak Dayanımı (13.2.4)</h4>
+                <div id="resultsArea8">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars8" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps8" class="math-block katex-manual">Hesaplama adımları burada
+                        gösterilecektir.
+                    </div>
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results8" class="math-block katex-manual">R<sub>d</sub> sonucu burada
+                        gösterilecektir.</div>
+                </div>
+
+                <hr style="margin:16px 0" />
+
+                <h4>Hesaplama Özeti</h4>
+                <div id="summaryArea" class="summary-card">
+                    <table class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Sınır Durum</th>
+                                <th>Tasarım Kesme Kuvveti R<sub>d</sub> (kN)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summaryBody">
+                            <tr>
+                                <td colspan="2" style="text-align:center; color:var(--muted);">
+                                    Henüz hesaplama yapılmadı.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="summary-note">
+                        En küçük R<sub>d</sub> (kritik): <span id="summaryMin">-</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="calc.js" defer></script>
+    <script>
+        // KaTeX otomatik render tetikleyicisi (ilk açılışta)
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    ignoredClasses: ['katex-manual'], delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false }
+                    ]
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

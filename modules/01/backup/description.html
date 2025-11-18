@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Birleşim 1 — Hesaplayıcı</title>
+
+    <!-- KaTeX (Matematiksel gösterim) -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"
+        data-delimiters='[{left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}]'>
+        </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Birleşim 1 — Kesme Kuvveti Birleşimi</h2>
+        <p>Birleşim 1, tek bir köşebent (korniyer) yardımıyla oluşturulmuş basit bir kesme kuvveti birleşimidir...</p>
+
+        <div class="grid">
+            <!-- Girişler ve hesaplama -->
+            <div class="card" name="kesitOzellikleri">
+                <div class="section-title">Kesit Özellikleri</div>
+
+                <div class="inputs-list">
+                    <div>
+                        <label>Ana Profil</label>
+                        <select id="anaProfil">
+                            <option>I100</option>
+                            <option>I200</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Ana Malzeme</label>
+                        <select id="anaMalzeme">
+                            <option>St37</option>
+                            <option>St52</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputs-list">
+                    <div>
+                        <label>Tali Profil</label>
+                        <select id="taliProfil">
+                            <option>U100</option>
+                            <option>U120</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Tali Malzeme</label>
+                        <select id="taliMalzeme">
+                            <option>St37</option>
+                            <option>St52</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <label>Köşebent Ebatları</label>
+                        <input id="kosebent_1" class="little_input" value="90">
+                        <input id="kosebent_2" class="little_input" value="90">
+                        <input id="kosebent_t" class="little_input" value="10">
+                    </div>
+                    <div>
+                        <label>Köşebent Malzeme</label>
+                        <select id="kosebentMalzeme">
+                            <option>St37</option>
+                            <option>St52</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr>
+
+                <label>Et Kalınlığı t (mm)</label>
+                <input id="t" type="number" value="10">
+
+                <label>Ubs</label>
+                <select id="Ubs">
+                    <option value="1">1.0</option>
+                    <option value="0.5">0.5</option>
+                </select>
+
+                <label>φ (Dayanım faktörü)</label>
+                <input id="phi" type="number" value="0.75" readonly>
+
+                <hr>
+
+                <label>Brüt kesme yolları genişlikleri (mm, virgülle ayır)</label>
+                <input id="shearWidths" type="text" value="40,70,70">
+
+                <label>Çekme yolu genişliği (mm)</label>
+                <input id="tensionWidth" type="number" value="45">
+
+                <div class="row">
+                    <div class="col">
+                        <label>Kesme yolunda delik sayısı</label>
+                        <input id="shearHoleCount" type="number" value="2.5">
+                    </div>
+                    <div class="col">
+                        <label>Çekme yolunda delik faktörü</label>
+                        <input id="tensionHoleFactor" type="number" value="0.5">
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:12px">
+                    <button id="calcBtn">Hesapla</button>
+                    <button id="resetBtn" class="secondary">Sıfırla</button>
+                </div>
+            </div>
+
+            <!-- Sonuçlar -->
+            <div class="card">
+                <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Hesap Sonuçları</div>
+                <div id="resultsArea">
+                    <div class="section-title">Kullanılan Değişkenler</div>
+                    <div id="vars" class="math-block">Henüz hesaplama yapılmadı.</div>
+
+                    <div class="section-title">İşlem Basamakları</div>
+                    <div id="calcSteps" class="math-block">Hesaplama adımları burada gösterilecektir.</div>
+
+                    <div class="section-title">Sonuçlar</div>
+                    <div id="results" class="math-block">R<sub>d</sub> sonucu burada gösterilecektir.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+
+</html>

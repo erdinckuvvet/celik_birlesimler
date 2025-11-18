@@ -1,0 +1,26 @@
+{
+    "id": 19,
+    "title": "Birleşim 19 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 19, ½ I enkesitli bir ara yüz elemanı kullanarak iki kirişi birleştiren basit bir kesme kuvveti birleşimidir. Bu birleşim, ½ I enkesitin başlık kenarları boyunca ana kirişinin (I enkesitli) gövdesine köşe kaynağı ile kaynaklanması, gövdesinin ise ikincil kirişin gövdesine bulonlanması ile tamamlanmış olur. Her iki kiriş plânda çoğunlukla birbirine dik olarak yaklaşırlar. Kaynaklar genellikle imalathanede yapılırken, bulonlar da genellikle şantiyede tamamlanır. İki I kirişin üst başlığı birbiriyle aynı hizada olmadığından, bu birleşim tipi muhtemelen köprü kirişlerinin, çatı veya döşeme kirişlerinin yanal desteklemelerinde kullanılacaktır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "19",
+    "similar": [
+        2,
+        8,
+        20,
+        21,
+        29,
+        36
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

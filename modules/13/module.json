@@ -1,0 +1,24 @@
+{
+    "id": 13,
+    "title": "Birleşim 13 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 13, iki I enkesitli kiriş arasında oluşturulmuş, kesme kuvveti aktaran basit bir kiriş-kiriş birleşimidir. Uygulamada sıklıkla tercih edilen bu birleşimde kirişler, düzlemleri dışında genellikle birbirlerine dik yaklaşırlar. Birleşimde iki adet köşebent, talî (ikincil) ve ana kirişin gövdelerine bulonlarla birleştirilerek birleşim tamamlanmıştır. Birleşimde kullanılan kirişlerin, kesit yükseklikleri birbirinden farklı olmakla birlikte, üst başlık seviyeleri aynıdır. Birleşimin imal edilebilmesi için, talî kirişin üst başlığı kesilerek, ana kirişe sorunsuz olarak yaklaşması sağlanmıştır. Talî kirişle ana kirişin aynı seviyede olması, bu kirişin bir döşeme kirişi olduğunu gösterir. Tali kirişin üst başlığının kesilmesi birleşimde bulon deliği ezilme dayanımının yanında, talî kirişin eğilme kapasitesini de olumsuz olarak etkileyecektir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Yanal burulmalı burkulma",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "13",
+    "similar": [
+        7,
+        14,
+        32
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "id": 46,
+    "title": "Birleşim 46 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 46, bir aşık profilinin dolu gövdeli bir kiriş üzerine mesnetlenmesini göstermektedir. Yatayla belirli bir açı yapan ana kiriş, muhtemelen bir sanayi yapısına aittir. Bu eğimli kiriş üzerindeki aşık, bir U enkesitli profilden tasarlanmıştır. Birleşim ara yüzünde bir köşebent kullanılmış, bu köşebent kirişe köşe kaynak dikişi ile bağlanırken aşık profilinin gövdesine bulonlarla bağlanmıştır. Verilen birleşim aşık profillerinin U enkesitli olması durumunda sıklıkla tercih edilen bir birleşim tipidir. Köşebent kiriş üzerine atölye kaynaklı olarak tasarlanır ve delikleri açılmış şekilde şantiye sahasına nakledilir. Aşık profili soğuk şekillendirilmiş çelik profillerden veya hadde ürünü diğer I profillerden de seçilebilir. Çatı kaplamasında sağladığı kolaylık için U enkesitli profiller daha sık tercih edilmektedir.",
+    "limits": [
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "46",
+    "similar": [
+        22
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

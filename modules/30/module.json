@@ -1,0 +1,20 @@
+{
+    "id": 30,
+    "title": "Birleşim 30 — Eksenel Kuvvet Birleşimi",
+    "desc": "Birleşim 30, kaynak ve bulonlar kullanan bir kolon ekidir. Kolon ekinin bir parçasına atölyede kaynaklanan levha, ekin diğer parçasına şantiyede bulonla bağlanarak ekleme işlemi tamamlanmaktadır. Daha önceki örneklerde verilen kiriş eklerinde açıklandığı üzere, kolon eklerinin de farklı sebepleri olabilir. Kolon eklerinin, eğilme momenti diyagramları takip edilerek, mümkün mertebe moment sıfır noktalarında gerçekleştirilmeleri önemlidir. Eğilme momentinin bulunduğu bir noktada ek yapılırsa, ekin normal kuvvetle birlikte eğilme momentini de taşıması gerektiği açıktır.",
+    "limits": [
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kopma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "30",
+    "similar": [
+        31
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

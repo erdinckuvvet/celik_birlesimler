@@ -1,0 +1,19 @@
+{
+        "id": 17,
+        "title": "Birleşim 17 — Kesme Kuvveti ve Moment Birleşimi",
+        "desc": "Bu birleşim bir çelik kolon-betonarme temel birleşimidir. Kolon profili ile betonarme temelin ara yüzü olan taban levhası, I enkesitli kolona tüm çevresinden atölyede kaynaklanmıştır. Taban levhasındaki eğilmeleri sınırlandırmak için genellikle, levha ile kolon arasına üçgen biçimli rijitlik levhaları tasarlanmaktadır. Bu rijitlik levhaları, kolon taban levhasına verdikleri eğilme katkısının yanında, kesme kuvveti aktarımında rol alan kaynak boyunu da uzatmaktadırlar. Taban levhası üzerine açılan delikler, betonarme temel betonu dökülürken beton içine yerleştirilen ankraj çubukları içindir. Bu birleşimler moment aktarmayan basit mesnet olarak da moment aktaran ankastre mesnet olarak da tasarlanabilirler. Ankastre tasarımlarda rijitlik levhalarının kullanımı zorunludur. Kolondaki eğilme momenti kolonun kuvvetli ve/veya zayıf ekseni etrafında olabilir. Bu birleşimde eğilme momenti kuvvetli eksen etrafındadır.",
+        "limits": [
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Bulonlarda çekme",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "17",
+        "similar": [
+            39
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    }

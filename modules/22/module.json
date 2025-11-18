@@ -1,0 +1,19 @@
+{
+    "id": 22,
+    "title": "Birleşim 22 — Kesme Kuvveti Birleşimi",
+    "desc": "Bir adet köşebent kullanılarak oluşturulmuş basit kesme kuvveti birleşimi olan birleşim 22, U enkesitli bir elemanın I enkesitli bir kirişe bağlantısından ibarettir. Daha önceki örneklerde de değinildiği üzere benzer olarak köşebent, talî (ikincil) elemana atölye kaynağı ile kaynaklanarak şantiye sahasında nakledilir. Şantiyede ana kirişe bulonlar yardımıyla bağlanarak birleşim tamamlanır. Diğer kesme kuvveti birleşimlerinden farklı olarak U enkesitli elemanın düşeyde bir açıyla ana kirişe yaklaştığı görülmektedir. Bu açı sebebiyle U enkesitli elemanın bir çapraz olduğu düşünülebilir. Birleşim elemanlarının I enkesitli asıl elemanın pozisyonuna göre ayarlandığı görülmektedir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "22",
+    "similar": [],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

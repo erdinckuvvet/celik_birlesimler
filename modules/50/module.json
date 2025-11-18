@@ -1,0 +1,18 @@
+{
+    "id": 50,
+    "title": "Birleşim 50 — Eğilme Momenti Birleşimi",
+    "desc": "Birleşim 50, bir önceki bölümde verilen birleşimin devamı ve tamamlayıcısıdır. Bu birleşimde, trapez levhaları kolon başlıklarına bağlayan birleşimin eğilme momenti kapasitesi ve bu eğilme momentine sebep olan kesme kuvveti hesaplanacaktır. Kolon başlığında yer alan bulonların ağırlık merkezi ile köşebentler aracılığı ile aktarılan kesme kuvveti arasındaki dış merkezlik sebebiyle, bulonlar burulma momenti etkisinde kalacaklardır. Bu burulma momenti, bulon gövdelerinde kesme kuvveti oluşturacaktır. Kolon başlığını levhaya bağlayan bulonların burulma momenti kaynaklı kesme kuvvetinin yanında, kreyn kirişinden gelen kesme kuvvetini de aktarması gerekecektir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme"
+    ],
+    "folder": "50",
+    "similar": [
+        "Notu: Tamamlayıcı birleşim: 49 "
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

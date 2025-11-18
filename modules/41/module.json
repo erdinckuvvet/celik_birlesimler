@@ -1,0 +1,24 @@
+{
+    "id": 41,
+    "title": "Birleşim 41 — Kesme Kuvveti ve Moment Birleşimi",
+    "desc": "Birleşim 40’ın devamı niteliğinde olan Birleşim 41, kesme kuvveti ile eğilme momenti aktaran bir kolon-kiriş birleşiminin eğilme momenti kapasitesinin değerlendirmektedir. Birleşimin eğilme momentini aktarabilmesi için I enkesitli kirişin başlıkları, kolona kaynakla bağlanmış levhalara (başlık levhaları) 6 adet bulon ile bağlanmıştır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "41",
+    "similar": [
+        25,
+        26,
+        33,
+        34
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

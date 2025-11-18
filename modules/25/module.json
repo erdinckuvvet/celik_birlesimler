@@ -1,0 +1,21 @@
+{
+    "id": 25,
+    "title": "Birleşim 25 — Kesme Kuvveti Birleşimi",
+    "desc": "Örnek açıklama.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "25",
+    "similar": [
+        "Kontrol"
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

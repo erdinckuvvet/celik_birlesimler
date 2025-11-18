@@ -1,0 +1,26 @@
+{
+    "id": 2,
+    "title": "Birleşim 2 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 2, çift köşebent veya L şeklinde bükülmüş iki levha kullanılarak oluşturulmuş basit bir kesme kuvveti birleşimidir. Kiriş-kiriş birleşimi olan bu yapı, köşebentin bir kolunun ana kirişinin (I enkesitli) gövdesine bulonlanması ve diğer kolunun üç kenarı boyunca talî (ikincil) kirişin (ikinci I enkesitli) gövdesine ark kaynağı ile bağlanmasıyla tamamlanmış olur. Her iki kiriş plânda çoğunlukla birbirine dik olarak yaklaşırlar. Kaynaklar genellikle imalathanede yapılırken, bulonlar şantiyede tamamlanır. Talî kirişin gövdesinin her iki tarafında birer köşebent bulunduğuna dikkat edilmelidir. İki I kirişin üst başlığı birbiriyle aynı hizada olmadığından, bu birleşim tipi muhtemelen köprü kirişlerinin, çatı veya döşeme kirişlerinin yanal desteklemelerinde kullanılacaktır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kaymada akma",
+        "Kaymada kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "02",
+    "similar": [
+        1,
+        8,
+        19,
+        20,
+        21,
+        29
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

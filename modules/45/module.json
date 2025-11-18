@@ -1,0 +1,26 @@
+{
+    "id": 45,
+    "title": "Birleşim 45 — Eksenel Kuvvet Birleşimi",
+    "desc": "Bu birleşim, bir kafes sitemin üst başlık çubuğunun kolon yüzüne mesnetlenmesini göstermektedir. Bir düğüm levhası etrafında toplanan kafes sistem elemanları, bir çift köşebent kullanılarak kolon yüzüne mesnetlenmiştir. Mesnetlemede, köşebentler düğüm levhasına kaynakla bağlanırken, kolon yüzüne bulonlarla tespit edilmiştir. Yatay ve düşey harekete izin vermeyen bu mesnet, modelleme ve hesaplamalarda basit mesnet olarak kabul edilmektedir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Bulonlarda çekme",
+        "Bulonlarda ilave kaldırma kuvveti",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kopma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "45",
+    "similar": [
+        43,
+        44
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

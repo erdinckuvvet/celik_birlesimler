@@ -1,0 +1,22 @@
+{
+    "id": 26,
+    "title": "Birleşim 26 — Moment Birleşimi",
+    "desc": "Birleşim 25’in devamı niteliğinde olan birleşim 26, kesme kuvveti ile eğilme momenti aktaran bir kolon-kiriş birleşiminin eğilme momenti kapasitesini değerlendirmektedir. Birleşimin, eğilme momentini aktarabilmesi için, I enkesitli kirişin başlıkları, kolona kaynakla bağlanmış levhaya, tam penetrasyonlu küt kaynak ile kaynaklanmıştır. Detayları Birleşim 25’te açıklandığı üzere, kirişin başlıkları kolona doğrudan kaynaklanması yerine, kolonun başlıkları arasını dolduran bir levhaya kaynaklanmış böylece, uygulamada kolaylık sağlanmıştır. Ayrıca bu levhalar kolon profili için ilave rijitlik sağlamıştır. Ayrıca bu uygulamada kiriş profilinde herhangi bir kesim işlemine gerek kalmamıştır. Sadece, kaynaklama işlemi için kiriş gövdesinde iki adet boşluk oluşturulmuştur.",
+    "limits": [
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "26",
+    "similar": [
+        15,
+        33,
+        34,
+        40,
+        41
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "id": 28,
+    "title": "Birleşim 28 — Eksenel Kuvvet Birleşimi",
+    "desc": "Birleşim 28, nispeten küçük bir yapıda kullanılmış olması muhtemel bir düşey çaprazın kolona birleşimini göstermektedir. Dolu gövdeli dairesel enkesitli çapraz eleman, I enkesitli kolonun gövdesine bulonlanarak birleşim tamamlanmıştır. Bulonla kolon gövdesi arasında çelik pul kullanılmıştır.",
+    "limits": [
+        "Çubukta çekme",
+        "Bulonda ilave kaldırma kuvveti (manivela etkisi)"
+    ],
+    "folder": "28",
+    "similar": [
+        16
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

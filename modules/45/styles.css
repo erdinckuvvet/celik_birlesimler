@@ -1,0 +1,177 @@
+:root {
+    --bg: #f4f6fb;
+    --card: #fff;
+    --accent: #2b6cb0;
+    --muted: #6b7280;
+}
+
+body {
+    font-family: Inter, system-ui, Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 10px;
+    color: #111;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+.grid {
+    display: block;
+    grid-template-columns: 1fr 50%;
+    gap: 12px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(20, 24, 40, 0.06);
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 90%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #e6e9ef;
+    font-size: 14px;
+}
+
+.little_input {
+    width: 65px;
+    margin-right: 6px;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: var(--accent);
+}
+
+.inputs-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row .col {
+    flex: 1;
+}
+
+button {
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.secondary {
+    background: #e6eef9;
+    color: var(--accent);
+}
+
+.math-block {
+    background: #7296cc;
+    color: #0a021d;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.aside {
+    background: #f0f4f8;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 13px;
+}
+
+.aside h4 {
+    margin: 6px 0 4px;
+    color: var(--accent);
+}
+
+.aside ul {
+    padding-left: 18px;
+    margin-bottom: 10px;
+}
+
+.math-block {
+    white-space: normal;
+}
+
+.math-block .katex-display {
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+}
+
+.summary-card {
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #f9fafb;
+    border: 1px solid rgba(148, 163, 253, 0.25);
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.summary-table th,
+.summary-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.summary-table th {
+    background: #eff6ff;
+    font-weight: 600;
+}
+
+.summary-table tr.critical td {
+    font-weight: 600;
+    font-style: italic;
+    color: #b91c1c;
+    background: #fef2f2;
+}
+
+.summary-note {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+
+
+@media(max-width:880px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "id": 18,
+    "title": "Birleşim 18 — Kesme Kuvveti Birleşimi",
+    "desc": "Döşemeleri betonarme olarak tasarlanan çelik yapılarda, betonarme döşeme ile döşeme kirişleri arasında bir çelik eleman kullanılarak beton ve çeliğin birlikte çalışmasının temin edildiği kompozit bir sistemden söz edilebilir. Bu kompozit yapıda, tıpkı betonarme tablalı kirişlerde olduğu gibi, basınç bölgesinde betonarme döşemenin, çekme bölgesinde çeliğin yer aldığı tablalı bir kesit ortaya çıkmış olur. Bu T-enkesitin ağırlık merkezi, çoğunlukla betonarme kesitin içinde kaldığından, çelik kiriş enkesiti tamamen çekme bölgesinde çalışır. Bu durum, taşıyıcı sistemde yer alan döşeme kirişlerinin daha ekonomik olarak boyutlandırılmasına imkân sağlar. Ayrıca, kiriş başlığını yanal olarak tuttuğu için yerel burkulma ihtimalini de ortadan kaldırmış olur.",
+    "limits": [
+        "başlıklı çelik ankraj (Kayma elemanı) dayanımı",
+        "Kompozit etkileşim için başlıklı çelik ankraj kayma dayanımı",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "18",
+    "similar": [],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

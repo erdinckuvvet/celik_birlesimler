@@ -1,0 +1,21 @@
+{
+    "id": 43,
+    "title": "Birleşim 43 — Eksenel Kuvvet Birleşimi",
+    "desc": "Birleşim 43, bir kafes sistemin alt başlık çubuğunun kolona mesnetlenmesini göstermektedir. Bu örnekte kafes sistemin alt başlık çubuğu bir ½ I enkesitli eleman olarak tasarlanmıştır. Hareketli mesnet olarak tasarlanan bu yapıda, büyük oval delikler kullanılarak, sistemin yatay doğrultudaki hareketine izin verilmiştir. İki adet bulon kullanılan hareket mekanizmasında yeterli kesit yüksekliği sağlayabilmek amacıyla ½ I enkesitin üzerine bir levha kaynaklanmıştır. Birleşimde iki adet köşebent kullanılmış ve bu köşebentler her iki elamana da bulonla bağlanmıştır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kopma"
+    ],
+    "folder": "43",
+    "similar": [
+        44,
+        45
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

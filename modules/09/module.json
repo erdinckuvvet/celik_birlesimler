@@ -1,0 +1,23 @@
+{
+    "id": 9,
+    "title": "Birleşim 9 — Eksenel Kuvvet ve Kesme Kuvveti Birleşimi ",
+    "desc": "Bu birleşim, eksenel normal kuvvet etkisindeki kutu enkesitli bir elemanın I enkesitli kirişlere üst ve alt uçlarından bağlanmasıyla oluşturulmuştur. Bu birleşim, kirişlerinin başlığına bulonlu bir kolon ve kolona kaynaklı uç levhasından oluşan birleşimde eksenel kuvvet çekme veya basınç olabilir. Kutu enkesitli kolon uç levhasına, atölye kaynaklı olarak şantiye sahasına nakledilir ve sahada kirişin başlığına bulonlanır. Bu durum genellikle, bina türü yapıların katları arasında ilave kolona ihtiyaç duyulduğunda ortaya çıkar. Birleşimde, kiriş gövdesinde yerel burkulmayı önlemek amacıyla, kirişin başlıkları arasında rijitlik levhaları kullanılmalıdır..",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Blonlarda çekme",
+        "Blonlarda ilave kaldırma kuvveti (manivela) etkisi",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "09",
+    "similar": [
+        3
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

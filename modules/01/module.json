@@ -1,0 +1,27 @@
+{
+    "id": 1,
+    "title": "Birleşim 1 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 1, tek bir köşebent (korniyer) yardımıyla oluşturulmuş basit bir kesme kuvveti birleşimidir. Bu tip birleşimlerde, birleşimi oluşturan iki unsur birbirlerine düzlemleri dışında yaklaşır ve genellikle diktir. Birleşim çoğunlukla, I kesitli kirişin gövdesine atölyede kaynaklanan köşebentin, sahada U kesitli kirişe bulon (cıvata) ile bağlanmasıyla tamamlanmış olur. Köşebent hem kök noktasından hem de kol ucundan tüm uzunluğu boyunca kaynaklanır. Birleşen parçaların kesit yüksekliklerinin aynı olması veya üst başlıklarının aynı hizada olması gibi durumda birleşen parçalardan talî (ikincil) olanın (bu örnekte U kesitli kiriş) başlıkları kesilip çıkarılarak ana kirişe yaklaşmasının sorunsuz olması sağlanır. Bu örnekte U-kesitinin, yüksekliği ana kiriş yüksekliğinde daha küçük olduğu için, I-kesitli ana kirişin başlıkları (flanşları) arasına sığabilecek yeterli boşluk olduğundan herhangi bir kesim işlemi uygulanmamıştır. U kesitli kirişin üst başlığı I kesitinin üst başlığı ile aynı hizada olmadığından, bu birleşim tipi muhtemelen köprü kirişlerinin, çatı veya döşeme kirişlerinin yanal kuşaklamalarında kullanılacaktır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kaymada akma",
+        "Kaynakta kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "01",
+    "similar": [
+        2,
+        8,
+        19,
+        20,
+        21,
+        29,
+        36
+    ],
+     "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

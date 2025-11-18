@@ -1,0 +1,19 @@
+{
+        "id": 31,
+        "title": "Birleşim 31 — Eksenel Kuvvet Birleşimi",
+        "desc": "Bu birleşim, tamamen bulon kullanılarak oluşturulmuş bir kolon ekidir. Tamamen bulonlu olması hasebiyle ekleme işlemi bütünüyle şantiyede yapılabileceği gibi, bir bölümü atölyede diğer bölümü şantiyede de yapılabilir. Kolon ekindeki kuvvet aktarımı 30 numaralı birleşimle aynı olmakla beraber, 30 numaralı birleşimden tek farkı, birleşimde hiç kaynak kullanılmamasıdır. Klon eklerinin moment sıfır noktalarında yapılması tasarımcının elini rahatlatabilir. Ancak her durumda tasarımın bütün etkileri karşılayabilecek şekilde yapılması gerektiği unutulmamalıdır.",
+        "limits": [
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma"
+        ],
+        "folder": "31",
+        "similar": [
+            30
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    }

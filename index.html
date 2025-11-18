@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Yapısal Hesaplama Modülleri</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="logo">🧮 Yapısal Hesaplama Platformu</div>
+        <div class="search-box">
+            <input id="filter" type="text" placeholder="Modül ara..." />
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Sol Menü -->
+        <aside class="sidebar">
+            <h2>Modüller</h2>
+            <div id="moduleList" class="module-list">Yükleniyor...</div>
+        </aside>
+
+        <!-- İçerik Alanı -->
+        <main class="main-content">
+            <iframe id="moduleFrame" src="" frameborder="0"></iframe>
+            <div id="placeholder">
+                <h2>Bir modül seçiniz</h2>
+                <p>Sol menüden bir hesaplama modülü seçildiğinde içerik burada yüklenecektir.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

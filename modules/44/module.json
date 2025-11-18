@@ -1,0 +1,19 @@
+{
+    "id": 44,
+    "title": "Birleşim 44 — Eksenel Kuvvet Birleşimi",
+    "desc": "Bu birleşim, bir kafes sistemin alt başlığında tasarlanan bir düğüm noktasını temsil etmektedir. Bilindiği üzere kafes sistemlerin düğüm noktaları, ideal mafsal olarak kabul edilir ve boyuna eksenleri aynı noktada kesişen çubukların, bir birleşim levhasına bağlanmasıyla oluşturulur. Birleşim 44, böyle bir kafesin alt başlık çubuğu üzerinde tasarlanmış bir ara düğüm noktasını göstermektedir. Birleşim aracı olarak kaynak veya bulon kullanılabilir. Bu örnekte çubukların düğüm noktası levhasına birleştirilmesinde köşe kaynak dikişleri kullanılmıştır.",
+    "limits": [
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kopma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "44",
+    "similar": [
+        43,
+        45
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

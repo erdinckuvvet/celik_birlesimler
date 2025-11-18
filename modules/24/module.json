@@ -1,0 +1,18 @@
+{
+    "id": 24,
+    "title": "Birleşim 24 — Moment Birleşimi",
+    "desc": "Bilindiği gibi kiriş ekleri, çelik yapıların kaçınılamaz önemli ayrıntılarındandır. Bu eklere, yapıda kullanılan kiriş açıklıklarının profil boylarından büyük olması durumunda veya kesilen profillerin değerlendirilmesi durumunda başvurulabileceği gibi bazen de nakliye zorlukları sebebiyle kesilmek zorunda olan kirişlerin şantiyede tekrar eklenmesi durumlarında da başvurulabilmektedir. Kiriş ekleri, kirişin başlıkları ve gövdesinde tasarlanan ek elemanları sayesinde yapılabilmektedir. Gövdede bulunan levha ve bulonlar kesme kuvveti aktarırken, başlıklarda bulunan levha ve bulonlar başlığa etkiyen normal kuvveti aktarmakla yükümlüdürler. Bu normal kuvvet, eğilme momentinin kuvvet çiftine dönüştürülmesiyle elde edilen kuvvettir. Burada kiriş başlıklarını ekleyen levha ve bulonlar için hesap yapılarak eğilme momenti kapasitesi belirlenecektir.",
+    "limits": [
+        "Bulonlarda kesme",
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kopma"
+    ],
+    "folder": "24",
+    "similar": [
+        23
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "id": 4,
+    "title": "Birleşim 4 — Kesme Kuvveti Birleşimi ",
+    "desc": "Bu birleşim, I enkesitli bir kiriş ile boru enkesitli bir kolonun oluşturduğu, yalnız kesme kuvveti aktaran kiriş-kolon birleşimidir. Birleşimde, dairesel kolon profilinde açılan boşluğa girerek bütün kolon kesitini boydan boya geçen bir levha kullanılmıştır. Levha, kiriş tarafında birleşime imkân verecek uzunlukta tasarlanırken, diğer tarafta kolona kaynak imkânı verecek ölçüde kolondan dışarı taşırılmıştır. Boşluktan geçen levha ile kolon, kolon dış yüzeyinin kesiştiği hatlar boyunca kaynakla birbirine bağlanmıştır. Kaynaklarının genellikle atölyede tamamlandığı bu birleşim, dairesel kesitli kolonlar kullanıldığı zaman sıklıkla tercih edilen bir birleşim tipidir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kaymada akma",
+        "Kaymada kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "04",
+    "similar": [
+        27,
+        35
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "id": 38,
+    "title": "Birleşim 38 — Eksenel Kuvvet Birleşimi",
+    "desc": "Tipik bir çapraz-kolon birleşimini temsil eden 38 numaralı birleşimi, 39 ile birlikte düşünmek gerekir. Çapraz elemanının eksenel yük aktardığı 38 ve 39 numaralı birleşimlerde mesnetlenmenin mafsallı olduğu kabul edilmektedir. Örnekte, çapraz elemanı bir kutu profilden tasarlanmış olup birleşim levhasına bağlantısı için bir T profili kullanılmıştır. Bu T profil çapraz elemanına kaynakla, birleşim levhasına ise bulonla bağlanarak birleşim tamamlanmıştır. Son olarak, birleşim levhasının da kolon başlığına kaynakla bağlandığı not edilmelidir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kopma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "38",
+    "similar": [
+        39
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

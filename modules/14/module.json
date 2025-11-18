@@ -1,0 +1,24 @@
+{
+    "id": 14,
+    "title": "Birleşim 14 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 14, I enkesitli üç kirişin oluşturduğu bir kiriş-kiriş birleşimidir. Birleşimde kesit yükseklikleri birbirinden farklı olan iki kiriş aynı düzlemde, üçüncü kiriş bu ikisine dik olarak bulunmaktadır. Birleşim aracı olarak 2 adet köşebent kullanılmıştır. Aynı düzlemdeki kirişleri, ana kirişin gövdesine bağlayan bulonların bir kısmı, 3 parçayı birleştirdikleri için 2 kayma düzlemine, bir kısmı tek kayma düzlemine sahip olmaktadırlar. Birleşimdeki her üç kirişin üst başlık seviyeleri de aynıdır. Daha önceki örneklerde olduğu gibi bu durumda da ikincil kirişlerin başlıkları veya bir tek başlığı ile gövdesinin bir bölümünün kesilerek ana kirişe sorunsuz yaklaşması temin edilmiştir. Kolon akslarında bulunan ana kirişe, farklı açıklıklara sahip döşeme kirişlerinin bağlanmasıyla oluşturulan bu tür birleşimlere çok katlı binalarda sıklıkla rastlanılmaktadır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Eğilme etkisinde yerel burkulma",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "14",
+    "similar": [
+        7,
+        13,
+        32
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

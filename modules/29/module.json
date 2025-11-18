@@ -1,0 +1,25 @@
+{
+    "id": 29,
+    "title": "Birleşim 29 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 29, iki adet I enkesitli kiriş arasında oluşturulan bir kiriş-kiriş birleşimidir. Birleşimde bir adet levha kullanılmış olup bu levha asıl kirişe köşe kaynağı ile ikincil kirişe de bulonlar yardımıyla bağlanmıştır. Kirişlerin alt başlık seviyeleri aynı olduğundan, ikincil kirişin alt başlığının tamamı ile gövdesinin bir bölümünün birleşim bölgesinde kesilmesi bir zorunluluk olmuştur.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Yanal burulmalı burkulma",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "29",
+    "similar": [
+        7,
+        13,
+        14,
+        32
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "id": 49,
+    "title": "Birleşim 49 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 49, bir sanayi yapısı içerisinde bulunan yatay taşıma ünitesinin kolona birleşimini göstermektedir. I enkesitli bir kolonun her iki başlığına trapez biçimli levhalar bulonlarla bağlanarak bir konsol kiriş tasarlanmıştır. Konsol kirişin ucunda, yapı içerisinde yatay taşımayı sağlayan vincin (kreyn) yürüme yolu olan I enkesitli bir kreyn kirişi bulunmaktadır. Bu kiriş trapez levhalara eşit kollu çift köşebentler yardımıyla bağlanmıştır. Köşebentler, I enkesitli kreyn kirişine köşe kaynakları ile bağlanırken trapez levhaya bulonlar ile birleştirilmiştir. Burada öncelikle kreyn kirişini trapez levhalara bağlayan köşebentler ve birleşim araçlarının kapasitesi araştırılacaktır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Eğilme etkisinde akma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "49",
+    "similar": [
+        1,
+        8,
+        14,
+        19,
+        21,
+        22
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

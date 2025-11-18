@@ -1,0 +1,24 @@
+{
+    "id": 7,
+    "title": "Birleşim 7 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 7, iki I enkesitli kiriş arasında oluşturulmuş, kesme kuvveti aktaran basit bir kiriş-kiriş birleşimidir. Uygulamada sıklıkla tercih edilen bu birleşimde kirişler, düzlemleri dışında ve genel olarak birbirlerine dik yaklaşırlar. Birleşimde iki adet levha, talî (ikincil) kirişin gövdesine kaynaklanmış, sonra levhalar ana kirişin gövdesine bulonlarla bağlanarak birleşim tamamlanmıştır. Birleşimde kullanılan kirişlerin kesit yükseklikleri birbiriyle aynı olduğundan, talî kirişin hem alt hem de üst başlığı kesilerek talî kirişin ana kirişe sorunsuz olarak yaklaşması sağlanmıştır. Bu durumun, talî kirişin eğilme kapasitesini olumsuz olarak etkilediği, daha önceki örneklerde olduğu gibi, hatırlanmalıdır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Yanal burulmalı burkulma",
+        "Kayma etkisinde akma",
+        "Kaymada kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "07",
+    "similar": [
+        13,
+        14,
+        32
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

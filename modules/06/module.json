@@ -1,0 +1,21 @@
+{
+    "id": 6,
+    "title": "Birleşim 6 — Eksenel Kuvvet Birleşimi",
+    "desc": "Bu birleşim, Birleşim 5’in devamı niteliğinde kabul edilebilir. Birleşim 5, kiriş yükünü daha yukarısında bulunan bir elemana transfer eden köşebentlerin, altta bulunan I enkesitli kirişe bağlantısını incelerken, Birleşim 6 aynı transfer elemanlarının üst ucunun birleşimini ele almaktadır. Birleşimin yapısı gereği üstte bulunan eleman, hesaplar bakımından belirleyici olmadığından, birleşim resminin daha anlaşılır olabilmesi için burada ayrıntılı olarak verilmemiş, sadece birleşim levhası olarak gösterilmiştir. Birleşimde çekme elemanı olarak görev yapan köşebentler, bu birleşim levhasına bulonlar ile bağlanırken, birleşim levhası üstünde bulunan elemana köşe kaynağı ile bağlanmıştır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "06",
+    "similar": [
+        12
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

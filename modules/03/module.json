@@ -1,0 +1,23 @@
+{
+    "id": 3,
+    "title": "Birleşim 3 — Eksenel Kuvvet ve Kesme Kuvveti Birleşimi",
+    "desc": "Bu birleşim, eksenel normal kuvvet etkisindeki boru enkesitli bir elemanın, I enkesitli kirişlere üst ve alt uçlarından bağlanmasıyla oluşturulmuştur. Eksenel kuvvet, çekme veya basınç olabilir. Birleşimdeki boru enkesitli eleman, üst seviyesinde bulunan ve kolona basit oturacak şekilde tasarlanmış kiriş için destek vazifesi görmektedir (bk. Birleşim 27). Kolon, üzerindeki kirişten aldığı yükü, altında bulunan rijit destekli (bk. Birleşim 26) kirişe aktarmak için kullanılan bir link elemanıdır. Kolon, esas olarak basınca çalışır ancak birleşimin kesme ve/veya çekme durumlarını da içeren bütün alternatiflere göre tasarlanması önemlidir. Bu birleşim, kirişin başlığına bulonlarla bağlanmış bir kolon ve uç levhasından oluşmaktadır. Uç levhası, boru enkesitli kolona atölye kaynaklı olarak şantiye sahasına nakledilir ve sahada kirişin başlığına bulonlanır. Kiriş gövdesinde yerel burkulmayı önlemek için kirişte gövde rijitlik levhalarının kullanılması doğru bir yaklaşımdır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kaymada akma",
+        "Kaymada kırılma",
+        "Blonlarda çekme",
+        "Blonlarda ilave kaldırma kuvveti (manivela) etkisi",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "03",
+    "similar": [
+        9
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

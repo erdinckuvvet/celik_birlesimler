@@ -1,0 +1,29 @@
+{
+    "id": 21,
+    "title": "Birleşim 21 — Kesme Kuvveti Birleşimi",
+    "desc": "Birleşim 21, bir önceki birleşimin çok benzeri olan bir kesme kuvveti birleşimidir. Kirişler arasındaki açı, birleşim aracı olarak bir köşebent kullanmaya imkân tanımadığından, birleşim 20’nin aksine, birleşim aracı olarak bir levha yerine, bükülmüş bir levha kullanılmıştır. Bu tür birleşimlerde bükülmüş levha, ikincil kirişin gövdesine atölyede kaynaklanarak inşaat sahasına getirilir. Şantiyede ana kirişin gövdesine bulonlanarak birleşim tamamlanır. Kaynak ve bulonlamada elemanlar tercihe göre yer değiştirebilir. Yani birleşim levhası ana kirişe kaynaklanıp, ikincil kirişe bulonlanabilir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Eğilme etkisinde akma",
+        "Eğilme etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "21",
+    "similar": [
+        1,
+        2,
+        8,
+        19,
+        20,
+        29,
+        36
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

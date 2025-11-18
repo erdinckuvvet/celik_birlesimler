@@ -1,0 +1,22 @@
+{
+    "id": 16,
+    "title": "Birleşim 16 — Eksenel Kuvvet Birleşimi ",
+    "desc": "Birleşim 16, eksenel çekme kuvveti etkisine maruz dairesel enkesitli bir çapraz elemanın kirişle birleşimini göstermektedir. Birleşimde birisi kirişe, diğeri çekme çubuğuna kaynaklı olarak bağlanmış iki adet levha kullanılmıştır. Dairesel enkesitli çekme çubuğunun levhaya bağlanabilmesi için, levha üzerinde dikdörtgen biçimli bir yarık açılmış, bu yarığa yerleştirilen çekme çubuğunun kenarları boyunca iki parça birbirine köşe kaynağı ile kaynaklanmıştır. Diğer levha, I enkesitli kiriş ile temas ettiği hat boyunca ve çift taraflı olmak üzere yine köşe kaynağı ile kiriş başlığına kaynaklanmıştır. İki levha birbirine tek bir bulon yardımıyla bağlanarak birleşim tamamlanmıştır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Çekme etkisinde kırılma",
+        "Çekme etkisinde akma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "16",
+    "similar": [
+        "Notu: Tamamlayıcı Birleşim: 28",
+        28
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

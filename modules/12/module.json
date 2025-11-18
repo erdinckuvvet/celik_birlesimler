@@ -1,0 +1,19 @@
+{
+    "id": 12,
+    "title": "Birleşim 12 — Eksenel Kuvvet Birleşimi",
+    "desc": "Birleşim 12, 11 numaralı birleşimde kullanılan link elemanını üst noktaya bağlayan birleşimdir. T enkesitli link elemanı bir birleşim levhasına çevresi boyunca kaynakla bağlanmış, aynı levha üstünde yer alan I enkesitli kirişin alt başlığına bulonlar kullanılarak bağlanmıştır. Örnekte link elemanının boyu rastgele seçilmiş olup değişebileceğine dikkat edilmelidir. Link elemanı çekme etkisinde çalışan bir yapısal eleman olmasına karşın, boyu daha uzun olduğunda basınç etkisinde burkulma, belirleyici mekanik davranış olacaktır.",
+    "limits": [
+        "Bulonlarda çekme",
+        "Bulonlarda ilave kaldırma kuvveti",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "12",
+    "similar": [
+        11,
+        "Notu: Tamamlayıcı Birlesimler: 6-5, 12-11 "
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

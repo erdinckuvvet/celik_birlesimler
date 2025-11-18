@@ -1,0 +1,16 @@
+{
+    "id": 53,
+    "title": "Birleşim 53 — Kesme Kuvveti ve Eğilme Momenti Birleşimi",
+    "desc": "Birleşim 53 Birleşim 47’nin çok benzeri olan bir kolon-kiriş birleşimidir. Birleşim 47’nin aksine bu birleşimde iki adet levha yerine tek bir levha kullanılmış, dolayısıyla kolon ve kiriş bu levhaya doğrudan kaynaklanarak birleşim tamamlanmıştır. Kaynakların atölyede yapılması durumunda kolon ve kirişten oluşan yapının bütün olarak inşaat sahasına nakli zorunluluk olmaktadır. Değişken kesitli kiriş uygulamalarında sıklıkla rastlandığı gibi, kirişin birleşim bölgesi dışında ve fakat yakınında diğer bir eki barındırdığı durumlarda tercih edilen bir birleşim türüdür. Üst başlığı levhaya bağlayan kaynak dikişlerinde taşıma gücünün aşılması durumunda kolon ve kiriş başlıklarını dıştan bağlayan bir çekme levhası da kullanılabilir. Burada birleşimin eğilme momenti kapasitesi araştırılacaktır.",
+    "limits": [
+        "Kaynak mukavemeti"
+    ],
+    "folder": "53",
+    "similar": [
+        47
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

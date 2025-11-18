@@ -1,0 +1,18 @@
+{
+    "id": 39,
+    "title": "Birleşim 39 — Kesme Kuvveti Birleşimi",
+    "desc": "Tipik bir çapraz-kiriş birleşimini temsil eden 39 numaralı birleşim, 38 numaralı birleşimin diğer ucudur. Çapraz elemanının eksenel yük aktardığı 38 ve 39 numaralı birleşimlerde mesnetlenmenin mafsallı olduğu kabul edilmektedir. Örnekte çapraz elemanı bir kutu profilden tasarlanmış olup birleşim levhasına bağlantısı kaynak dikişleri yardımıyla sağlanmıştır. Bunun için, kutu profil üzerinde levhanın sığabileceği genişlikte yarık açılmış, levha bu yarığa yerleştirildikten sonra köşe kaynakları ile birleştirilmiştir. Birleşim levhası kiriş başlığına köşe kaynak dikişleri ile kaynaklanarak birleşim tamamlanmıştır.",
+    "limits": [
+        "Çekme etkisinde akma",
+        "Çekme etkisinde kopma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "39",
+    "similar": [
+        38
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

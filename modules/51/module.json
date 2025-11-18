@@ -1,0 +1,18 @@
+{
+    "id": 51,
+    "title": "Birleşim 51 — Eğilme Momenti Birleşimi",
+    "desc": "Birleşim 51 kirişin kolon üzerine oturduğu bir kolon-kiriş birleşimidir. Büyük eğilme momentleri aktarmak gerektiğinde tercih edilen bu birleşimde kolon-kiriş ara yüzünün dışına taşan bir levha kullanılmıştır. Kolonun üstüne kaynaklan levha kiriş başlığına bulonlanarak birleşim tamamlanmıştır. Eğilme momentinin aktarımı sırasında kolon veya kirişin gövdesinde ortaya çıkması muhtemel yerel stabilite problemlerini engellemek amacıyla hem kolonda hem de kirişte rijitlik levhaları kullanılmıştır. Ayrıca kolon-kiriş birleşim bölgesi dışına taşan levhayı desteklemek maksadıyla üçgen biçimli bir bayrak levhası kullanılmıştır. Yine bu bayrak levhasında oluşabilecek burkulma ve/veya buruşma risklerini ortadan kaldırmak ve gerekirse mesnet bölgesinde kiriş kesitini güçlendirmek maksadıyla bu bayrak levhasının uç kısmına diğer bir levha kaynakla bağlanarak birleşim bölgesi takviye edilmiştir. Kolonun üst kotlara devam ettiği durumlarda birleşim, kolon başlığından da gerçekleştirilebilir.",
+    "limits": [
+        "Bulonlarda çekme",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "51",
+    "similar": [
+        15,
+        47
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "id": 47,
+    "title": "Birleşim 47 — Kesme Kuvveti ve Eğilme Momenti Birleşimi",
+    "desc": "Bu birleşim kesme kuvveti ve eğilme momenti aktaran bir kolon-kiriş birleşimidir. Kolon profili ile kiriş profilinin aynı kesitler olarak seçildiği tasarımlarda uygulama kolaylığı bakımından tercih edilmektedir. Kolon ile kirişin açılı olarak kesildiği (bu örnekte 45°) uygulamada, kiriş ve kolon birbirini tam olarak örtmektedir. Birleşimde, biri kolona diğeri kirişe kaynakla bağlanmış olan aynı boyutlu iki adet levha kullanılmıştır. Levhalar kolon ve kirişe atölyede kaynaklanmış olarak şantiye sahasına nakledilirler. Şantiyede her iki grup bulonlar yardımıyla birleştirilerek birleşim tamamlanmış olur. Uygulamada alın levhası kolon-kiriş birleşim ara yüzünün her iki tarafından dışarı doğru taşırılabileceği gibi, birtakım gerekçelerle taşırılmadan da uygulanabilir. Bulon diziliminde dışarı taşan levha bölümleri de kullanılabilir. Bu bölümde birleşimin kesme kuvveti kapasitesi araştırılacaktır. Kirişteki iç kuvvetlerin kolona aktarılmasını sağlayan bu birleşimin hesabında kiriş ucunda hesaplanan iç kuvvetlerin levha düzlemine indirgenmesi gerektiği unutulmamalıdır. Yani burada hesaplanan kapasite değerleri levha düzlemindeki değerler olacaktır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "47",
+    "similar": [
+        52
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "id": 5,
+    "title": "Birleşim 5 — Kesme Kuvveti Birleşimi",
+    "desc": "Bu birleşim, dairesel enkesitli kolana basit oturan I enkesitli kirişi desteklemek için bir eksenel çekme elemanın (çift köşebent) nasıl kullanıldığını göstermektedir (bk. Birleşim 4). Birleşimde köşebentler I kirişin ucundaki kuvveti, üstünde bulunan diğer bir elemana (birleşimde levha olarak gösterilmiştir) transfer etmektedirler (bk. Birleşim 6). Köşebentler, kirişin gövdesine bulonlar yardımıyla birleştirilmiştir. Bu birleşimin yapılabilmesi için I kirişin başlığının tamamının ve gövdesinin bir bölümünün, birleşime izin verecek ölçüde kesilmesi gerekmektedir. Bu işlemin bulon deliğinin ezilme dayanımını azalttığı açıktır. Kiriş mesnedinde oluşan kesme kuvvetinin aktarılmasını sağlayan bu birleşimde, köşebentlerin çekme çubuğu olduğuna dikkat edilmelidir.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Eğilme etkisinde akma",
+        "Kiriş gövdesinde yerel burkulma",
+        "Kayma etkisinde akma (Kiriş)",
+        "Çekme etkisinde akma (Köşebentler)",
+        "Çekme etkisinde kırılma (Köşebentler)"
+    ],
+    "folder": "05",
+    "similar": [
+        11
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

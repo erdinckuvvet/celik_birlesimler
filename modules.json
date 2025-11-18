@@ -1,0 +1,1148 @@
+[
+    {
+        "id": 1,
+        "title": "Birleşim 1 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 1, tek bir köşebent (korniyer) yardımıyla oluşturulmuş basit bir kesme kuvveti birleşimidir. Bu tip birleşimlerde, birleşimi oluşturan iki unsur birbirlerine düzlemleri dışında yaklaşır ve genellikle diktir. Birleşim çoğunlukla, I kesitli kirişin gövdesine atölyede kaynaklanan köşebentin, sahada U kesitli kirişe bulon (cıvata) ile bağlanmasıyla tamamlanmış olur. Köşebent hem kök noktasından hem de kol ucundan tüm uzunluğu boyunca kaynaklanır. Birleşen parçaların kesit yüksekliklerinin aynı olması veya üst başlıklarının aynı hizada olması gibi durumda birleşen parçalardan talî (ikincil) olanın (bu örnekte U kesitli kiriş) başlıkları kesilip çıkarılarak ana kirişe yaklaşmasının sorunsuz olması sağlanır. Bu örnekte U-kesitinin, yüksekliği ana kiriş yüksekliğinde daha küçük olduğu için, I-kesitli ana kirişin başlıkları (flanşları) arasına sığabilecek yeterli boşluk olduğundan herhangi bir kesim işlemi uygulanmamıştır. U kesitli kirişin üst başlığı I kesitinin üst başlığı ile aynı hizada olmadığından, bu birleşim tipi muhtemelen köprü kirişlerinin, çatı veya döşeme kirişlerinin yanal kuşaklamalarında kullanılacaktır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kaymada akma",
+            "Kaynakta kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "01",
+        "similar": [
+            2,
+            8,
+            19,
+            20,
+            21,
+            29,
+            36
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Birleşim 2 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 2, çift köşebent veya L şeklinde bükülmüş iki levha kullanılarak oluşturulmuş basit bir kesme kuvveti birleşimidir. Kiriş-kiriş birleşimi olan bu yapı, köşebentin bir kolunun ana kirişinin (I enkesitli) gövdesine bulonlanması ve diğer kolunun üç kenarı boyunca talî (ikincil) kirişin (ikinci I enkesitli) gövdesine ark kaynağı ile bağlanmasıyla tamamlanmış olur. Her iki kiriş plânda çoğunlukla birbirine dik olarak yaklaşırlar. Kaynaklar genellikle imalathanede yapılırken, bulonlar şantiyede tamamlanır. Talî kirişin gövdesinin her iki tarafında birer köşebent bulunduğuna dikkat edilmelidir. İki I kirişin üst başlığı birbiriyle aynı hizada olmadığından, bu birleşim tipi muhtemelen köprü kirişlerinin, çatı veya döşeme kirişlerinin yanal desteklemelerinde kullanılacaktır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kaymada akma",
+            "Kaymada kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "02",
+        "similar": [
+            1,
+            8,
+            19,
+            20,
+            21,
+            29
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Birleşim 3 — Eksenel Kuvvet ve Kesme Kuvveti Birleşimi",
+        "desc": "Bu birleşim, eksenel normal kuvvet etkisindeki boru enkesitli bir elemanın, I enkesitli kirişlere üst ve alt uçlarından bağlanmasıyla oluşturulmuştur. Eksenel kuvvet, çekme veya basınç olabilir. Birleşimdeki boru enkesitli eleman, üst seviyesinde bulunan ve kolona basit oturacak şekilde tasarlanmış kiriş için destek vazifesi görmektedir (bk. Birleşim 27). Kolon, üzerindeki kirişten aldığı yükü, altında bulunan rijit destekli (bk. Birleşim 26) kirişe aktarmak için kullanılan bir link elemanıdır. Kolon, esas olarak basınca çalışır ancak birleşimin kesme ve/veya çekme durumlarını da içeren bütün alternatiflere göre tasarlanması önemlidir. Bu birleşim, kirişin başlığına bulonlarla bağlanmış bir kolon ve uç levhasından oluşmaktadır. Uç levhası, boru enkesitli kolona atölye kaynaklı olarak şantiye sahasına nakledilir ve sahada kirişin başlığına bulonlanır. Kiriş gövdesinde yerel burkulmayı önlemek için kirişte gövde rijitlik levhalarının kullanılması doğru bir yaklaşımdır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kaymada akma",
+            "Kaymada kırılma",
+            "Blonlarda çekme",
+            "Blonlarda ilave kaldırma kuvveti (manivela) etkisi",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "03",
+        "similar": [
+            9
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Birleşim 4 — Kesme Kuvveti Birleşimi ",
+        "desc": "Bu birleşim, I enkesitli bir kiriş ile boru enkesitli bir kolonun oluşturduğu, yalnız kesme kuvveti aktaran kiriş-kolon birleşimidir. Birleşimde, dairesel kolon profilinde açılan boşluğa girerek bütün kolon kesitini boydan boya geçen bir levha kullanılmıştır. Levha, kiriş tarafında birleşime imkân verecek uzunlukta tasarlanırken, diğer tarafta kolona kaynak imkânı verecek ölçüde kolondan dışarı taşırılmıştır. Boşluktan geçen levha ile kolon, kolon dış yüzeyinin kesiştiği hatlar boyunca kaynakla birbirine bağlanmıştır. Kaynaklarının genellikle atölyede tamamlandığı bu birleşim, dairesel kesitli kolonlar kullanıldığı zaman sıklıkla tercih edilen bir birleşim tipidir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kaymada akma",
+            "Kaymada kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "04",
+        "similar": [
+            27,
+            35
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Birleşim 5 — Kesme Kuvveti Birleşimi",
+        "desc": "Bu birleşim, dairesel enkesitli kolana basit oturan I enkesitli kirişi desteklemek için bir eksenel çekme elemanın (çift köşebent) nasıl kullanıldığını göstermektedir (bk. Birleşim 4). Birleşimde köşebentler I kirişin ucundaki kuvveti, üstünde bulunan diğer bir elemana (birleşimde levha olarak gösterilmiştir) transfer etmektedirler (bk. Birleşim 6). Köşebentler, kirişin gövdesine bulonlar yardımıyla birleştirilmiştir. Bu birleşimin yapılabilmesi için I kirişin başlığının tamamının ve gövdesinin bir bölümünün, birleşime izin verecek ölçüde kesilmesi gerekmektedir. Bu işlemin bulon deliğinin ezilme dayanımını azalttığı açıktır. Kiriş mesnedinde oluşan kesme kuvvetinin aktarılmasını sağlayan bu birleşimde, köşebentlerin çekme çubuğu olduğuna dikkat edilmelidir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Eğilme etkisinde akma",
+            "Kiriş gövdesinde yerel burkulma",
+            "Kayma etkisinde akma (Kiriş)",
+            "Çekme etkisinde akma (Köşebentler)",
+            "Çekme etkisinde kırılma (Köşebentler)"
+        ],
+        "folder": "05",
+        "similar": [
+            11
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Birleşim 6 — Eksenel Kuvvet Birleşimi",
+        "desc": "Bu birleşim, Birleşim 5’in devamı niteliğinde kabul edilebilir. Birleşim 5, kiriş yükünü daha yukarısında bulunan bir elemana transfer eden köşebentlerin, altta bulunan I enkesitli kirişe bağlantısını incelerken, Birleşim 6 aynı transfer elemanlarının üst ucunun birleşimini ele almaktadır. Birleşimin yapısı gereği üstte bulunan eleman, hesaplar bakımından belirleyici olmadığından, birleşim resminin daha anlaşılır olabilmesi için burada ayrıntılı olarak verilmemiş, sadece birleşim levhası olarak gösterilmiştir. Birleşimde çekme elemanı olarak görev yapan köşebentler, bu birleşim levhasına bulonlar ile bağlanırken, birleşim levhası üstünde bulunan elemana köşe kaynağı ile bağlanmıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "06",
+        "similar": [
+            12
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Birleşim 7 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 7, iki I enkesitli kiriş arasında oluşturulmuş, kesme kuvveti aktaran basit bir kiriş-kiriş birleşimidir. Uygulamada sıklıkla tercih edilen bu birleşimde kirişler, düzlemleri dışında ve genel olarak birbirlerine dik yaklaşırlar. Birleşimde iki adet levha, talî (ikincil) kirişin gövdesine kaynaklanmış, sonra levhalar ana kirişin gövdesine bulonlarla bağlanarak birleşim tamamlanmıştır. Birleşimde kullanılan kirişlerin kesit yükseklikleri birbiriyle aynı olduğundan, talî kirişin hem alt hem de üst başlığı kesilerek talî kirişin ana kirişe sorunsuz olarak yaklaşması sağlanmıştır. Bu durumun, talî kirişin eğilme kapasitesini olumsuz olarak etkilediği, daha önceki örneklerde olduğu gibi, hatırlanmalıdır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Yanal burulmalı burkulma",
+            "Kayma etkisinde akma",
+            "Kaymada kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "07",
+        "similar": [
+            13,
+            14,
+            32
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Birleşim 8 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 8, iki I enkesitli kiriş arasında oluşturulmuş, kesme kuvveti aktaran basit bir kiriş-kiriş birleşimidir. Uygulamada sıklıkla tercih edilen bu birleşimde kirişler, düzlemleri dışında ve genellikle birbirlerine dik yaklaşırlar. Birleşimde iki adet köşebent, talî (ikincil) kirişin gövdesine bulonlarla birleştirilmiş, sonra köşebentler ana kirişin gövdesine kol uçları boyunca kaynaklanarak birleşim tamamlanmıştır. Bu birleşimde kaynaklar, genellikle atölyede yapılırken, bulonlar ise şantiyede yerine takılır. Birleşimde kullanılan kiriş kesit yükseklikleri birbirinden farklı olduğundan, talî kirişin başlıklarının kesilmesine gerek olmamıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kaymada akma",
+            "Kaymada kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "08",
+        "similar": [
+            1,
+            2,
+            19,
+            20,
+            21,
+            29,
+            36
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Birleşim 9 — Eksenel Kuvvet ve Kesme Kuvveti Birleşimi ",
+        "desc": "Bu birleşim, eksenel normal kuvvet etkisindeki kutu enkesitli bir elemanın I enkesitli kirişlere üst ve alt uçlarından bağlanmasıyla oluşturulmuştur. Bu birleşim, kirişlerinin başlığına bulonlu bir kolon ve kolona kaynaklı uç levhasından oluşan birleşimde eksenel kuvvet çekme veya basınç olabilir. Kutu enkesitli kolon uç levhasına, atölye kaynaklı olarak şantiye sahasına nakledilir ve sahada kirişin başlığına bulonlanır. Bu durum genellikle, bina türü yapıların katları arasında ilave kolona ihtiyaç duyulduğunda ortaya çıkar. Birleşimde, kiriş gövdesinde yerel burkulmayı önlemek amacıyla, kirişin başlıkları arasında rijitlik levhaları kullanılmalıdır..",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Blonlarda çekme",
+            "Blonlarda ilave kaldırma kuvveti (manivela) etkisi",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "09",
+        "similar": [
+            3
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Birleşim 10 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 10, kutu enkesitlere sahip bir kolon-kiriş birleşimidir. Birleşimde, kirişin kesme kuvveti aktarımını kolaylaştırmak amacıyla kolon yüzüne kaynakla bağlanana bir köşebent kullanılmıştır. Birleşimde, bir yüzü açık bırakılan kutu enkesitli kiriş, bu köşebentin üzerine oturacak şekilde yerleştirilir ve kiriş, kolon yüzüne kaynakla bağlanarak birleşim tamamlanır. Birleşim, dış ortam etkilerine maruz kalacaksa, açık kısımları uygun bir şekilde kapatılabilir.",
+        "limits": [
+            "Eğilme etkisinde akma",
+            "Eğilme etkisinde kırılma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "10",
+        "similar": [
+            42
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Birleşim 11 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 11, birleşim yapıları farklı olmakla birlikte fonksiyonel olarak Birleşim 5 ile aynıdır. Kutu enkesitli bir kiriş, T enkesitli düşey bir elemanın başlığına bulonlarla bağlanmıştır. Bulonlu birleşimin gerçekleştirilebilmesi için kutu enkesitli kirişin uç kısmına bir birleşim levhası kaynakla bağlanmıştır. Birleşimde T enkesitli eleman, tıpkı 5 ve 6 numaralı birleşimlerde olduğu gibi, kutu enkesitli kirişten aldığı yükü, üstünde bulunan başka bir kirişe aktaran yani kirişler arasında bir link vazifesi gören bir transfer elemanıdır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "11",
+        "similar": [
+            12,
+            "Notu: Tamamlayıcı Birlesimler: 6-5, 12-11 "
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Birleşim 12 — Eksenel Kuvvet Birleşimi",
+        "desc": "Birleşim 12, 11 numaralı birleşimde kullanılan link elemanını üst noktaya bağlayan birleşimdir. T enkesitli link elemanı bir birleşim levhasına çevresi boyunca kaynakla bağlanmış, aynı levha üstünde yer alan I enkesitli kirişin alt başlığına bulonlar kullanılarak bağlanmıştır. Örnekte link elemanının boyu rastgele seçilmiş olup değişebileceğine dikkat edilmelidir. Link elemanı çekme etkisinde çalışan bir yapısal eleman olmasına karşın, boyu daha uzun olduğunda basınç etkisinde burkulma, belirleyici mekanik davranış olacaktır.",
+        "limits": [
+            "Bulonlarda çekme",
+            "Bulonlarda ilave kaldırma kuvveti",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "12",
+        "similar": [
+            11,
+            "Notu: Tamamlayıcı Birlesimler: 6-5, 12-11 "
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Birleşim 13 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 13, iki I enkesitli kiriş arasında oluşturulmuş, kesme kuvveti aktaran basit bir kiriş-kiriş birleşimidir. Uygulamada sıklıkla tercih edilen bu birleşimde kirişler, düzlemleri dışında genellikle birbirlerine dik yaklaşırlar. Birleşimde iki adet köşebent, talî (ikincil) ve ana kirişin gövdelerine bulonlarla birleştirilerek birleşim tamamlanmıştır. Birleşimde kullanılan kirişlerin, kesit yükseklikleri birbirinden farklı olmakla birlikte, üst başlık seviyeleri aynıdır. Birleşimin imal edilebilmesi için, talî kirişin üst başlığı kesilerek, ana kirişe sorunsuz olarak yaklaşması sağlanmıştır. Talî kirişle ana kirişin aynı seviyede olması, bu kirişin bir döşeme kirişi olduğunu gösterir. Tali kirişin üst başlığının kesilmesi birleşimde bulon deliği ezilme dayanımının yanında, talî kirişin eğilme kapasitesini de olumsuz olarak etkileyecektir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Yanal burulmalı burkulma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "13",
+        "similar": [
+            7,
+            14,
+            32
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Birleşim 14 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 14, I enkesitli üç kirişin oluşturduğu bir kiriş-kiriş birleşimidir. Birleşimde kesit yükseklikleri birbirinden farklı olan iki kiriş aynı düzlemde, üçüncü kiriş bu ikisine dik olarak bulunmaktadır. Birleşim aracı olarak 2 adet köşebent kullanılmıştır. Aynı düzlemdeki kirişleri, ana kirişin gövdesine bağlayan bulonların bir kısmı, 3 parçayı birleştirdikleri için 2 kayma düzlemine, bir kısmı tek kayma düzlemine sahip olmaktadırlar. Birleşimdeki her üç kirişin üst başlık seviyeleri de aynıdır. Daha önceki örneklerde olduğu gibi bu durumda da ikincil kirişlerin başlıkları veya bir tek başlığı ile gövdesinin bir bölümünün kesilerek ana kirişe sorunsuz yaklaşması temin edilmiştir. Kolon akslarında bulunan ana kirişe, farklı açıklıklara sahip döşeme kirişlerinin bağlanmasıyla oluşturulan bu tür birleşimlere çok katlı binalarda sıklıkla rastlanılmaktadır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Eğilme etkisinde yerel burkulma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "14",
+        "similar": [
+            7,
+            13,
+            32
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Birleşim 15 — Moment Birleşimi",
+        "desc": "Birleşim 15, moment aktaran bir kolon-kiriş birleşimidir. Hem kolon hem de kirişin, I enkesitli elemanlardan seçildiği birleşimin ara yüzünde bir adet alın levhası kullanılmıştır. Levha, kiriş enkesitine çepeçevre kaynaklanmış, kolon başlığına ise bulonlarla bağlanmıştır. Sekiz adet bulon kullanılan birleşimde, eğilme momenti etkisiyle bulonların dördü çekme, diğer dördü de basınç bölgesinde kalmaktadır. Kiriş enkesitinin başlıkları çekme ve basınç bölgesinde yer alan bu dört bulona hizalanmıştır. Birleşimde kaynaklar genellikle atölye kaynağı olarak uygulanırken, bulonlar şantiyede takılabilmektedir.",
+        "limits": [
+            "Bulonlarda çekme",
+            "Kaynak dayanımı"
+        ],
+        "folder": "15",
+        "similar": [
+            24,
+            26,
+            34,
+            41,
+            42
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Birleşim 16 — Eksenel Kuvvet Birleşimi ",
+        "desc": "Birleşim 16, eksenel çekme kuvveti etkisine maruz dairesel enkesitli bir çapraz elemanın kirişle birleşimini göstermektedir. Birleşimde birisi kirişe, diğeri çekme çubuğuna kaynaklı olarak bağlanmış iki adet levha kullanılmıştır. Dairesel enkesitli çekme çubuğunun levhaya bağlanabilmesi için, levha üzerinde dikdörtgen biçimli bir yarık açılmış, bu yarığa yerleştirilen çekme çubuğunun kenarları boyunca iki parça birbirine köşe kaynağı ile kaynaklanmıştır. Diğer levha, I enkesitli kiriş ile temas ettiği hat boyunca ve çift taraflı olmak üzere yine köşe kaynağı ile kiriş başlığına kaynaklanmıştır. İki levha birbirine tek bir bulon yardımıyla bağlanarak birleşim tamamlanmıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde kırılma",
+            "Çekme etkisinde akma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "16",
+        "similar": [
+            "Notu: Tamamlayıcı Birleşim: 28",
+            28
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Birleşim 17 — Kesme Kuvveti ve Moment Birleşimi",
+        "desc": "Bu birleşim bir çelik kolon-betonarme temel birleşimidir. Kolon profili ile betonarme temelin ara yüzü olan taban levhası, I enkesitli kolona tüm çevresinden atölyede kaynaklanmıştır. Taban levhasındaki eğilmeleri sınırlandırmak için genellikle, levha ile kolon arasına üçgen biçimli rijitlik levhaları tasarlanmaktadır. Bu rijitlik levhaları, kolon taban levhasına verdikleri eğilme katkısının yanında, kesme kuvveti aktarımında rol alan kaynak boyunu da uzatmaktadırlar. Taban levhası üzerine açılan delikler, betonarme temel betonu dökülürken beton içine yerleştirilen ankraj çubukları içindir. Bu birleşimler moment aktarmayan basit mesnet olarak da moment aktaran ankastre mesnet olarak da tasarlanabilirler. Ankastre tasarımlarda rijitlik levhalarının kullanımı zorunludur. Kolondaki eğilme momenti kolonun kuvvetli ve/veya zayıf ekseni etrafında olabilir. Bu birleşimde eğilme momenti kuvvetli eksen etrafındadır.",
+        "limits": [
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Bulonlarda çekme",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "17",
+        "similar": [
+            39
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Birleşim 18 — Kesme Kuvveti Birleşimi",
+        "desc": "Döşemeleri betonarme olarak tasarlanan çelik yapılarda, betonarme döşeme ile döşeme kirişleri arasında bir çelik eleman kullanılarak beton ve çeliğin birlikte çalışmasının temin edildiği kompozit bir sistemden söz edilebilir. Bu kompozit yapıda, tıpkı betonarme tablalı kirişlerde olduğu gibi, basınç bölgesinde betonarme döşemenin, çekme bölgesinde çeliğin yer aldığı tablalı bir kesit ortaya çıkmış olur. Bu T-enkesitin ağırlık merkezi, çoğunlukla betonarme kesitin içinde kaldığından, çelik kiriş enkesiti tamamen çekme bölgesinde çalışır. Bu durum, taşıyıcı sistemde yer alan döşeme kirişlerinin daha ekonomik olarak boyutlandırılmasına imkân sağlar. Ayrıca, kiriş başlığını yanal olarak tuttuğu için yerel burkulma ihtimalini de ortadan kaldırmış olur.",
+        "limits": [
+            "başlıklı çelik ankraj (Kayma elemanı) dayanımı",
+            "Kompozit etkileşim için başlıklı çelik ankraj kayma dayanımı",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "18",
+        "similar": [],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Birleşim 19 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 19, ½ I enkesitli bir ara yüz elemanı kullanarak iki kirişi birleştiren basit bir kesme kuvveti birleşimidir. Bu birleşim, ½ I enkesitin başlık kenarları boyunca ana kirişinin (I enkesitli) gövdesine köşe kaynağı ile kaynaklanması, gövdesinin ise ikincil kirişin gövdesine bulonlanması ile tamamlanmış olur. Her iki kiriş plânda çoğunlukla birbirine dik olarak yaklaşırlar. Kaynaklar genellikle imalathanede yapılırken, bulonlar da genellikle şantiyede tamamlanır. İki I kirişin üst başlığı birbiriyle aynı hizada olmadığından, bu birleşim tipi muhtemelen köprü kirişlerinin, çatı veya döşeme kirişlerinin yanal desteklemelerinde kullanılacaktır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "19",
+        "similar": [
+            2,
+            8,
+            20,
+            21,
+            29,
+            36
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Birleşim 20 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 20, tek bir levha yardımıyla oluşturulmuş basit bir kesme kuvveti birleşimidir. Diğer birleşimlerin aksine bu birleşimde ikincil kiriş, ana kirişe dik olarak değil, yatayda belirli bir açı ile yaklaşmaktadır. Birleşim çoğunlukla, I enkesitli ana kirişin gövdesine atölyede kaynaklanan levhanın, sahada I enkesitli talî (ikincil) kirişe bulonlar ile bağlanmasıyla tamamlanmış olur.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "20",
+        "similar": [
+            1,
+            2,
+            8,
+            19,
+            21,
+            29,
+            36
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Birleşim 21 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 21, bir önceki birleşimin çok benzeri olan bir kesme kuvveti birleşimidir. Kirişler arasındaki açı, birleşim aracı olarak bir köşebent kullanmaya imkân tanımadığından, birleşim 20’nin aksine, birleşim aracı olarak bir levha yerine, bükülmüş bir levha kullanılmıştır. Bu tür birleşimlerde bükülmüş levha, ikincil kirişin gövdesine atölyede kaynaklanarak inşaat sahasına getirilir. Şantiyede ana kirişin gövdesine bulonlanarak birleşim tamamlanır. Kaynak ve bulonlamada elemanlar tercihe göre yer değiştirebilir. Yani birleşim levhası ana kirişe kaynaklanıp, ikincil kirişe bulonlanabilir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Eğilme etkisinde akma",
+            "Eğilme etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "21",
+        "similar": [
+            1,
+            2,
+            8,
+            19,
+            20,
+            29,
+            36
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Birleşim 22 — Kesme Kuvveti Birleşimi",
+        "desc": "Bir adet köşebent kullanılarak oluşturulmuş basit kesme kuvveti birleşimi olan birleşim 22, U enkesitli bir elemanın I enkesitli bir kirişe bağlantısından ibarettir. Daha önceki örneklerde de değinildiği üzere benzer olarak köşebent, talî (ikincil) elemana atölye kaynağı ile kaynaklanarak şantiye sahasında nakledilir. Şantiyede ana kirişe bulonlar yardımıyla bağlanarak birleşim tamamlanır. Diğer kesme kuvveti birleşimlerinden farklı olarak U enkesitli elemanın düşeyde bir açıyla ana kirişe yaklaştığı görülmektedir. Bu açı sebebiyle U enkesitli elemanın bir çapraz olduğu düşünülebilir. Birleşim elemanlarının I enkesitli asıl elemanın pozisyonuna göre ayarlandığı görülmektedir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "22",
+        "similar": [],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Birleşim 23 — Kesme Kuvveti Birleşimi",
+        "desc": "Bilindiği gibi kiriş ekleri, çelik yapıların kaçınılamaz önemli ayrıntılarındandır. Bu eklere, yapıda kullanılan kiriş açıklıklarının profil boylarından büyük olması durumunda veya kesilen profillerin değerlendirilmesi durumunda başvurulabileceği gibi, bazen de nakliye zorlukları sebebiyle kesilmek zorunda olan kirişlerin şantiyede tekrar eklenmesi durumlarında da başvurulabilmektedir. Kiriş ekleri, kirişin başlıkları ve gövdesinde tasarlanan ek elemanları sayesinde yapılabilmektedir. Gövde levhaları ve gövde ekinde bulunan birleşim araçları kesme kuvveti aktarırken, başlıklarda bulunan levha ve birleşim araçları başlığa etkiyen normal kuvveti aktarmakla yükümlüdürler. Bu normal kuvvet, eğilme momentinin kuvvet çiftine dönüştürülmesiyle elde edilen eksenel kuvvettir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma"
+        ],
+        "folder": "23",
+        "similar": [
+            24
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Birleşim 24 — Moment Birleşimi",
+        "desc": "Bilindiği gibi kiriş ekleri, çelik yapıların kaçınılamaz önemli ayrıntılarındandır. Bu eklere, yapıda kullanılan kiriş açıklıklarının profil boylarından büyük olması durumunda veya kesilen profillerin değerlendirilmesi durumunda başvurulabileceği gibi bazen de nakliye zorlukları sebebiyle kesilmek zorunda olan kirişlerin şantiyede tekrar eklenmesi durumlarında da başvurulabilmektedir. Kiriş ekleri, kirişin başlıkları ve gövdesinde tasarlanan ek elemanları sayesinde yapılabilmektedir. Gövdede bulunan levha ve bulonlar kesme kuvveti aktarırken, başlıklarda bulunan levha ve bulonlar başlığa etkiyen normal kuvveti aktarmakla yükümlüdürler. Bu normal kuvvet, eğilme momentinin kuvvet çiftine dönüştürülmesiyle elde edilen kuvvettir. Burada kiriş başlıklarını ekleyen levha ve bulonlar için hesap yapılarak eğilme momenti kapasitesi belirlenecektir.",
+        "limits": [
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma"
+        ],
+        "folder": "24",
+        "similar": [
+            23
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Birleşim 25 — Kesme Kuvveti Birleşimi",
+        "desc": "Örnek açıklama.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "25",
+        "similar": [
+            "Kontrol"
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Birleşim 26 — Moment Birleşimi",
+        "desc": "Birleşim 25’in devamı niteliğinde olan birleşim 26, kesme kuvveti ile eğilme momenti aktaran bir kolon-kiriş birleşiminin eğilme momenti kapasitesini değerlendirmektedir. Birleşimin, eğilme momentini aktarabilmesi için, I enkesitli kirişin başlıkları, kolona kaynakla bağlanmış levhaya, tam penetrasyonlu küt kaynak ile kaynaklanmıştır. Detayları Birleşim 25’te açıklandığı üzere, kirişin başlıkları kolona doğrudan kaynaklanması yerine, kolonun başlıkları arasını dolduran bir levhaya kaynaklanmış böylece, uygulamada kolaylık sağlanmıştır. Ayrıca bu levhalar kolon profili için ilave rijitlik sağlamıştır. Ayrıca bu uygulamada kiriş profilinde herhangi bir kesim işlemine gerek kalmamıştır. Sadece, kaynaklama işlemi için kiriş gövdesinde iki adet boşluk oluşturulmuştur.",
+        "limits": [
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "26",
+        "similar": [
+            15,
+            33,
+            34,
+            40,
+            41
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Birleşim 27 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 27, kolon ve kiriş arasında oluşturulan bir basit kesme kuvveti birleşimidir. Birleşimde, kirişin gövdesi kolonun gövdesine iki adet köşebent ve bulonlar kullanılarak birleştirilmiştir. Birleşimde kaynak kullanılmamıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma"
+        ],
+        "folder": "27",
+        "similar": [
+            4,
+            35
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Birleşim 28 — Eksenel Kuvvet Birleşimi",
+        "desc": "Birleşim 28, nispeten küçük bir yapıda kullanılmış olması muhtemel bir düşey çaprazın kolona birleşimini göstermektedir. Dolu gövdeli dairesel enkesitli çapraz eleman, I enkesitli kolonun gövdesine bulonlanarak birleşim tamamlanmıştır. Bulonla kolon gövdesi arasında çelik pul kullanılmıştır.",
+        "limits": [
+            "Çubukta çekme",
+            "Bulonda ilave kaldırma kuvveti (manivela etkisi)"
+        ],
+        "folder": "28",
+        "similar": [
+            16
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Birleşim 29 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 29, iki adet I enkesitli kiriş arasında oluşturulan bir kiriş-kiriş birleşimidir. Birleşimde bir adet levha kullanılmış olup bu levha asıl kirişe köşe kaynağı ile ikincil kirişe de bulonlar yardımıyla bağlanmıştır. Kirişlerin alt başlık seviyeleri aynı olduğundan, ikincil kirişin alt başlığının tamamı ile gövdesinin bir bölümünün birleşim bölgesinde kesilmesi bir zorunluluk olmuştur.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Yanal burulmalı burkulma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "29",
+        "similar": [
+            7,
+            13,
+            14,
+            32
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Birleşim 30 — Eksenel Kuvvet Birleşimi",
+        "desc": "Birleşim 30, kaynak ve bulonlar kullanan bir kolon ekidir. Kolon ekinin bir parçasına atölyede kaynaklanan levha, ekin diğer parçasına şantiyede bulonla bağlanarak ekleme işlemi tamamlanmaktadır. Daha önceki örneklerde verilen kiriş eklerinde açıklandığı üzere, kolon eklerinin de farklı sebepleri olabilir. Kolon eklerinin, eğilme momenti diyagramları takip edilerek, mümkün mertebe moment sıfır noktalarında gerçekleştirilmeleri önemlidir. Eğilme momentinin bulunduğu bir noktada ek yapılırsa, ekin normal kuvvetle birlikte eğilme momentini de taşıması gerektiği açıktır.",
+        "limits": [
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "30",
+        "similar": [
+            31
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Birleşim 31 — Eksenel Kuvvet Birleşimi",
+        "desc": "Bu birleşim, tamamen bulon kullanılarak oluşturulmuş bir kolon ekidir. Tamamen bulonlu olması hasebiyle ekleme işlemi bütünüyle şantiyede yapılabileceği gibi, bir bölümü atölyede diğer bölümü şantiyede de yapılabilir. Kolon ekindeki kuvvet aktarımı 30 numaralı birleşimle aynı olmakla beraber, 30 numaralı birleşimden tek farkı, birleşimde hiç kaynak kullanılmamasıdır. Klon eklerinin moment sıfır noktalarında yapılması tasarımcının elini rahatlatabilir. Ancak her durumda tasarımın bütün etkileri karşılayabilecek şekilde yapılması gerektiği unutulmamalıdır.",
+        "limits": [
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma"
+        ],
+        "folder": "31",
+        "similar": [
+            30
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Birleşim 32 — Kesme Kuvveti Birleşimi",
+        "desc": "Aynı enkesitlere sahip iki yapısal elemandan oluşan ve kiriş-kiriş birleşimi olarak tasarlanan bu birleşim, tek levha yardımıyla gerçekleştirilmiştir. Levha, ana kirişe kaynaklanmış ikincil kirişe ise bulonlar yardımıyla bağlanmıştır. Kesit yüksekliklerinin aynı olması sebebiyle talî kirişin alt ve üst başlıkları kesilerek çıkarılmıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Yanal burulmalı burkulma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "32",
+        "similar": [
+            7,
+            13,
+            14
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Birleşim 33 — Kesme Kuvveti ve Moment Birleşimi",
+        "desc": "Bir kolon-kiriş birleşimi olan 33 numaralı birleşimin, kirişten gelen kesme kuvveti ve eğilme momentini kolona aktarması beklenir. Birleşimin kesme kuvveti ve eğilme momenti kapasiteleri ayrı başlıklarda verilecektir. Bu başlık altında kesme kuvveti kapasitesi verilirken eğilme momenti kapasitesi 34 numaralı birleşimde hesaplanacaktır. Kesme kuvvetinin aktarılabilmesi için bir adet levha kullanılmıştır. Levha kolon başlığına köşe kaynağı ile kiriş gövdesine bulonlar ile bağlanmıştır. Kiriş başlıkları kolon başlığına tam penetrasyonlu küt kaynaklar ile doğrudan bağlanmıştır. Kirişin montaj ve kaynak işlemlerinin kolaylaştırılabilmesi için iki adet yardımcı montaj levhası kullanılmıştır. Kiriş gövdesinde açılan boşluklar, kaynağın kesintisiz yapılabilmesi için bir zorunluluktur.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "33",
+        "similar": [
+            25,
+            26,
+            40,
+            41
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Birleşim 34 — Kesme Kuvveti ve Moment Birleşimi",
+        "desc": "Bir kolon-kiriş birleşimi olan 34 numaralı birleşimin kirişten gelen kesme kuvveti ve eğilme momentini kolona aktarması beklenir. Birleşimin kesme kuvveti kapasitesi bir önceki bölümde verilmişti. Bu başlık altında birleşimin eğilme momenti kapasitesi araştırılacaktır. Eğilme momentinden kaynaklanan kuvvetler, bilindiği üzere başlık ve bağlı elemanlar tarafından aktarılır. Bunun için kiriş başlıkları doğrudan kolon başlığına küt kaynaklar ile bağlanmıştır. Montaj ve kaynak işlemlerinin kolaylaştırılabilmesi için iki adet yardımcı montaj levhası kullanılmıştır. Kiriş gövdesinde açılan boşluklar kaynağın kesintisiz yapılabilmesi için bir zorunluluktur.",
+        "limits": [
+            "Kaynak mukavemeti"
+        ],
+        "folder": "34",
+        "similar": [
+            25,
+            26,
+            40,
+            41
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Birleşim 35 — Kesme Kuvveti Birleşimi",
+        "desc": "Bu birleşim, kolon-kiriş arasında sadece kesme kuvveti aktaran basit kesme kuvveti birleşimidir. Birleşim ara yüzü olarak iki adet köşebentin kullanıldığı birleşimde, sadece bulon kullanılmıştır. 27 numaralı birleşimden tek fark kirişin, kolonun gövdesine değil de başlığına bağlanmış olmasıdır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "35",
+        "similar": [
+            7,
+            27
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Birleşim 36 — Kesme Kuvveti Birleşimi",
+        "desc": "Basit bir kesme kuvveti birleşimi olarak tasarlanan Birleşim 36, iki adet köşebent kullanılarak oluşturulmuş bir kiriş-kiriş birleşimidir. Birleşimde kullanılan talî (ikincil) kirişin üst başlığının tamamı ile gövdesinden bir bölümü kesilerek çıkarılmıştır. Talî kirişin üst başlığı ana kirişe göre daha yüksekte konumlandırılmıştır. Ayrıca talî kirişin alt başlığı, bu örnekte gerekli olmasa da kesilerek çıkarılmıştır. Köşebentler tali kirişe atölyede kaynaklanmış, ana kirişe şantiyede bulonlar yardımıyla bağlanarak birleşim tamamlanmıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Yanal burulmalı burkulma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "36",
+        "similar": [
+            1,
+            2,
+            8,
+            19,
+            20,
+            21,
+            29
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Birleşim 37 —  Kesme Kuvveti ve Moment Birleşimi",
+        "desc": "Bu birleşim bir kolon-temel birleşimidir. Kolon profili ile temel ara yüzü olan taban levhası I enkesitli kolona tüm çevresinden atölyede kaynaklanmıştır. Ankastre olarak tasarlanan birleşimlerde taban levhasındaki eğilmeleri sınırlandırmak için genellikle levha ile kolon arasına üçgen biçimli rijitlik levhaları tasarlanmaktadır. Bu levhalar, taban levhasına verdikleri eğilme katkısının yanında, kesme kuvveti aktarımında rol alan kaynak boyunu da uzatmaktadırlar. Mafsallı olarak tasarlanan birleşimlerde genellikle rijitlik levhaları kullanılmamaktadır. Taban levhası üzerine açılan delikler, betonarme temel betonu dökülürken beton içine yerleştirilen ankraj çubukları içindir. Kolondaki eğilme momenti kolonun kuvvetli veya zayıf ekseni etrafında olabilir. Bu birleşimde eğilme momenti kolon profilinin zayıf ekseni etrafındadır.",
+        "limits": [
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Bulonlarda çekme",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "37",
+        "similar": [
+            17
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Birleşim 38 — Eksenel Kuvvet Birleşimi",
+        "desc": "Tipik bir çapraz-kolon birleşimini temsil eden 38 numaralı birleşimi, 39 ile birlikte düşünmek gerekir. Çapraz elemanının eksenel yük aktardığı 38 ve 39 numaralı birleşimlerde mesnetlenmenin mafsallı olduğu kabul edilmektedir. Örnekte, çapraz elemanı bir kutu profilden tasarlanmış olup birleşim levhasına bağlantısı için bir T profili kullanılmıştır. Bu T profil çapraz elemanına kaynakla, birleşim levhasına ise bulonla bağlanarak birleşim tamamlanmıştır. Son olarak, birleşim levhasının da kolon başlığına kaynakla bağlandığı not edilmelidir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "38",
+        "similar": [
+            39
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Birleşim 39 — Kesme Kuvveti Birleşimi",
+        "desc": "Tipik bir çapraz-kiriş birleşimini temsil eden 39 numaralı birleşim, 38 numaralı birleşimin diğer ucudur. Çapraz elemanının eksenel yük aktardığı 38 ve 39 numaralı birleşimlerde mesnetlenmenin mafsallı olduğu kabul edilmektedir. Örnekte çapraz elemanı bir kutu profilden tasarlanmış olup birleşim levhasına bağlantısı kaynak dikişleri yardımıyla sağlanmıştır. Bunun için, kutu profil üzerinde levhanın sığabileceği genişlikte yarık açılmış, levha bu yarığa yerleştirildikten sonra köşe kaynakları ile birleştirilmiştir. Birleşim levhası kiriş başlığına köşe kaynak dikişleri ile kaynaklanarak birleşim tamamlanmıştır.",
+        "limits": [
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "39",
+        "similar": [
+            38
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Birleşim 40 — Kesme Kuvveti Birleşimi",
+        "desc": "Örnek açıklama.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "40",
+        "similar": [
+            "kontrol"
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 41,
+        "title": "Birleşim 41 — Kesme Kuvveti ve Moment Birleşimi",
+        "desc": "Birleşim 40’ın devamı niteliğinde olan Birleşim 41, kesme kuvveti ile eğilme momenti aktaran bir kolon-kiriş birleşiminin eğilme momenti kapasitesinin değerlendirmektedir. Birleşimin eğilme momentini aktarabilmesi için I enkesitli kirişin başlıkları, kolona kaynakla bağlanmış levhalara (başlık levhaları) 6 adet bulon ile bağlanmıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "41",
+        "similar": [
+            25,
+            26,
+            33,
+            34
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Birleşim 42 — Kesme Kuvveti Birleşimi",
+        "desc": "Bu birleşim, bir kolonun gövdesine bağlanmış köşebent parçası üzerine oturan kolon-kiriş birleşimidir. Birleşimin misyonu, kirişte hesaplanan kesme kuvvetini kiriş alt başlığından kolona aktarmaktır. Kesme kuvveti aktarmakla görevli köşebentin bir benzeri de kiriş üst başlığında tasarlanarak, kirişin montajı sırasında kolayca pozisyonlanması temin edilmiş olmaktadır. Uygulaması son derece basit olan bu birleşim, kolon gövdesine birleşmelerde sıklıkla tercih edilmektedir.",
+        "limits": [
+            "Eğilme etkisinde akma",
+            "Eğilme etkisinde kırılma",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "42",
+        "similar": [
+            10
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 43,
+        "title": "Birleşim 43 — Eksenel Kuvvet Birleşimi",
+        "desc": "Birleşim 43, bir kafes sistemin alt başlık çubuğunun kolona mesnetlenmesini göstermektedir. Bu örnekte kafes sistemin alt başlık çubuğu bir ½ I enkesitli eleman olarak tasarlanmıştır. Hareketli mesnet olarak tasarlanan bu yapıda, büyük oval delikler kullanılarak, sistemin yatay doğrultudaki hareketine izin verilmiştir. İki adet bulon kullanılan hareket mekanizmasında yeterli kesit yüksekliği sağlayabilmek amacıyla ½ I enkesitin üzerine bir levha kaynaklanmıştır. Birleşimde iki adet köşebent kullanılmış ve bu köşebentler her iki elamana da bulonla bağlanmıştır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma"
+        ],
+        "folder": "43",
+        "similar": [
+            44,
+            45
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 44,
+        "title": "Birleşim 44 — Eksenel Kuvvet Birleşimi",
+        "desc": "Bu birleşim, bir kafes sistemin alt başlığında tasarlanan bir düğüm noktasını temsil etmektedir. Bilindiği üzere kafes sistemlerin düğüm noktaları, ideal mafsal olarak kabul edilir ve boyuna eksenleri aynı noktada kesişen çubukların, bir birleşim levhasına bağlanmasıyla oluşturulur. Birleşim 44, böyle bir kafesin alt başlık çubuğu üzerinde tasarlanmış bir ara düğüm noktasını göstermektedir. Birleşim aracı olarak kaynak veya bulon kullanılabilir. Bu örnekte çubukların düğüm noktası levhasına birleştirilmesinde köşe kaynak dikişleri kullanılmıştır.",
+        "limits": [
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "44",
+        "similar": [
+            43,
+            45
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Birleşim 45 — Eksenel Kuvvet Birleşimi",
+        "desc": "Bu birleşim, bir kafes sitemin üst başlık çubuğunun kolon yüzüne mesnetlenmesini göstermektedir. Bir düğüm levhası etrafında toplanan kafes sistem elemanları, bir çift köşebent kullanılarak kolon yüzüne mesnetlenmiştir. Mesnetlemede, köşebentler düğüm levhasına kaynakla bağlanırken, kolon yüzüne bulonlarla tespit edilmiştir. Yatay ve düşey harekete izin vermeyen bu mesnet, modelleme ve hesaplamalarda basit mesnet olarak kabul edilmektedir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Bulonlarda çekme",
+            "Bulonlarda ilave kaldırma kuvveti",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Çekme etkisinde akma",
+            "Çekme etkisinde kopma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "45",
+        "similar": [
+            43,
+            44
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 46,
+        "title": "Birleşim 46 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 46, bir aşık profilinin dolu gövdeli bir kiriş üzerine mesnetlenmesini göstermektedir. Yatayla belirli bir açı yapan ana kiriş, muhtemelen bir sanayi yapısına aittir. Bu eğimli kiriş üzerindeki aşık, bir U enkesitli profilden tasarlanmıştır. Birleşim ara yüzünde bir köşebent kullanılmış, bu köşebent kirişe köşe kaynak dikişi ile bağlanırken aşık profilinin gövdesine bulonlarla bağlanmıştır. Verilen birleşim aşık profillerinin U enkesitli olması durumunda sıklıkla tercih edilen bir birleşim tipidir. Köşebent kiriş üzerine atölye kaynaklı olarak tasarlanır ve delikleri açılmış şekilde şantiye sahasına nakledilir. Aşık profili soğuk şekillendirilmiş çelik profillerden veya hadde ürünü diğer I profillerden de seçilebilir. Çatı kaplamasında sağladığı kolaylık için U enkesitli profiller daha sık tercih edilmektedir.",
+        "limits": [
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "46",
+        "similar": [
+            22
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Birleşim 47 — Kesme Kuvveti ve Eğilme Momenti Birleşimi",
+        "desc": "Bu birleşim kesme kuvveti ve eğilme momenti aktaran bir kolon-kiriş birleşimidir. Kolon profili ile kiriş profilinin aynı kesitler olarak seçildiği tasarımlarda uygulama kolaylığı bakımından tercih edilmektedir. Kolon ile kirişin açılı olarak kesildiği (bu örnekte 45°) uygulamada, kiriş ve kolon birbirini tam olarak örtmektedir. Birleşimde, biri kolona diğeri kirişe kaynakla bağlanmış olan aynı boyutlu iki adet levha kullanılmıştır. Levhalar kolon ve kirişe atölyede kaynaklanmış olarak şantiye sahasına nakledilirler. Şantiyede her iki grup bulonlar yardımıyla birleştirilerek birleşim tamamlanmış olur. Uygulamada alın levhası kolon-kiriş birleşim ara yüzünün her iki tarafından dışarı doğru taşırılabileceği gibi, birtakım gerekçelerle taşırılmadan da uygulanabilir. Bulon diziliminde dışarı taşan levha bölümleri de kullanılabilir. Bu bölümde birleşimin kesme kuvveti kapasitesi araştırılacaktır. Kirişteki iç kuvvetlerin kolona aktarılmasını sağlayan bu birleşimin hesabında kiriş ucunda hesaplanan iç kuvvetlerin levha düzlemine indirgenmesi gerektiği unutulmamalıdır. Yani burada hesaplanan kapasite değerleri levha düzlemindeki değerler olacaktır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "47",
+        "similar": [
+            52
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 48,
+        "title": "Birleşim 48 — Eğilme Momenti Birleşimi",
+        "desc": "Birleşim 48, bir önceki bölümde verilen birleşimin devamı niteliğindedir. Önceki bölümde kesme kuvveti kapasitesi hesaplanan birleşimin, burada eğilme momenti kapasitesi araştırılacaktır. Bilindiği üzere, bulonların eksenine paralel zorlanma oluşturan eğilme momenti etkisinde, bulonların bir kısmı çekme kuvveti etkisinde kalırken, diğer bir kısmı basınç kuvveti etkisinde kalmaktadır. Çekme bölgesinde sadece bulonlar çalışırken, basınç bölgesinde birleşim levhaları çalışmaktadır. Bu durumda çekme ve basınç etkileri için tarafsız eksenin yeri hesaplanarak işlem yapılabileceği gibi yaklaşık olarak da hesap yapılabilir. Daha önceki örneklerde her iki uygulamaya da yer verilmiştir.",
+        "limits": [
+            "Bulonlarda çekme",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "48",
+        "similar": [
+            15
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 49,
+        "title": "Birleşim 49 — Kesme Kuvveti Birleşimi",
+        "desc": "Birleşim 49, bir sanayi yapısı içerisinde bulunan yatay taşıma ünitesinin kolona birleşimini göstermektedir. I enkesitli bir kolonun her iki başlığına trapez biçimli levhalar bulonlarla bağlanarak bir konsol kiriş tasarlanmıştır. Konsol kirişin ucunda, yapı içerisinde yatay taşımayı sağlayan vincin (kreyn) yürüme yolu olan I enkesitli bir kreyn kirişi bulunmaktadır. Bu kiriş trapez levhalara eşit kollu çift köşebentler yardımıyla bağlanmıştır. Köşebentler, I enkesitli kreyn kirişine köşe kaynakları ile bağlanırken trapez levhaya bulonlar ile birleştirilmiştir. Burada öncelikle kreyn kirişini trapez levhalara bağlayan köşebentler ve birleşim araçlarının kapasitesi araştırılacaktır.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme",
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Eğilme etkisinde akma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "49",
+        "similar": [
+            1,
+            8,
+            14,
+            19,
+            21,
+            22
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 50,
+        "title": "Birleşim 50 — Eğilme Momenti Birleşimi",
+        "desc": "Birleşim 50, bir önceki bölümde verilen birleşimin devamı ve tamamlayıcısıdır. Bu birleşimde, trapez levhaları kolon başlıklarına bağlayan birleşimin eğilme momenti kapasitesi ve bu eğilme momentine sebep olan kesme kuvveti hesaplanacaktır. Kolon başlığında yer alan bulonların ağırlık merkezi ile köşebentler aracılığı ile aktarılan kesme kuvveti arasındaki dış merkezlik sebebiyle, bulonlar burulma momenti etkisinde kalacaklardır. Bu burulma momenti, bulon gövdelerinde kesme kuvveti oluşturacaktır. Kolon başlığını levhaya bağlayan bulonların burulma momenti kaynaklı kesme kuvvetinin yanında, kreyn kirişinden gelen kesme kuvvetini de aktarması gerekecektir.",
+        "limits": [
+            "Blok kırılma",
+            "Bulon deliği ezilme",
+            "Bulonlarda kesme"
+        ],
+        "folder": "50",
+        "similar": [
+            "Notu: Tamamlayıcı birleşim: 49 "
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 51,
+        "title": "Birleşim 51 — Eğilme Momenti Birleşimi",
+        "desc": "Birleşim 51 kirişin kolon üzerine oturduğu bir kolon-kiriş birleşimidir. Büyük eğilme momentleri aktarmak gerektiğinde tercih edilen bu birleşimde kolon-kiriş ara yüzünün dışına taşan bir levha kullanılmıştır. Kolonun üstüne kaynaklan levha kiriş başlığına bulonlanarak birleşim tamamlanmıştır. Eğilme momentinin aktarımı sırasında kolon veya kirişin gövdesinde ortaya çıkması muhtemel yerel stabilite problemlerini engellemek amacıyla hem kolonda hem de kirişte rijitlik levhaları kullanılmıştır. Ayrıca kolon-kiriş birleşim bölgesi dışına taşan levhayı desteklemek maksadıyla üçgen biçimli bir bayrak levhası kullanılmıştır. Yine bu bayrak levhasında oluşabilecek burkulma ve/veya buruşma risklerini ortadan kaldırmak ve gerekirse mesnet bölgesinde kiriş kesitini güçlendirmek maksadıyla bu bayrak levhasının uç kısmına diğer bir levha kaynakla bağlanarak birleşim bölgesi takviye edilmiştir. Kolonun üst kotlara devam ettiği durumlarda birleşim, kolon başlığından da gerçekleştirilebilir.",
+        "limits": [
+            "Bulonlarda çekme",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "51",
+        "similar": [
+            15,
+            47
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 52,
+        "title": "Birleşim 52 — Kesme Kuvveti ve Eğilme Momenti Birleşimi",
+        "desc": "Birleşim 52 Birleşim 47’nin çok benzeri olan bir kolon-kiriş birleşimidir. Birleşim 47’nin aksine bu birleşimde iki adet levha yerine tek bir levha kullanılmış, dolayısıyla kolon ve kiriş bu levhaya doğrudan kaynaklanarak birleşim tamamlanmıştır. Kaynakların atölyede yapılması durumunda kolon ve kirişten oluşan yapının inşaat sahasına bir bütün olarak nakliyesi zorunluluk olmaktadır. Değişken kesitli kiriş uygulamalarında sıklıkla rastlandığı gibi, kirişin birleşim bölgesi dışında ve fakat yakınında diğer bir eki barındırdığı durumlarda tercih edilen bir birleşim türüdür. Üst başlığı levhaya bağlayan kaynak dikişlerinde taşıma gücünün aşılması durumunda kolon ve kiriş başlıklarını dıştan bağlayan bir çekme levhası da kullanılabilir. Burada birleşimin kesme kuvveti kapasitesi araştırılacaktır.",
+        "limits": [
+            "Kayma etkisinde akma",
+            "Kayma etkisinde kırılma",
+            "Kaynak mukavemeti"
+        ],
+        "folder": "52",
+        "similar": [
+            47
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    },
+    {
+        "id": 53,
+        "title": "Birleşim 53 — Kesme Kuvveti ve Eğilme Momenti Birleşimi",
+        "desc": "Birleşim 53 Birleşim 47’nin çok benzeri olan bir kolon-kiriş birleşimidir. Birleşim 47’nin aksine bu birleşimde iki adet levha yerine tek bir levha kullanılmış, dolayısıyla kolon ve kiriş bu levhaya doğrudan kaynaklanarak birleşim tamamlanmıştır. Kaynakların atölyede yapılması durumunda kolon ve kirişten oluşan yapının bütün olarak inşaat sahasına nakli zorunluluk olmaktadır. Değişken kesitli kiriş uygulamalarında sıklıkla rastlandığı gibi, kirişin birleşim bölgesi dışında ve fakat yakınında diğer bir eki barındırdığı durumlarda tercih edilen bir birleşim türüdür. Üst başlığı levhaya bağlayan kaynak dikişlerinde taşıma gücünün aşılması durumunda kolon ve kiriş başlıklarını dıştan bağlayan bir çekme levhası da kullanılabilir. Burada birleşimin eğilme momenti kapasitesi araştırılacaktır.",
+        "limits": [
+            "Kaynak mukavemeti"
+        ],
+        "folder": "53",
+        "similar": [
+            47
+        ],
+        "images": [
+            "images/1.png",
+            "images/2.png"
+        ]
+    }
+]

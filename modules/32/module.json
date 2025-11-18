@@ -1,0 +1,24 @@
+{
+    "id": 32,
+    "title": "Birleşim 32 — Kesme Kuvveti Birleşimi",
+    "desc": "Aynı enkesitlere sahip iki yapısal elemandan oluşan ve kiriş-kiriş birleşimi olarak tasarlanan bu birleşim, tek levha yardımıyla gerçekleştirilmiştir. Levha, ana kirişe kaynaklanmış ikincil kirişe ise bulonlar yardımıyla bağlanmıştır. Kesit yüksekliklerinin aynı olması sebebiyle talî kirişin alt ve üst başlıkları kesilerek çıkarılmıştır.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Yanal burulmalı burkulma",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "32",
+    "similar": [
+        7,
+        13,
+        14
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}

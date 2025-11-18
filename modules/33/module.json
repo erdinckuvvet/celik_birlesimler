@@ -1,0 +1,24 @@
+{
+    "id": 33,
+    "title": "Birleşim 33 — Kesme Kuvveti ve Moment Birleşimi",
+    "desc": "Bir kolon-kiriş birleşimi olan 33 numaralı birleşimin, kirişten gelen kesme kuvveti ve eğilme momentini kolona aktarması beklenir. Birleşimin kesme kuvveti ve eğilme momenti kapasiteleri ayrı başlıklarda verilecektir. Bu başlık altında kesme kuvveti kapasitesi verilirken eğilme momenti kapasitesi 34 numaralı birleşimde hesaplanacaktır. Kesme kuvvetinin aktarılabilmesi için bir adet levha kullanılmıştır. Levha kolon başlığına köşe kaynağı ile kiriş gövdesine bulonlar ile bağlanmıştır. Kiriş başlıkları kolon başlığına tam penetrasyonlu küt kaynaklar ile doğrudan bağlanmıştır. Kirişin montaj ve kaynak işlemlerinin kolaylaştırılabilmesi için iki adet yardımcı montaj levhası kullanılmıştır. Kiriş gövdesinde açılan boşluklar, kaynağın kesintisiz yapılabilmesi için bir zorunluluktur.",
+    "limits": [
+        "Blok kırılma",
+        "Bulon deliği ezilme",
+        "Bulonlarda kesme",
+        "Kayma etkisinde akma",
+        "Kayma etkisinde kırılma",
+        "Kaynak mukavemeti"
+    ],
+    "folder": "33",
+    "similar": [
+        25,
+        26,
+        40,
+        41
+    ],
+    "images": [
+        "images/1.png",
+        "images/2.png"
+    ]
+}
