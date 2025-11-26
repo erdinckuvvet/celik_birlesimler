@@ -254,83 +254,193 @@
     document.getElementById('results').innerHTML = resultsHTML;
 
 
-    // --- Bulon Deliği Ezilme Kuvveti Dayanımı (13.3.13) ------------------------
-    (function bearingCalc() {
-      // calculate() içinde zaten okuduğumuz değişkenleri kullanıyoruz:
-      // t, db, phi, Fu, shearWidths
-      const dh = db + 2; // delik çapı
-      const bolts = [];  // her bulon için: lc, Rn_i (N), R1, R2
+    // 2.4.1 / 13.3.13 — Bulon Deliği Ezilme Kuvveti Dayanımı (Birleşim 2)
+    (function boltBearingJoint2() {
+      const varsEl = document.getElementById("vars2");
+      const stepsEl = document.getElementById("calcSteps2");
+      const resultEl = document.getElementById("results2");
+      if (!varsEl || !stepsEl || !resultEl) return;
 
-      // shearWidths = [e1, p2, p3, ...]
-      for (let i = 0; i < shearWidths.length; i++) {
-        const w = Number(shearWidths[i]);
-        const lc = Math.max(i === 0 ? (w - dh / 2) : (w - dh), 0); // negatifse sıfırla
-        const R1 = 1.2 * lc * t * Fu;   // N
-        const R2 = 2.4 * db * t * Fu;   // N
-        const Rn_i = Math.min(R1, R2);  // N
-        bolts.push({ idx: i + 1, lc, R1, R2, Rn_i });
+      // ------------------------
+      // Ortak girdiler
+      // ------------------------
+      const phi = Number(document.getElementById("phi")?.value) || 0.75;
+
+      const db = Number(document.getElementById("boltSelect")?.value) || 20; // bulon çapı (mm)
+      const dh = db + 2;                                                     // delik çapı (mm)
+
+      // dik yöndeki kenar mesafesi ve bulon aralığı: shearWidths = "50,100,50" gibi
+      const sw = (document.getElementById("shearWidths")?.value || "")
+        .split(",")
+        .map(s => Number(String(s).trim()))
+        .filter(v => Number.isFinite(v) && v > 0);
+
+      const e1 = sw[0] || 50; // ilk kenar mesafesi (mm)
+      const s = sw[1] || 100; // bulon aralığı (mm)
+
+      // malzeme tablosu (global)
+      const matDB = (typeof malzemeListesi !== "undefined") ? malzemeListesi : null;
+
+      function pickFu(matSelectId, thk) {
+        const sel = document.getElementById(matSelectId);
+        const key = sel ? sel.value : null;
+        if (!key || !matDB || !matDB[key]) return NaN;
+        const rec = matDB[key];
+        // t<40 ise Fu, t>40 ise Fu2 kullan (sen istersen tam tersini uyarlayabilirsin)
+        let fu = (thk > 40 && rec.Fu2) ? rec.Fu2 : rec.Fu;
+        if (!Number.isFinite(Number(fu)) || Number(fu) === 0) {
+          fu = Number(rec.Fu) || Number(rec.Fu2);
+        }
+        return Number(fu);
       }
 
-      // Toplam ve tasarım
-      const Rn_total = bolts.reduce((s, b) => s + b.Rn_i, 0); // N
-      const Rn_total_kN = Rn_total / 1000;
-      const Rd_kN = phi * Rn_total_kN;
+      // ---------------------------------------------------
+      // 1) KÖŞEBENT TARAFI – iki bulon, iki köşebent
+      // ---------------------------------------------------
+      const tAngle =
+        Number(document.getElementById("kosebent_t")?.value) ||
+        Number(document.getElementById("t")?.value) || 0;
 
-      // Özet için kaydet
-      const Rd_bearing_kN = Rd_kN.toFixed(2); // zaten kN ise direkt
-      setSummary("bearing", Rd_bearing_kN);
+      const FuAngle = pickFu("kosebentMalzeme", tAngle) || 360; // MPa
+      const nAngles = 2; // çift köşebent
 
-      // 1) Değişkenler (vars2)
-      const vars2HTML = `
-    $$t = ${t}\\text{ mm},\\quad d_b = ${db}\\text{ mm},\\quad d_h = d_b + 2 = ${dh}\\text{ mm}$$
-    $$F_u = ${Fu}\\text{ MPa},\\quad \\phi = ${phi}$$
-  `;
+      // Bulon 1: lc = e1 - dh/2
+      const lc1_ang = e1 - dh / 2;
+      const R1_ang1 = 1.2 * lc1_ang * tAngle * FuAngle * 1e-3;          // kN
+      const R2_ang1 = 2.4 * db * tAngle * FuAngle * 1e-3;                // kN
+      const Rn1_ang = Math.min(R1_ang1, R2_ang1);
 
-      // 2) İşlem basamakları (calcSteps2) — her bulon satır satır
-      const lines = bolts.map(b => {
-        const R1k = (b.R1 / 1000).toFixed(2);
-        const R2k = (b.R2 / 1000).toFixed(2);
-        const Rnk = (b.Rn_i / 1000).toFixed(2);
-        return String.raw`Bulon\ ${b.idx}:\
-\ l_c = ${b.lc.toFixed(2)}\ \text{mm},\ R_{n,${b.idx}} = \min(1.2\,l_c\,t\,F_u,\ 2.4\,d_b\,t\,F_u)\
-= \min(${R1k},\ ${R2k}) = ${Rnk}\ \text{kN}`;
-      }).join("<br/>");
+      // Bulon 2: lc = s - dh
+      const lc2_ang = s - dh;
+      const R1_ang2 = 1.2 * lc2_ang * tAngle * FuAngle * 1e-3;          // kN
+      const R2_ang2 = 2.4 * db * tAngle * FuAngle * 1e-3;                // kN
+      const Rn2_ang = Math.min(R1_ang2, R2_ang2);
 
-      // 2) İşlem basamakları (calcSteps2) — her bulon satır satır (KaTeX aligned)
-      const lineTex = bolts.map(b => {
-        const R1k = (b.R1 / 1000).toFixed(2);
-        const R2k = (b.R2 / 1000).toFixed(2);
-        const Rnk = (b.Rn_i / 1000).toFixed(2);
-        return String.raw`\text{Bulon ${b.idx}:}\quad l_c = ${b.lc.toFixed(2)}\,\text{mm},\;
-  R_{n,${b.idx}} = \min(1.2\,l_c\,t\,F_u,\; 2.4\,d_b\,t\,F_u)
-  = \min(${R1k},\; ${R2k}) = ${Rnk}\,\text{kN}`;
-      }).join(String.raw` \\ `);
+      const Rn_ang_single = Rn1_ang + Rn2_ang;           // tek köşebent toplamı
+      const Rn_ang_total = nAngles * Rn_ang_single;     // çift köşebent
+      const Rd_ang = phi * Rn_ang_total;          // kN
 
-      const steps2HTML = String.raw`
+      // ---------------------------------------------------
+      // 2) IPE GÖVDE TARAFI
+      // ---------------------------------------------------
+      // IPE geometrisi: mümkünse global tablodan çek, yoksa örnekteki IPE 400 değerlerine düş
+      let d = 400,   // mm
+        bf = 180,
+        tw = 8.6,
+        tf = 13.5;
+
+      try {
+        const anaProfil = document.getElementById("anaProfil")?.value;
+        if (anaProfil && window.IPE_GEOMETRY && window.IPE_GEOMETRY[anaProfil]) {
+          const g = window.IPE_GEOMETRY[anaProfil];
+          d = Number(g.d) || d;
+          bf = Number(g.bf) || bf;
+          tw = Number(g.tw) || tw;
+          tf = Number(g.tf) || tf;
+        }
+      } catch (e) {
+        console.warn("IPE_GEOMETRY okunamadı, varsayılan IPE 400 kullanılıyor.", e);
+      }
+
+      const FuIPE = pickFu("anaMalzeme", tw) || 510; // MPa
+
+      // Bulon 1 için lc:
+      // lc = (d/2 - tf + bf/2) - dh/2 - s/2
+      const lc1_ipe =
+        (d / 2 - tf + bf / 2) - dh / 2 - s / 2;
+
+      const R1_ipe1 = 1.2 * lc1_ipe * tw * FuIPE * 1e-3; // kN
+      const R2_ipe1 = 2.4 * db * tw * FuIPE * 1e-3;      // kN
+      const Rn1_ipe = Math.min(R1_ipe1, R2_ipe1);
+
+      // Bulon 2: lc = s - dh
+      const lc2_ipe = s - dh;
+      const R1_ipe2 = 1.2 * lc2_ipe * tw * FuIPE * 1e-3;
+      const R2_ipe2 = 2.4 * db * tw * FuIPE * 1e-3;
+      const Rn2_ipe = Math.min(R1_ipe2, R2_ipe2);
+
+      const Rn_ipe_total = Rn1_ipe + Rn2_ipe; // tek gövde
+      const Rd_ipe = phi * Rn_ipe_total;
+
+      // ---------------------------------------------------
+      // 3) KaTeX metinleri
+      // ---------------------------------------------------
+      const varsTex = String.raw`
+$$
+d = ${d}\,\text{mm},\quad
+b_f = ${bf}\,\text{mm},\quad
+t_w = ${tw}\,\text{mm},\quad
+t_f = ${tf}\,\text{mm} \\
+t_{\text{kçb}} = ${tAngle}\,\text{mm},\quad
+F_{u,\text{kçb}} = ${FuAngle}\,\text{MPa},\quad
+F_{u,\text{IPE}} = ${FuIPE}\,\text{MPa} \\
+d_b = ${db}\,\text{mm},\quad d_h = d_b + 2 = ${dh}\,\text{mm},\quad
+e_1 = ${e1}\,\text{mm},\ s = ${s}\,\text{mm},\ \varphi = ${phi} \\
+n_{\text{köşebent}} = ${nAngles}
+$$
+`;
+
+      const stepsTex = String.raw`
 $$
 \begin{aligned}
-R_n = \min(1.2\,l_c\,t\,F_u,\; 2.4\,d_b\,t\,F_u) \\
-l_{c,1} = e_1 - \frac{d_h}{2},\quad l_{c,i} = p_i - d_h\ (i\ge 2) \\
-${lineTex}
+&\textbf{Köşebentlerde bulon deliği ezilme dayanımı}\\[2pt]
+l_{c,1}^{(\text{kçb})} &= e_1 - \frac{d_h}{2}
+= ${e1} - \frac{${dh}}{2} = ${lc1_ang.toFixed(2)}\ \text{mm} \\
+l_{c,2}^{(\text{kçb})} &= s - d_h
+= ${s} - ${dh} = ${lc2_ang.toFixed(2)}\ \text{mm} \\
+R_{n,1}^{(\text{kçb})} &= \min\!\bigl(1.2\,l_{c,1} t_{\text{kçb}} F_u,\ 2.4\,d_b t_{\text{kçb}} F_u\bigr)
+= \min(${R1_ang1.toFixed(2)},\ ${R2_ang1.toFixed(2)}) = ${Rn1_ang.toFixed(2)}\ \text{kN} \\
+R_{n,2}^{(\text{kçb})} &= \min\!\bigl(1.2\,l_{c,2} t_{\text{kçb}} F_u,\ 2.4\,d_b t_{\text{kçb}} F_u\bigr)
+= \min(${R1_ang2.toFixed(2)},\ ${R2_ang2.toFixed(2)}) = ${Rn2_ang.toFixed(2)}\ \text{kN} \\
+R_{n,\text{kçb,tek}} &= R_{n,1}^{(\text{kçb})} + R_{n,2}^{(\text{kçb})}
+= ${Rn_ang_single.toFixed(2)}\ \text{kN} \\
+R_{n,\text{kçb}} &= n_{\text{köşebent}}\,R_{n,\text{kçb,tek}}
+= ${nAngles}\times${Rn_ang_single.toFixed(2)} = ${Rn_ang_total.toFixed(2)}\ \text{kN} \\[6pt]
+&\textbf{IPE gövdesinde bulon deliği ezilme dayanımı}\\[2pt]
+l_{c,1}^{(\text{IPE})} &=
+\left(\frac{d}{2} - t_f + \frac{b_f}{2}\right)
+- \frac{d_h}{2} - \frac{s}{2}
+= \left(\frac{${d}}{2} - ${tf} + \frac{${bf}}{2}\right)
+- \frac{${dh}}{2} - \frac{${s}}{2}
+= ${lc1_ipe.toFixed(2)}\ \text{mm} \\
+l_{c,2}^{(\text{IPE})} &= s - d_h
+= ${s} - ${dh} = ${lc2_ipe.toFixed(2)}\ \text{mm} \\
+R_{n,1}^{(\text{IPE})} &= \min\!\bigl(1.2\,l_{c,1} t_w F_u,\ 2.4\,d_b t_w F_u\bigr)
+= \min(${R1_ipe1.toFixed(2)},\ ${R2_ipe1.toFixed(2)}) = ${Rn1_ipe.toFixed(2)}\ \text{kN} \\
+R_{n,2}^{(\text{IPE})} &= \min\!\bigl(1.2\,l_{c,2} t_w F_u,\ 2.4\,d_b t_w F_u\bigr)
+= \min(${R1_ipe2.toFixed(2)},\ ${R2_ipe2.toFixed(2)}) = ${Rn2_ipe.toFixed(2)}\ \text{kN} \\
+R_{n,\text{IPE}} &= R_{n,1}^{(\text{IPE})} + R_{n,2}^{(\text{IPE})}
+= ${Rn_ipe_total.toFixed(2)}\ \text{kN}
 \end{aligned}
 $$
 `;
 
-      document.getElementById('calcSteps2').innerHTML = steps2HTML;
+      const RdCrit = Math.min(Rd_ang, Rd_ipe);
 
-      // 3) Sonuç (results2)
-      const results2HTML = `
-    $$R_n = ${Rn_total_kN.toFixed(2)}\\text{ kN}$$
-    $$R_d = \\phi R_n = ${phi}\\times${Rn_total_kN.toFixed(2)}\
-= ${Rd_kN.toFixed(2)}\\text{ kN}$$
-  `;
+      // Özet için kaydet
+      const Rd_bearing_kN = RdCrit.toFixed(2); // zaten kN ise direkt
+      setSummary("bearing", Rd_bearing_kN);
 
+      const resTex = String.raw`
+$$
+\begin{aligned}
+R_{d,\text{kçb}} &= \varphi R_{n,\text{kçb}}
+= ${phi}\times${Rn_ang_total.toFixed(2)} = ${Rd_ang.toFixed(2)}\ \text{kN} \\
+R_{d,\text{IPE}} &= \varphi R_{n,\text{IPE}}
+= ${phi}\times${Rn_ipe_total.toFixed(2)} = ${Rd_ipe.toFixed(2)}\ \text{kN} \\
+R_d &= \min\bigl(R_{d,\text{kçb}},\,R_{d,\text{IPE}}\bigr)
+= \min(${Rd_ang.toFixed(2)},\ ${Rd_ipe.toFixed(2)})
+= \mathbf{${RdCrit.toFixed(2)}\ \text{kN}}
+\end{aligned}
+$$
+`;
 
-      // DOM'a yaz
-      document.getElementById('vars2').innerHTML = vars2HTML;
-      document.getElementById('calcSteps2').innerHTML = steps2HTML;
-      document.getElementById('results2').innerHTML = results2HTML;
+      varsEl.innerHTML = varsTex;
+      stepsEl.innerHTML = stepsTex;
+      resultEl.innerHTML = resTex;
+
     })();
+
 
     // 13.3.9 — Bulonların Kesme Kuvveti Dayanımı
     (function boltShearCalc() {
@@ -593,82 +703,51 @@ $$
 
 
 
-    // 2.4.6 — Kaynak Dayanımı (13.2.4) - Birleşim 2, çift köşebent
+    // 2.4.6 — Kaynak Dayanımı (13.2.4) - Birleşim 2, çift köşebent (DÜZELTİLMİŞ)
     (function weldCapacityJoint2() {
       const varsEl = document.getElementById("vars8");
       const stepsEl = document.getElementById("calcSteps8");
       const resEl = document.getElementById("results8");
-
-      if (!varsEl || !stepsEl || !resEl) return; // ilgili bölüm yoksa çık
+      if (!varsEl || !stepsEl || !resEl) return;
 
       // --- Girdiler ---
+      const a = Number(document.getElementById("weldSize")?.value) || 4;    // mm
+      // TOPLAM boyuna dikiş uzunluğu (tek köşebent için): ör. 200 mm
+      const LparTotal =
+        Number(document.getElementById("weldL_parallel_total")?.value) ||
+        Number(document.getElementById("weldL_parallel")?.value) || 200;
 
-      // Kaynak boyutları: input varsa oku, yoksa örnekten varsay
-      const a = Number(document.getElementById("weldSize")?.value) || 4;        // kaynak dikiş boyu (mm)
+      // Enine kaynaklar (kuvvete dik): ör. (90 - a) * a * 2
+      const LperpBase = Number(document.getElementById("weldL_perp")?.value) || 90; // mm (baz değer)
+      const nPerp = Number(document.getElementById("weldN_perp")?.value) || 2;  // adet
 
-      // Boyuna (kuvvet doğrultusunda) kaynaklar
-      const Lpar = Number(document.getElementById("weldL_parallel")?.value) || 200; // tek dikiş boyu (mm)
-      const nPar = Number(document.getElementById("weldN_parallel")?.value) || 4;   // dikiş adedi (ör: 4×200)
-
-      // Enine kaynaklar (kuvvete dik)
-      // Örnekte: (90 - 4) * 4 * 2
-      const LperpBase = Number(document.getElementById("weldL_perp")?.value) || 90; // toplam yükseklik benzeri (mm)
-      const nPerp = Number(document.getElementById("weldN_perp")?.value) || 2;      // dik dikiş adedi
-
-      // Elektrod dayanımı F_E (MPa)
-      const FE = Number(document.getElementById("Fe_weld")?.value) || 550;
-
-      // Dayanım katsayısı
+      const FE = Number(document.getElementById("Fe_weld")?.value) || 550;   // MPa
       const phi = Number(document.getElementById("phi")?.value) || 0.75;
-
-      // Köşebent sayısı (simetrik olduğu için 2)
       const nAngles = Number(document.getElementById("weldAnglesCount")?.value) || 2;
 
-      // --- Temel kontroller ---
-      if (!a || !Lpar || !nPar || !FE || !phi) {
-        varsEl.textContent = "Girdi eksik. Kaynak boyu, uzunluklar ve elektrod dayanımı kontrol edilmeli.";
-        stepsEl.textContent = "";
-        resEl.textContent = "";
-        return;
-      }
-
       // --- Hesaplar ---
+      const Fnw = 0.60 * FE;                        // MPa
+      const Awel = a * LparTotal;                   // mm^2  (DÜZELTME: dikiş sayısı YOK)
+      const LperpEff = Math.max(LperpBase - a, 0);  // mm
+      const Awet = a * LperpEff * nPerp;            // mm^2
 
-      // F_nw tasarım gerilmesi
-      const Fnw = 0.60 * FE; // MPa
+      const Rnwl = Fnw * Awel * 1e-3;               // kN
+      const Rnwt = Fnw * Awet * 1e-3;               // kN
 
-      // Boyuna kaynak efektif alanı (örnekte: [4 × 200] = 800 mm²)
-      const Awel = a * Lpar * nPar; // mm²
-
-      // Enine kaynak efektif alanı (örnekte: (90 - 4) × 4 × 2 = 688 mm²)
-      const LperpEff = Math.max(LperpBase - a, 0);
-      const Awet = a * LperpEff * nPerp; // mm²
-
-      // Tek köşebent için nominal dayanımlar (kN)
-      const Rnwl = Fnw * Awel * 1e-3;
-      const Rnwt = Fnw * Awet * 1e-3;
-
-      // Denklem 13.5 ve 13.6
-      const Rnw_sum = Rnwl + Rnwt;
-      const Rnw_comb = 0.85 * Rnwl + 1.5 * Rnwt;
-
-      // Tek köşebent için kontrol eden R_nw
+      const Rnw_sum = Rnwl + Rnwt;                 // kN  (13.5)
+      const Rnw_comb = 0.85 * Rnwl + 1.5 * Rnwt;    // kN  (13.6)
       const Rnw_single = Math.max(Rnw_sum, Rnw_comb);
-
-      // Çift köşebent
-      const Rnw_total = Rnw_single * nAngles; // kN
-
-      // Tasarım dayanımı
-      const Rd = phi * Rnw_total; // kN
+      const Rnw_total = Rnw_single * nAngles;      // çift köşebent
+      const Rd = phi * Rnw_total;                   // kN
 
       // --- KaTeX: Kullanılan Değişkenler ---
       const varsTex = String.raw`
 $$
 a = ${a}\,\text{mm},\quad
-L_{\parallel} = ${Lpar}\,\text{mm},\ n_{\parallel} = ${nPar},\quad
+L_{\parallel}^{(\text{toplam})} = ${LparTotal}\,\text{mm},\quad
 L_{\perp,\text{baz}} = ${LperpBase}\,\text{mm},\ n_{\perp} = ${nPerp} \\
 F_E = ${FE}\,\text{MPa},\quad
-F_{nw} = 0.60 F_E = ${Fnw.toFixed(0)}\,\text{MPa},\quad
+F_{nw} = 0.60\,F_E = ${Fnw.toFixed(0)}\,\text{MPa},\quad
 \varphi = ${phi},\quad
 n_{\text{köşebent}} = ${nAngles}
 $$
@@ -678,8 +757,8 @@ $$
       const stepsTex = String.raw`
 $$
 \begin{aligned}
-A_{wel} &= a\,L_{\parallel}\,n_{\parallel}
-= ${a}\times${Lpar}\times${nPar}
+A_{wel} &= a\,L_{\parallel}^{(\text{toplam})}
+= ${a}\times${LparTotal}
 = ${Awel.toFixed(0)}\ \text{mm}^2 \\
 A_{wet} &= a\,(L_{\perp,\text{baz}} - a)\,n_{\perp}
 = ${a}\times(${LperpBase}-${a})\times${nPerp}
@@ -692,10 +771,10 @@ R_{nwt} &= F_{nw}\,A_{wet}
 = ${Rnwt.toFixed(2)}\ \text{kN} \\
 R_{nw,1} &= R_{nwl} + R_{nwt}
 = ${Rnw_sum.toFixed(2)}\ \text{kN} \\
-R_{nw,2} &= 0.85R_{nwl} + 1.5R_{nwt}
+R_{nw,2} &= 0.85\,R_{nwl} + 1.5\,R_{nwt}
 = 0.85\times${Rnwl.toFixed(2)} + 1.5\times${Rnwt.toFixed(2)}
 = ${Rnw_comb.toFixed(2)}\ \text{kN} \\
-R_{nw,\text{tek}} &= \max(R_{nw,1}, R_{nw,2})
+R_{nw,\text{tek}} &= \max(R_{nw,1},\ R_{nw,2})
 = ${Rnw_single.toFixed(2)}\ \text{kN} \\
 R_{nw} &= n_{\text{köşebent}}\,R_{nw,\text{tek}}
 = ${nAngles}\times${Rnw_single.toFixed(2)}
@@ -707,22 +786,20 @@ $$
       // --- KaTeX: Sonuç ---
       const resTex = String.raw`
 $$
-R_d = \varphi R_{nw}
-= ${phi}\times${Rnw_total.toFixed(2)}
+R_d = \varphi\,R_{nw} = ${phi}\times${Rnw_total.toFixed(2)}
 = \mathbf{${Rd.toFixed(2)}\ \text{kN}}
 $$
 `;
 
-      // DOM yaz
       varsEl.innerHTML = varsTex;
       stepsEl.innerHTML = stepsTex;
       resEl.innerHTML = resTex;
 
-      // Hesaplama özetine gönder
       if (typeof setSummary === "function" && isFinite(Rd)) {
         setSummary("weld", Rd);
       }
     })();
+
 
 
     // KaTeX render
