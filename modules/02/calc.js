@@ -23,6 +23,76 @@
     "IPE 750 x 147": 13.2, "IPE 750 x 173": 14.4, "IPE 750 x 196": 15.6
   };
 
+  const IPE_GEOMETRY = {
+    "IPE A 100": { d: 98, bf: 55, tw: 3.6, tf: 4.7 },
+    "IPE 100": { d: 100, bf: 55, tw: 4.1, tf: 5.7 },
+
+    "IPE A 120": { d: 117.6, bf: 64, tw: 3.8, tf: 5.1 },
+    "IPE 120": { d: 120, bf: 64, tw: 4.4, tf: 6.3 },
+
+    "IPE A 140": { d: 137.4, bf: 73, tw: 3.8, tf: 5.6 },
+    "IPE 140": { d: 140, bf: 73, tw: 4.7, tf: 6.9 },
+
+    "IPE A 160": { d: 157, bf: 82, tw: 4.0, tf: 5.9 },
+    "IPE 160": { d: 160, bf: 82, tw: 5.0, tf: 7.4 },
+
+    "IPE A 180": { d: 177, bf: 91, tw: 4.3, tf: 6.5 },
+    "IPE 180": { d: 180, bf: 91, tw: 5.3, tf: 8.0 },
+    "IPE O 180": { d: 182, bf: 92, tw: 6.0, tf: 9.0 },
+
+    "IPE A 200": { d: 197, bf: 100, tw: 4.5, tf: 7.0 },
+    "IPE 200": { d: 200, bf: 100, tw: 5.6, tf: 8.5 },
+    "IPE O 200": { d: 202, bf: 102, tw: 6.2, tf: 9.5 },
+
+    "IPE A 220": { d: 217, bf: 110, tw: 5.0, tf: 7.7 },
+    "IPE 220": { d: 220, bf: 110, tw: 5.9, tf: 9.2 },
+    "IPE O 220": { d: 222, bf: 112, tw: 6.6, tf: 10.2 },
+
+    "IPE A 240": { d: 237, bf: 120, tw: 5.2, tf: 8.3 },
+    "IPE 240": { d: 240, bf: 120, tw: 6.2, tf: 9.8 },
+    "IPE O 240": { d: 242, bf: 122, tw: 7.0, tf: 10.8 },
+
+    "IPE A 270": { d: 267, bf: 135, tw: 5.5, tf: 8.7 },
+    "IPE 270": { d: 270, bf: 135, tw: 6.6, tf: 10.2 },
+    "IPE O 270": { d: 274, bf: 136, tw: 7.5, tf: 12.2 },
+
+    "IPE A 300": { d: 297, bf: 150, tw: 6.1, tf: 9.2 },
+    "IPE 300": { d: 300, bf: 150, tw: 7.1, tf: 10.7 },
+    "IPE O 300": { d: 304, bf: 152, tw: 8.0, tf: 12.7 },
+
+    "IPE A 330": { d: 327, bf: 160, tw: 6.5, tf: 10.0 },
+    "IPE 330": { d: 330, bf: 160, tw: 7.5, tf: 11.5 },
+    "IPE O 330": { d: 334, bf: 162, tw: 8.5, tf: 13.5 },
+
+    "IPE A 360": { d: 357.6, bf: 170, tw: 6.6, tf: 11.5 },
+    "IPE 360": { d: 360, bf: 170, tw: 8.0, tf: 12.7 },
+    "IPE O 360": { d: 364, bf: 172, tw: 9.2, tf: 14.7 },
+
+    "IPE A 400": { d: 397, bf: 180, tw: 7.0, tf: 12.0 },
+    "IPE 400": { d: 400, bf: 180, tw: 8.6, tf: 13.5 },
+    "IPE O 400": { d: 404, bf: 182, tw: 9.7, tf: 15.5 },
+
+    "IPE A 450": { d: 447, bf: 190, tw: 7.6, tf: 13.1 },
+    "IPE 450": { d: 450, bf: 190, tw: 9.4, tf: 14.6 },
+    "IPE O 450": { d: 456, bf: 192, tw: 11.0, tf: 17.6 },
+
+    "IPE A 500": { d: 497, bf: 200, tw: 8.4, tf: 14.5 },
+    "IPE 500": { d: 500, bf: 200, tw: 10.2, tf: 16.0 },
+    "IPE O 500": { d: 506, bf: 202, tw: 12.0, tf: 19.0 },
+
+    "IPE A 550": { d: 547, bf: 210, tw: 9.0, tf: 15.7 },
+    "IPE 550": { d: 550, bf: 210, tw: 11.1, tf: 17.2 },
+    "IPE O 550": { d: 556, bf: 212, tw: 12.7, tf: 20.2 },
+
+    "IPE A 600": { d: 597, bf: 220, tw: 9.8, tf: 17.5 },
+    "IPE 600": { d: 600, bf: 220, tw: 12.0, tf: 19.0 },
+    "IPE O 600": { d: 610, bf: 224, tw: 15.0, tf: 24.0 },
+
+    "IPE 750 x 147": { d: 753, bf: 265, tw: 13.2, tf: 17.0 },
+    "IPE 750 x 173": { d: 762, bf: 267, tw: 14.4, tf: 21.6 },
+    "IPE 750 x 196": { d: 770, bf: 268, tw: 15.6, tf: 25.4 }
+  };
+
   const taliProfilVerileri = {
     "UPN 100": 6, "UPN 120": 7, "UPN 140": 7, "UPN 160": 7.5,
     "UPN 180": 8, "UPN 200": 8.5, "UPN 220": 9, "UPN 240": 9.5,
@@ -323,24 +393,17 @@
       // ---------------------------------------------------
       // 2) IPE GÖVDE TARAFI
       // ---------------------------------------------------
-      // IPE geometrisi: mümkünse global tablodan çek, yoksa örnekteki IPE 400 değerlerine düş
-      let d = 400,   // mm
-        bf = 180,
-        tw = 8.6,
-        tf = 13.5;
+      // IPE geometrisi: tablodan çek
 
-      try {
-        const anaProfil = document.getElementById("anaProfil")?.value;
-        if (anaProfil && window.IPE_GEOMETRY && window.IPE_GEOMETRY[anaProfil]) {
-          const g = window.IPE_GEOMETRY[anaProfil];
-          d = Number(g.d) || d;
-          bf = Number(g.bf) || bf;
-          tw = Number(g.tw) || tw;
-          tf = Number(g.tf) || tf;
-        }
-      } catch (e) {
-        console.warn("IPE_GEOMETRY okunamadı, varsayılan IPE 400 kullanılıyor.", e);
-      }
+      const anaProfilSel = document.getElementById("anaProfil");
+      const profilName = anaProfilSel.value;
+      const geo = IPE_GEOMETRY[profilName];
+
+      const d = geo.d;
+      const bf = geo.bf;
+      const tw = geo.tw;
+      const tf = geo.tf;
+
 
       const FuIPE = pickFu("anaMalzeme", tw) || 510; // MPa
 
