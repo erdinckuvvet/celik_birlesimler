@@ -113,7 +113,7 @@
                 <select id="boltClass"></select>
 
                 <label>Kaynak Kalınlığı a (mm)</label>
-                <input id="weld_a" type="number" value="6">
+                <input id="weld_a" type="number" value="4">
 
                 <label>Elektrod Mukavemeti F<sub>E</sub> (MPa)</label>
                 <input id="weld_FE" type="number" value="550">
@@ -131,30 +131,26 @@
                 <label for="phi">φ (Dayanım faktörü)</label>
                 <input id="phi" type="number" value="0.75" readonly>
 
-                <label>Dış merkezlik e<sub>x</sub> (mm)</label>
-                <input id="ex" type="number" value="45">
 
-                <label>φ<sub>b</sub> (Eğilme dayanım faktörü)</label>
-                <input id="phi_bend" type="number" value="0.90" step="0.05">
 
                 <hr style="margin:12px 0" />
 
                 <!-- Kesme / çekme yol verileri -->
                 <label for="shearWidths">Brüt kesme yolları genişlikleri (mm) lütfen virgülle ayırarak
                     giriniz</label>
-                <input id="shearWidths" type="text" value="40,70,70" placeholder="örn: 40,70,70">
+                <input id="shearWidths" type="text" value="37.5,75" placeholder="örn: 40,70,70">
 
                 <label for="tensionWidth">Çekme yolu genişliği (mm)</label>
-                <input id="tensionWidth" type="number" value="45">
+                <input id="tensionWidth" type="number" value="37.5">
 
                 <div class="row">
                     <div class="col">
                         <label for="shearHoleCount">Kesme yolunda delik sayısı</label>
-                        <input id="shearHoleCount" type="number" value="2.5" step="0.5">
+                        <input id="shearHoleCount" type="number" value="1.5" step="0.5">
                     </div>
                     <div class="col">
                         <label for="tensionHoleFactor">Çekme yolunda delik faktörü</label>
-                        <input id="tensionHoleFactor" type="number" value="0.5" step="0.1">
+                        <input id="tensionHoleFactor" type="number" value="0.5" step="0.5">
                     </div>
                 </div>
 
@@ -247,37 +243,6 @@
                         gösterilecektir.</div>
                 </div>
 
-                <hr style="margin:12px 0" />
-
-
-                <h4>Eğilmede Akma Sınır Durumu (13.4.5)</h4>
-                <div id="resultsArea6">
-                    <div class="section-title">Kullanılan Değişkenler</div>
-                    <div id="vars6" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
-                    <div class="section-title">İşlem Basamakları</div>
-                    <div id="calcSteps6" class="math-block katex-manual">Hesaplama adımları burada
-                        gösterilecektir.
-                    </div>
-                    <div class="section-title">Sonuçlar</div>
-                    <div id="results6" class="math-block katex-manual">R<sub>d</sub> sonucu burada
-                        gösterilecektir.</div>
-                </div>
-
-                <hr style="margin:12px 0" />
-
-
-                <h4>Eğilmede Kırılma Sınır Durumu (13.4.5)</h4>
-                <div id="resultsArea7">
-                    <div class="section-title">Kullanılan Değişkenler</div>
-                    <div id="vars7" class="math-block katex-manual">Henüz hesaplama yapılmadı.</div>
-                    <div class="section-title">İşlem Basamakları</div>
-                    <div id="calcSteps7" class="math-block katex-manual">Hesaplama adımları burada
-                        gösterilecektir.
-                    </div>
-                    <div class="section-title">Sonuçlar</div>
-                    <div id="results7" class="math-block katex-manual">R<sub>d</sub> sonucu burada
-                        gösterilecektir.</div>
-                </div>
 
                 <hr style="margin:12px 0" />
 
