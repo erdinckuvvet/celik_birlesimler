@@ -286,6 +286,7 @@ body {
     cursor: pointer
 }
 
+
 @media (max-width:768px) {
     .module-header {
         gap: 12px

@@ -82,29 +82,22 @@
                     </div>
                 </div>
 
-                <!-- Köşebent -->
-                <div class="section-title">Köşebent</div>
-                <div class="row">
+                <!-- Ara Yüz -->
+                <div class="section-title">Ara Yüz</div>
+                <div class="inputs-list">
                     <div>
-                        <label for="kosebent_1">Ebatlar</label><br />
-                        <input id="kosebent_1" class="little_input" type="number" value="90"
-                            aria-label="Köşebent kol 1 (mm)">
-                        <input id="kosebent_2" class="little_input" type="number" value="90"
-                            aria-label="Köşebent kol 2 (mm)">
-                        <input id="kosebent_t" class="little_input" type="number" placeholder="t"
-                            aria-label="Köşebent et kalınlığı (mm)">
+                        <label for="arayuzProfil">Profil ½</label>
+                        <select id="arayuzProfil"></select>
                     </div>
                     <div>
-                        <label for="kosebentMalzeme">Malzeme Türü</label><br />
-                        <select id="kosebentMalzeme"></select>
+                        <label for="arayuzMalzeme">Malzeme Türü</label>
+                        <select id="arayuzMalzeme"></select>
                     </div>
                 </div>
 
                 <hr style="margin:12px 0" />
 
                 <!-- Genel parametreler -->
-                <label for="t">Et kalınlığı t (mm)</label>
-                <input id="t" type="number" min="0" step="0.1">
 
                 <label for="boltSelect">Bulon Tipi</label>
                 <select id="boltSelect"></select>
@@ -113,7 +106,7 @@
                 <select id="boltClass"></select>
 
                 <label>Kaynak Kalınlığı a (mm)</label>
-                <input id="weld_a" type="number" value="4">
+                <input id="weld_a" type="number" value="5">
 
                 <label>Elektrod Mukavemeti F<sub>E</sub> (MPa)</label>
                 <input id="weld_FE" type="number" value="550">
@@ -138,10 +131,10 @@
                 <!-- Kesme / çekme yol verileri -->
                 <label for="shearWidths">Brüt kesme yolları genişlikleri (mm) lütfen virgülle ayırarak
                     giriniz</label>
-                <input id="shearWidths" type="text" value="37.5,75" placeholder="örn: 40,70,70">
+                <input id="shearWidths" type="text" value="40,80" placeholder="örn: 40,70,70">
 
                 <label for="tensionWidth">Çekme yolu genişliği (mm)</label>
-                <input id="tensionWidth" type="number" value="37.5">
+                <input id="tensionWidth" type="number" value="40">
 
                 <div class="row">
                     <div class="col">

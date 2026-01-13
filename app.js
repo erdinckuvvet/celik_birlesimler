@@ -291,6 +291,7 @@
                     st.textContent =
                         ".has-sticky-aside{padding-right:360px;}" +
                         ".aside.aside-sticky{position:fixed;right:16px;width:320px;z-index:50;max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 6px 18px rgba(20,24,40,0.08);background:#f5f4f8;border-radius:10px;}" +
+                        "a:link { text-decoration:none; }" +
                         "@media(max-width:980px){.has-sticky-aside{padding-right:0;}.aside.aside-sticky{position:static;width:auto;max-height:none;box-shadow:none;}}";
                     doc.head.appendChild(st);
                 }
@@ -316,7 +317,7 @@
                     similarHtml += "<ul class='similar-list'>" +
                         similar.map(sid => {
                             const sm = byId(Number(sid));
-                            const label = sm ? (sm.id + ". " + sm.title) : ("Modül " + sid);
+                            const label = sm ? (sm.title) : ("Modül " + sid);
                             return "<li><a href='#' data-sim-id='" + sid + "'>" + label + "</a></li>";
                         }).join("") +
                         "</ul>";
