@@ -63,19 +63,19 @@
       opt.value = item;
       opt.textContent = item;
       sel.appendChild(opt);
-      if (id === "anaProfil" && item === "IPE 400") opt.selected = true;
-      if (id === "taliProfil" && item === "UPN 300") opt.selected = true;
+      if (id === "anaProfil" && item === "IPE 330") opt.selected = true;
+      if (id === "taliProfil" && item === "IPE 400") opt.selected = true;
       if (id === "anaMalzeme" && item === "S355") opt.selected = true;
       if (id === "taliMalzeme" && item === "S355") opt.selected = true;
-      if (id === "kosebentMalzeme" && item === "S355") opt.selected = true;
+      if (id === "levhaMalzeme" && item === "S235") opt.selected = true;
     });
   }
 
   populateSelect("anaProfil", Object.keys(anaProfilVerileri));
-  populateSelect("taliProfil", Object.keys(taliProfilVerileri));
+  populateSelect("taliProfil", Object.keys(anaProfilVerileri));
   populateSelect("anaMalzeme", Object.keys(malzemeListesi));
   populateSelect("taliMalzeme", Object.keys(malzemeListesi));
-  populateSelect("kosebentMalzeme", Object.keys(malzemeListesi));
+  populateSelect("levhaMalzeme", Object.keys(malzemeListesi));
 
   const boltSelect = document.getElementById('boltSelect');
   bulonList.forEach(b => {
@@ -98,8 +98,8 @@
     });
   }
 
-  // Köşebent et kalınlığı değişirse t'ye yansıt
-  document.getElementById('kosebent_t').addEventListener('change', e => {
+  // Levha et kalınlığı değişirse t'ye yansıt
+  document.getElementById('levha_t').addEventListener('change', e => {
     const t = parseFloat(e.target.value);
     if (t) document.getElementById('t').value = t;
   });
@@ -187,8 +187,8 @@
   function calculate() {
     const anaMalzeme = document.getElementById('anaMalzeme').value;
     const taliMalzeme = document.getElementById('taliMalzeme').value;
-    const kosebentMalzeme = document.getElementById('kosebentMalzeme').value;
-    if (!anaMalzeme || !taliMalzeme || !kosebentMalzeme) {
+    const levhaMalzeme = document.getElementById('levhaMalzeme').value;
+    if (!anaMalzeme || !taliMalzeme || !levhaMalzeme) {
       alert("Lütfen tüm malzeme türlerini seçin.");
       return;
     }
@@ -197,7 +197,7 @@
     let zayıfMalzeme = (malzemeListesi[anaMalzeme].Fy < malzemeListesi[taliMalzeme].Fy)
       ? anaMalzeme : taliMalzeme;
     let { Fy, Fu, Fy2, Fu2 } = malzemeListesi[zayıfMalzeme];
-    const t = parseFloat(document.getElementById('kosebent_t').value);
+    const t = parseFloat(document.getElementById('levha_t').value);
     if (t > 40) { Fy = Fy2; Fu = Fu2; }
     document.getElementById('t').value = t;
 
@@ -438,7 +438,7 @@ $$
         const rec = db[key];
         return Number(t > 40 && rec.Fy2 ? rec.Fy2 : rec.Fy);
       }
-      let Fy = pickFyFrom('kosebentMalzeme');
+      let Fy = pickFyFrom('levhaMalzeme');
       if (!Number.isFinite(Fy)) {
         const fyA = pickFyFrom('anaMalzeme');
         const fyT = pickFyFrom('taliMalzeme');
@@ -505,7 +505,7 @@ $$
       // --- Fu okuma: köşebent malzemesinden; t<40 ise Fu2, aksi halde Fu.
       // Eğer seçilen alan yok veya değer 0/NaN ise "dolusu hangisiyse onu" kullan.
       function pickFuFromKosebent(thk) {
-        const sel = document.getElementById('kosebentMalzeme');
+        const sel = document.getElementById('levhaMalzeme');
         const key = sel ? sel.value : null;
         const dbMat = (typeof malzemeListesi !== "undefined") ? malzemeListesi : null;
         if (!key || !dbMat || !dbMat[key]) return NaN;
@@ -612,7 +612,7 @@ $$
 
       // F_y: köşebent malzemesinden; t>40 ⇒ Fy2, aksi halde Fy
       function pickFyFromKosebent(thk) {
-        const sel = document.getElementById('kosebentMalzeme');
+        const sel = document.getElementById('levhaMalzeme');
         const key = sel ? sel.value : null;
         const db = (typeof malzemeListesi !== "undefined") ? malzemeListesi : null;
         if (!key || !db || !db[key]) return NaN;
@@ -674,7 +674,7 @@ $$
     // 13.4.5 — Eğilmede Kırılma Sınır Durumu
     (function bendingFractureCalc() {
       // --- girdiler
-      const tGross = Number(document.getElementById('kosebent_t')?.value)
+      const tGross = Number(document.getElementById('levha_t')?.value)
         || Number(document.getElementById('t')?.value) || 0;
 
       // İsteğe bağlı net kalınlık (delik/oyuk varsa); yoksa brüt kalınlık
@@ -700,7 +700,7 @@ $$
 
       // F_u: köşebent malzemesi; t<40 ⇒ Fu2, aksi halde Fu (dolusu hangisiyse onu al)
       function pickFuFromKosebent(thk) {
-        const sel = document.getElementById('kosebentMalzeme');
+        const sel = document.getElementById('levhaMalzeme');
         const key = sel ? sel.value : null;
         const db = (typeof malzemeListesi !== "undefined") ? malzemeListesi : null;
         if (!key || !db || !db[key]) return NaN;
@@ -714,7 +714,7 @@ $$
 
       // İstersen kıyas için Fy'ı da çekelim (akma bloğuyla karşılaştırma)
       function pickFyFromKosebent(thk) {
-        const sel = document.getElementById('kosebentMalzeme');
+        const sel = document.getElementById('levhaMalzeme');
         const key = sel ? sel.value : null;
         const db = (typeof malzemeListesi !== "undefined") ? malzemeListesi : null;
         if (!key || !db || !db[key]) return NaN;
