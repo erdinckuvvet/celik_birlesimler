@@ -167,7 +167,94 @@
     "HL 1100 A": { d: 1090, bf: 400, tw: 18.0, tf: 31.0 },
     "HL 1100 B": { d: 1100, bf: 400, tw: 20.0, tf: 36.0 },
     "HL 1100 M": { d: 1108, bf: 402, tw: 22.0, tf: 40.0 },
-    "HL 1100 R": { d: 1118, bf: 405, tw: 26.0, tf: 45.0 }
+    "HL 1100 R": { d: 1118, bf: 405, tw: 26.0, tf: 45.0 },
+
+    "IPE A 100": { d: 98, bf: 55, tw: 3.6, tf: 4.7 },
+    "IPE 100": { d: 100, bf: 55, tw: 4.1, tf: 5.7 },
+
+    "IPE A 120": { d: 117.6, bf: 64, tw: 3.8, tf: 5.1 },
+    "IPE 120": { d: 120, bf: 64, tw: 4.4, tf: 6.3 },
+
+    "IPE A 140": { d: 137.4, bf: 73, tw: 3.8, tf: 5.6 },
+    "IPE 140": { d: 140, bf: 73, tw: 4.7, tf: 6.9 },
+
+    "IPE A 160": { d: 157, bf: 82, tw: 4.0, tf: 5.9 },
+    "IPE 160": { d: 160, bf: 82, tw: 5.0, tf: 7.4 },
+
+    "IPE A 180": { d: 177, bf: 91, tw: 4.3, tf: 6.5 },
+    "IPE 180": { d: 180, bf: 91, tw: 5.3, tf: 8.0 },
+    "IPE O 180": { d: 182, bf: 92, tw: 6.0, tf: 9.0 },
+
+    "IPE A 200": { d: 197, bf: 100, tw: 4.5, tf: 7.0 },
+    "IPE 200": { d: 200, bf: 100, tw: 5.6, tf: 8.5 },
+    "IPE O 200": { d: 202, bf: 102, tw: 6.2, tf: 9.5 },
+
+    "IPE A 220": { d: 217, bf: 110, tw: 5.0, tf: 7.7 },
+    "IPE 220": { d: 220, bf: 110, tw: 5.9, tf: 9.2 },
+    "IPE O 220": { d: 222, bf: 112, tw: 6.6, tf: 10.2 },
+
+    "IPE A 240": { d: 237, bf: 120, tw: 5.2, tf: 8.3 },
+    "IPE 240": { d: 240, bf: 120, tw: 6.2, tf: 9.8 },
+    "IPE O 240": { d: 242, bf: 122, tw: 7.0, tf: 10.8 },
+
+    "IPE A 270": { d: 267, bf: 135, tw: 5.5, tf: 8.7 },
+    "IPE 270": { d: 270, bf: 135, tw: 6.6, tf: 10.2 },
+    "IPE O 270": { d: 274, bf: 136, tw: 7.5, tf: 12.2 },
+
+    "IPE A 300": { d: 297, bf: 150, tw: 6.1, tf: 9.2 },
+    "IPE 300": { d: 300, bf: 150, tw: 7.1, tf: 10.7 },
+    "IPE O 300": { d: 304, bf: 152, tw: 8.0, tf: 12.7 },
+
+    "IPE A 330": { d: 327, bf: 160, tw: 6.5, tf: 10.0 },
+    "IPE 330": { d: 330, bf: 160, tw: 7.5, tf: 11.5 },
+    "IPE O 330": { d: 334, bf: 162, tw: 8.5, tf: 13.5 },
+
+    "IPE A 360": { d: 357.6, bf: 170, tw: 6.6, tf: 11.5 },
+    "IPE 360": { d: 360, bf: 170, tw: 8.0, tf: 12.7 },
+    "IPE O 360": { d: 364, bf: 172, tw: 9.2, tf: 14.7 },
+
+    "IPE A 400": { d: 397, bf: 180, tw: 7.0, tf: 12.0 },
+    "IPE 400": { d: 400, bf: 180, tw: 8.6, tf: 13.5 },
+    "IPE O 400": { d: 404, bf: 182, tw: 9.7, tf: 15.5 },
+
+    "IPE A 450": { d: 447, bf: 190, tw: 7.6, tf: 13.1 },
+    "IPE 450": { d: 450, bf: 190, tw: 9.4, tf: 14.6 },
+    "IPE O 450": { d: 456, bf: 192, tw: 11.0, tf: 17.6 },
+
+    "IPE A 500": { d: 497, bf: 200, tw: 8.4, tf: 14.5 },
+    "IPE 500": { d: 500, bf: 200, tw: 10.2, tf: 16.0 },
+    "IPE O 500": { d: 506, bf: 202, tw: 12.0, tf: 19.0 },
+
+    "IPE A 550": { d: 547, bf: 210, tw: 9.0, tf: 15.7 },
+    "IPE 550": { d: 550, bf: 210, tw: 11.1, tf: 17.2 },
+    "IPE O 550": { d: 556, bf: 212, tw: 12.7, tf: 20.2 },
+
+    "IPE A 600": { d: 597, bf: 220, tw: 9.8, tf: 17.5 },
+    "IPE 600": { d: 600, bf: 220, tw: 12.0, tf: 19.0 },
+    "IPE O 600": { d: 610, bf: 224, tw: 15.0, tf: 24.0 },
+
+    "IPE 750 x 147": { d: 753, bf: 265, tw: 13.2, tf: 17.0 },
+    "IPE 750 x 173": { d: 762, bf: 267, tw: 14.4, tf: 21.6 },
+    "IPE 750 x 196": { d: 770, bf: 268, tw: 15.6, tf: 25.4 },
+
+    "IPN 120": { d: 120, bf: 58, tw: 5.1, tf: 7.7 },
+    "IPN 140": { d: 140, bf: 66, tw: 5.7, tf: 8.6 },
+    "IPN 160": { d: 160, bf: 74, tw: 6.3, tf: 9.5 },
+    "IPN 180": { d: 180, bf: 82, tw: 6.9, tf: 10.4 },
+    "IPN 200": { d: 200, bf: 90, tw: 7.5, tf: 11.3 },
+    "IPN 220": { d: 220, bf: 98, tw: 8.1, tf: 12.2 },
+    "IPN 240": { d: 240, bf: 106, tw: 8.7, tf: 13.1 },
+    "IPN 260": { d: 260, bf: 113, tw: 9.4, tf: 14.1 },
+    "IPN 280": { d: 280, bf: 119, tw: 10.1, tf: 15.2 },
+    "IPN 300": { d: 300, bf: 125, tw: 10.8, tf: 16.2 },
+    "IPN 320": { d: 320, bf: 131, tw: 11.5, tf: 17.3 },
+    "IPN 340": { d: 340, bf: 137, tw: 12.2, tf: 18.3 },
+    "IPN 360": { d: 360, bf: 143, tw: 13.0, tf: 19.5 },
+    "IPN 380": { d: 380, bf: 149, tw: 13.7, tf: 20.5 },
+    "IPN 400": { d: 400, bf: 155, tw: 14.4, tf: 21.6 },
+    "IPN 450": { d: 450, bf: 170, tw: 16.2, tf: 24.3 },
+    "IPN 500": { d: 500, bf: 185, tw: 18.0, tf: 27.0 },
+    "IPN 550": { d: 550, bf: 200, tw: 19.0, tf: 30.0 }
   };
 
   const taliProfilVerileri = {
@@ -399,37 +486,37 @@
 
     // --- Bulon Deliği Ezilme Kuvveti Dayanımı (13.3.13) ------------------------
     (function bearingCalc46() {
-  const varsEl = document.getElementById("vars2");
-  const stepsEl = document.getElementById("calcSteps2");
-  const resultEl = document.getElementById("results2");
-  if (!varsEl || !stepsEl || !resultEl) return;
+      const varsEl = document.getElementById("vars2");
+      const stepsEl = document.getElementById("calcSteps2");
+      const resultEl = document.getElementById("results2");
+      if (!varsEl || !stepsEl || !resultEl) return;
 
-  const num = (v) => Number(String(v).replace(",", "."));
+      const num = (v) => Number(String(v).replace(",", "."));
 
-  const shearTxt = document.getElementById("shearWidths")?.value || "";
-  const parts = shearTxt
-    .split(",")
-    .map(s => num(s.trim()))
-    .filter(v => Number.isFinite(v) && v > 0);
+      const shearTxt = document.getElementById("shearWidths")?.value || "";
+      const parts = shearTxt
+        .split(",")
+        .map(s => num(s.trim()))
+        .filter(v => Number.isFinite(v) && v > 0);
 
-  const e = parts.length > 0 ? parts[0] : 40;
-  const t = kt || num(document.getElementById("kosebent_t")?.value) || 10;
+      const e = parts.length > 0 ? parts[0] : 40;
+      const t = kt || num(document.getElementById("kosebent_t")?.value) || 10;
 
-  const dh = db + 2;
+      const dh = db + 2;
 
-  const Fu = pickFuFromMaterial("kosebentMalzeme", t) || 360;
+      const Fu = pickFuFromMaterial("kosebentMalzeme", t) || 360;
 
-  const lc = e - dh / 2;
+      const lc = e - dh / 2;
 
-  const R1 = 1.2 * lc * t * Fu;
-  const R2 = 2.4 * db * t * Fu;
-  const Rn_single = Math.min(R1, R2) * 1e-3; // kN
+      const R1 = 1.2 * lc * t * Fu;
+      const R2 = 2.4 * db * t * Fu;
+      const Rn_single = Math.min(R1, R2) * 1e-3; // kN
 
-  const boltCount = 2;
-  const Rn_total = Rn_single * boltCount;
-  const Rd = phi * Rn_total;
+      const boltCount = 2;
+      const Rn_total = Rn_single * boltCount;
+      const Rd = phi * Rn_total;
 
-  varsEl.innerHTML = String.raw`
+      varsEl.innerHTML = String.raw`
 $$
 d_b = ${db}\,\text{mm},\quad
 d_h = d_b + 2 = ${dh}\,\text{mm} \\
@@ -440,7 +527,7 @@ F_u = ${Fu}\,\text{MPa},\quad
 $$
 `;
 
-  stepsEl.innerHTML = String.raw`
+      stepsEl.innerHTML = String.raw`
 $$
 l_c = e - \frac{d_h}{2}
 = ${e} - \frac{${dh}}{2}
@@ -460,7 +547,7 @@ ${(2.4 * db * t * Fu * 1e-3).toFixed(2)}
 $$
 `;
 
-  resultEl.innerHTML = String.raw`
+      resultEl.innerHTML = String.raw`
 $$
 R_d = \varphi R_n \times 2
 = ${phi}\times ${Rn_single.toFixed(2)} \times 2
@@ -468,10 +555,10 @@ R_d = \varphi R_n \times 2
 $$
 `;
 
-  if (typeof setSummary === "function") {
-    setSummary("bearing", Rd);
-  }
-})();
+      if (typeof setSummary === "function") {
+        setSummary("bearing", Rd);
+      }
+    })();
 
     // 13.3.9 — Bulonların Kesme Kuvveti Dayanımı
     (function boltShear46() {
