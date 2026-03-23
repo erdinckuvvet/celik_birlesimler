@@ -2,32 +2,190 @@
 (function () {
 
   // --- Tablo verileri -------------------------------------------------------
-  const anaProfilVerileri = {
-    "IPE A 100": 3.6, "IPE 100": 4.1,
-    "IPE A 120": 3.8, "IPE 120": 4.4,
-    "IPE A 140": 3.8, "IPE 140": 4.7,
-    "IPE A 160": 4.0, "IPE 160": 5.0,
-    "IPE A 180": 4.3, "IPE 180": 5.3, "IPE O 180": 6.0,
-    "IPE A 200": 4.5, "IPE 200": 5.6, "IPE O 200": 6.2,
-    "IPE A 220": 5.0, "IPE 220": 5.9, "IPE O 220": 6.6,
-    "IPE A 240": 5.2, "IPE 240": 6.2, "IPE O 240": 7.0,
-    "IPE A 270": 5.5, "IPE 270": 6.6, "IPE O 270": 7.5,
-    "IPE A 300": 6.1, "IPE 300": 7.1, "IPE O 300": 8.0,
-    "IPE A 330": 6.5, "IPE 330": 7.5, "IPE O 330": 8.5,
-    "IPE A 360": 6.6, "IPE 360": 8.0, "IPE O 360": 9.2,
-    "IPE A 400": 7.0, "IPE 400": 8.6, "IPE O 400": 9.7,
-    "IPE A 450": 7.6, "IPE 450": 9.4, "IPE O 450": 11.0,
-    "IPE A 500": 8.4, "IPE 500": 10.2, "IPE O 500": 12.0,
-    "IPE A 550": 9.0, "IPE 550": 11.1, "IPE O 550": 12.7,
-    "IPE A 600": 9.8, "IPE 600": 12.0, "IPE O 600": 15.0,
-    "IPE 750 x 147": 13.2, "IPE 750 x 173": 14.4, "IPE 750 x 196": 15.6
+
+
+  const HE_GEOMETRY = {
+    "HE 100 AA": { d: 91, bf: 100, tw: 4.2, tf: 5.5 },
+    "HE 100 A": { d: 96, bf: 100, tw: 5.0, tf: 8.0 },
+    "HE 100 B": { d: 100, bf: 100, tw: 6.0, tf: 10.0 },
+    "HE 100 M": { d: 120, bf: 106, tw: 12.0, tf: 20.0 },
+
+    "HE 120 AA": { d: 109, bf: 120, tw: 4.2, tf: 5.5 },
+    "HE 120 A": { d: 114, bf: 120, tw: 5.0, tf: 8.0 },
+    "HE 120 B": { d: 120, bf: 120, tw: 6.5, tf: 11.0 },
+    "HE 120 M": { d: 140, bf: 126, tw: 12.5, tf: 21.0 },
+
+    "HE 140 AA": { d: 128, bf: 140, tw: 4.3, tf: 6.0 },
+    "HE 140 A": { d: 133, bf: 140, tw: 5.5, tf: 8.5 },
+    "HE 140 B": { d: 140, bf: 140, tw: 7.0, tf: 12.0 },
+    "HE 140 M": { d: 160, bf: 146, tw: 13.0, tf: 22.0 },
+
+    "HE 160 AA": { d: 148, bf: 160, tw: 4.5, tf: 7.0 },
+    "HE 160 A": { d: 152, bf: 160, tw: 6.0, tf: 9.0 },
+    "HE 160 B": { d: 160, bf: 160, tw: 8.0, tf: 13.0 },
+    "HE 160 M": { d: 180, bf: 166, tw: 14.0, tf: 23.0 },
+
+    "HE 180 AA": { d: 167, bf: 180, tw: 5.0, tf: 7.5 },
+    "HE 180 A": { d: 171, bf: 180, tw: 6.0, tf: 9.5 },
+    "HE 180 B": { d: 180, bf: 180, tw: 8.5, tf: 14.0 },
+    "HE 180 M": { d: 200, bf: 186, tw: 14.5, tf: 24.0 },
+
+    "HE 200 AA": { d: 186, bf: 200, tw: 5.5, tf: 8.0 },
+    "HE 200 A": { d: 190, bf: 200, tw: 6.5, tf: 10.0 },
+    "HE 200 B": { d: 200, bf: 200, tw: 9.0, tf: 15.0 },
+    "HE 200 M": { d: 220, bf: 206, tw: 15.0, tf: 25.0 },
+
+    "HE 220 AA": { d: 205, bf: 220, tw: 6.0, tf: 8.5 },
+    "HE 220 A": { d: 210, bf: 220, tw: 7.0, tf: 11.0 },
+    "HE 220 B": { d: 220, bf: 220, tw: 9.5, tf: 16.0 },
+    "HE 220 M": { d: 240, bf: 226, tw: 15.5, tf: 26.0 },
+
+    "HE 240 AA": { d: 224, bf: 240, tw: 6.5, tf: 9.0 },
+    "HE 240 A": { d: 230, bf: 240, tw: 7.5, tf: 12.0 },
+    "HE 240 B": { d: 240, bf: 240, tw: 10.0, tf: 17.0 },
+    "HE 240 M": { d: 270, bf: 248, tw: 18.0, tf: 32.0 },
+
+    "HE 260 AA": { d: 244, bf: 260, tw: 6.5, tf: 9.5 },
+    "HE 260 A": { d: 250, bf: 260, tw: 7.5, tf: 12.5 },
+    "HE 260 B": { d: 260, bf: 260, tw: 10.0, tf: 17.5 },
+    "HE 260 M": { d: 290, bf: 268, tw: 18.0, tf: 32.5 },
+
+    "HE 280 AA": { d: 264, bf: 280, tw: 7.0, tf: 10.0 },
+    "HE 280 A": { d: 270, bf: 280, tw: 8.0, tf: 13.0 },
+    "HE 280 B": { d: 280, bf: 280, tw: 10.5, tf: 18.0 },
+    "HE 280 M": { d: 310, bf: 288, tw: 18.5, tf: 33.0 },
+
+    "HE 300 AA": { d: 283, bf: 300, tw: 7.5, tf: 10.5 },
+    "HE 300 A": { d: 290, bf: 300, tw: 8.5, tf: 14.0 },
+    "HE 300 B": { d: 300, bf: 300, tw: 11.0, tf: 19.0 },
+    "HE 300 M": { d: 340, bf: 310, tw: 21.0, tf: 39.0 },
+
+    "HE 320 AA": { d: 301, bf: 300, tw: 8.0, tf: 11.0 },
+    "HE 320 A": { d: 310, bf: 300, tw: 9.0, tf: 15.5 },
+    "HE 320 B": { d: 320, bf: 300, tw: 11.5, tf: 20.5 },
+    "HE 320 M": { d: 359, bf: 309, tw: 21.0, tf: 40.0 },
+
+    "HE 340 AA": { d: 320, bf: 300, tw: 8.5, tf: 11.5 },
+    "HE 340 A": { d: 330, bf: 300, tw: 9.5, tf: 16.5 },
+    "HE 340 B": { d: 340, bf: 300, tw: 12.0, tf: 21.5 },
+    "HE 340 M": { d: 377, bf: 309, tw: 21.0, tf: 40.0 },
+
+    "HE 360 AA": { d: 339, bf: 300, tw: 9.0, tf: 12.0 },
+    "HE 360 A": { d: 350, bf: 300, tw: 10.0, tf: 17.5 },
+    "HE 360 B": { d: 360, bf: 300, tw: 12.5, tf: 22.5 },
+    "HE 360 M": { d: 395, bf: 308, tw: 21.0, tf: 40.0 },
+
+    "HE 400 AA": { d: 378, bf: 300, tw: 9.5, tf: 13.0 },
+    "HE 400 A": { d: 390, bf: 300, tw: 11.0, tf: 19.0 },
+    "HE 400 B": { d: 400, bf: 300, tw: 13.5, tf: 24.0 },
+    "HE 400 M": { d: 432, bf: 307, tw: 21.0, tf: 40.0 },
+
+    "HE 450 AA": { d: 425, bf: 300, tw: 10.0, tf: 13.5 },
+    "HE 450 A": { d: 440, bf: 300, tw: 11.5, tf: 21.0 },
+    "HE 450 B": { d: 450, bf: 300, tw: 14.0, tf: 26.0 },
+    "HE 450 M": { d: 478, bf: 307, tw: 21.0, tf: 40.0 },
+
+    "HE 500 AA": { d: 472, bf: 300, tw: 10.5, tf: 14.0 },
+    "HE 500 A": { d: 490, bf: 300, tw: 12.0, tf: 23.0 },
+    "HE 500 B": { d: 500, bf: 300, tw: 14.5, tf: 28.0 },
+    "HE 500 M": { d: 524, bf: 306, tw: 21.0, tf: 40.0 },
+
+    "HE 550 AA": { d: 522, bf: 300, tw: 11.5, tf: 15.0 },
+    "HE 550 A": { d: 540, bf: 300, tw: 12.5, tf: 24.0 },
+    "HE 550 B": { d: 550, bf: 300, tw: 15.0, tf: 29.0 },
+    "HE 550 M": { d: 572, bf: 306, tw: 21.0, tf: 40.0 },
+
+    "HE 600 AA": { d: 571, bf: 300, tw: 12.0, tf: 15.5 },
+    "HE 600 A": { d: 590, bf: 300, tw: 13.0, tf: 25.0 },
+    "HE 600 B": { d: 600, bf: 300, tw: 15.5, tf: 30.0 },
+    "HE 600 M": { d: 620, bf: 305, tw: 21.0, tf: 40.0 },
+    "HE 600 x 337": { d: 632, bf: 310, tw: 25.5, tf: 46.0 },
+    "HE 600 x 399": { d: 648, bf: 315, tw: 30.0, tf: 54.0 },
+
+    "HE 650 AA": { d: 620, bf: 300, tw: 12.5, tf: 16.0 },
+    "HE 650 A": { d: 640, bf: 300, tw: 13.5, tf: 26.0 },
+    "HE 650 B": { d: 650, bf: 300, tw: 16.0, tf: 31.0 },
+    "HE 650 M": { d: 668, bf: 305, tw: 21.0, tf: 40.0 },
+
+    "HE 650 x 343": { d: 680, bf: 309, tw: 25.0, tf: 46.0 },
+    "HE 650 x 407": { d: 696, bf: 314, tw: 29.5, tf: 54.0 },
+
+    "HE 700 AA": { d: 670, bf: 300, tw: 13.0, tf: 17.0 },
+    "HE 700 A": { d: 690, bf: 300, tw: 14.5, tf: 27.0 },
+    "HE 700 B": { d: 700, bf: 300, tw: 17.0, tf: 32.0 },
+    "HE 700 M": { d: 716, bf: 304, tw: 21.0, tf: 40.0 },
+
+    "HE 700 x 352": { d: 728, bf: 308, tw: 25.0, tf: 46.0 },
+    "HE 700 x 418": { d: 744, bf: 313, tw: 29.5, tf: 54.0 },
+
+    "HE 800 AA": { d: 770, bf: 300, tw: 14.0, tf: 18.0 },
+    "HE 800 A": { d: 790, bf: 300, tw: 15.0, tf: 28.0 },
+    "HE 800 B": { d: 800, bf: 300, tw: 17.5, tf: 33.0 },
+    "HE 800 M": { d: 814, bf: 303, tw: 21.0, tf: 40.0 },
+
+    "HE 800 x 373": { d: 826, bf: 308, tw: 25.0, tf: 46.0 },
+    "HE 800 x 444": { d: 842, bf: 313, tw: 30.0, tf: 54.0 },
+
+    "HE 900 AA": { d: 870, bf: 300, tw: 15.0, tf: 20.0 },
+    "HE 900 A": { d: 890, bf: 300, tw: 16.0, tf: 30.0 },
+    "HE 900 B": { d: 900, bf: 300, tw: 18.5, tf: 35.0 },
+    "HE 900 M": { d: 910, bf: 302, tw: 21.0, tf: 40.0 },
+
+    "HE 900 x 391": { d: 922, bf: 307, tw: 25.0, tf: 46.0 },
+    "HE 900 x 466": { d: 938, bf: 312, tw: 30.0, tf: 54.0 },
+
+    "HE 1000 AA": { d: 970, bf: 300, tw: 16.0, tf: 21.0 },
+    "HE 1000 A": { d: 990, bf: 300, tw: 16.5, tf: 31.0 },
+    "HE 1000 B": { d: 1000, bf: 300, tw: 19.0, tf: 36.0 },
+    "HE 1000 M": { d: 1008, bf: 302, tw: 21.0, tf: 40.0 },
+
+    "HE 1000 x 393": { d: 1016, bf: 303, tw: 24.4, tf: 43.9 },
+    "HE 1000 x 409": { d: 1020, bf: 306, tw: 25.0, tf: 46.0 },
+    "HE 1000 x 488": { d: 1036, bf: 311, tw: 30.0, tf: 54.0 },
+    "HE 1000 x 579": { d: 1056, bf: 316, tw: 35.0, tf: 64.0 },
+
+    "HL 920 x 342": { d: 912, bf: 418, tw: 19.3, tf: 32.0 },
+    "HL 920 x 365": { d: 916, bf: 419, tw: 20.3, tf: 34.3 },
+    "HL 920 x 387": { d: 921, bf: 420, tw: 21.3, tf: 36.6 },
+    "HL 920 x 417": { d: 928, bf: 422, tw: 22.5, tf: 39.9 },
+    "HL 920 x 446": { d: 933, bf: 423, tw: 24.0, tf: 42.7 },
+    "HL 920 x 488": { d: 942, bf: 422, tw: 25.9, tf: 47.0 },
+    "HL 920 x 534": { d: 950, bf: 425, tw: 28.4, tf: 51.1 },
+    "HL 920 x 585": { d: 960, bf: 427, tw: 31.0, tf: 55.9 },
+    "HL 920 x 653": { d: 972, bf: 431, tw: 34.5, tf: 62.0 },
+    "HL 920 x 784": { d: 996, bf: 437, tw: 40.9, tf: 73.9 },
+    "HL 920 x 967": { d: 1028, bf: 446, tw: 50.0, tf: 89.9 },
+    "HL 1000 x 296": { d: 982, bf: 400, tw: 16.5, tf: 27.0 },
+    "HL 1000 A": { d: 990, bf: 400, tw: 16.5, tf: 31.0 },
+    "HL 1000 B": { d: 1000, bf: 400, tw: 19.0, tf: 36.0 },
+    "HL 1000 M": { d: 1008, bf: 402, tw: 21.0, tf: 40.0 },
+    "HL 1000 x 477": { d: 1018, bf: 404, tw: 25.5, tf: 45.0 },
+    "HL 1000 x 554": { d: 1032, bf: 408, tw: 29.5, tf: 52.0 },
+    "HL 1000 x 642": { d: 1048, bf: 412, tw: 34.0, tf: 60.0 },
+    "HL 1000 x 748": { d: 1068, bf: 417, tw: 39.0, tf: 70.0 },
+    "HL 1000 x 883": { d: 1092, bf: 424, tw: 45.5, tf: 82.0 },
+    "HL 1100 A": { d: 1090, bf: 400, tw: 18.0, tf: 31.0 },
+    "HL 1100 B": { d: 1100, bf: 400, tw: 20.0, tf: 36.0 },
+    "HL 1100 M": { d: 1108, bf: 402, tw: 22.0, tf: 40.0 },
+    "HL 1100 R": { d: 1118, bf: 405, tw: 26.0, tf: 45.0 }
   };
 
   const taliProfilVerileri = {
-    "UPN 100": 6, "UPN 120": 7, "UPN 140": 7, "UPN 160": 7.5,
-    "UPN 180": 8, "UPN 200": 8.5, "UPN 220": 9, "UPN 240": 9.5,
-    "UPN 260": 10, "UPN 280": 10, "UPN 300": 10, "UPN 320": 14,
-    "UPN 350": 14, "UPN 380": 13.5, "UPN 400": 14
+    "UPN 100": { tw: 6.0 },
+    "UPN 120": { tw: 7.0 },
+    "UPN 140": { tw: 7.0 },
+    "UPN 160": { tw: 7.5 },
+    "UPN 180": { tw: 8.0 },
+    "UPN 200": { tw: 8.5 },
+    "UPN 220": { tw: 9.0 },
+    "UPN 240": { tw: 9.5 },
+    "UPN 260": { tw: 10.0 },
+    "UPN 280": { tw: 10.0 },
+    "UPN 300": { tw: 10.0 },
+    "UPN 320": { tw: 14.0 },
+    "UPN 350": { tw: 14.0 },
+    "UPN 380": { tw: 13.5 },
+    "UPN 400": { tw: 14.0 }
   };
 
   const malzemeListesi = {
@@ -63,16 +221,16 @@
       opt.value = item;
       opt.textContent = item;
       sel.appendChild(opt);
-      if (id === "anaProfil" && item === "IPE 400") opt.selected = true;
-      if (id === "taliProfil" && item === "IPE 300") opt.selected = true;
+      if (id === "anaProfil" && item === "HE 180 A") opt.selected = true;
+      if (id === "taliProfil" && item === "UPN 200") opt.selected = true;
       if (id === "anaMalzeme" && item === "S355") opt.selected = true;
       if (id === "taliMalzeme" && item === "S355") opt.selected = true;
       if (id === "kosebentMalzeme" && item === "S235") opt.selected = true;
     });
   }
 
-  populateSelect("anaProfil", Object.keys(anaProfilVerileri));
-  populateSelect("taliProfil", Object.keys(anaProfilVerileri));
+  populateSelect("anaProfil", Object.keys(HE_GEOMETRY));
+  populateSelect("taliProfil", Object.keys(taliProfilVerileri));
   populateSelect("anaMalzeme", Object.keys(malzemeListesi));
   populateSelect("taliMalzeme", Object.keys(malzemeListesi));
   populateSelect("kosebentMalzeme", Object.keys(malzemeListesi));
@@ -104,16 +262,13 @@
     if (t) document.getElementById('t').value = t;
   });
 
+
+
   //Tabloyu dolduran yardımcılar
   // Limit durum isimleri
   const LIMIT_LABELS = {
-    block: "Blok kırılma",
     bearing: "Bulon deliği ezilme",
     boltShear: "Bulon kesme kuvveti",
-    shearYield: "Kayma etkisinde akma",
-    shearFracture: "Kayma etkisinde kırılma",
-    bendYield: "Eğilmede akma",
-    bendFracture: "Eğilmede kırılma",
     weld: "Kaynak dayanımı"
   };
 
@@ -181,545 +336,284 @@
     }
   }
 
+  function pickFyFromMaterial(selectId, thk) {
+    const sel = document.getElementById(selectId);
+    const key = sel ? sel.value : null;
+    if (!key || !malzemeListesi[key]) return NaN;
+
+    const rec = malzemeListesi[key];
+    let Fy = (thk > 40 && rec.Fy2) ? rec.Fy2 : rec.Fy;
+    Fy = Number(Fy) || Number(rec.Fy) || Number(rec.Fy2);
+    return Fy;
+  }
+
+  function pickFuFromMaterial(selectId, thk) {
+    const sel = document.getElementById(selectId);
+    const key = sel ? sel.value : null;
+    if (!key || !malzemeListesi[key]) return NaN;
+
+    const rec = malzemeListesi[key];
+    let Fu = (thk > 40 && rec.Fu2) ? rec.Fu2 : rec.Fu;
+    Fu = Number(Fu) || Number(rec.Fu) || Number(rec.Fu2);
+    return Fu;
+  }
 
 
   // --- Hesaplama -------------------------------------------------------------
   function calculate() {
-    const anaMalzeme = document.getElementById('anaMalzeme').value;
-    const taliMalzeme = document.getElementById('taliMalzeme').value;
-    const kosebentMalzeme = document.getElementById('kosebentMalzeme').value;
-    if (!anaMalzeme || !taliMalzeme || !kosebentMalzeme) {
-      alert("Lütfen tüm malzeme türlerini seçin.");
+    const anaProfil = document.getElementById("anaProfil").value;
+    const taliProfil = document.getElementById("taliProfil").value;
+    const anaMalzeme = document.getElementById("anaMalzeme").value;
+    const taliMalzeme = document.getElementById("taliMalzeme").value;
+    const kosebentMalzeme = document.getElementById("kosebentMalzeme").value;
+
+
+    const phi = parseFloat(document.getElementById("phi").value);
+    const Ubs = parseFloat(document.getElementById("Ubs").value);
+
+    const k1 = parseFloat(document.getElementById("kosebent_1").value) || 90;
+    const k2 = parseFloat(document.getElementById("kosebent_2").value) || 90;
+    const kt = parseFloat(document.getElementById("kosebent_t").value) || 10;
+
+    const db = Number(document.getElementById("boltSelect")?.value);
+
+    const bolt = bulonList.find(b => b.db === db);
+    if (!bolt) {
+      alert("Bulon seçimi hatalı");
       return;
     }
 
-    // zayıf malzeme belirle
-    let zayıfMalzeme = (malzemeListesi[kosebentMalzeme].Fy < malzemeListesi[anaMalzeme].Fy)
-      ? kosebentMalzeme : anaMalzeme;
-    let { Fy, Fu, Fy2, Fu2 } = malzemeListesi[zayıfMalzeme];
-    const t = parseFloat(document.getElementById('kosebent_t').value);
-    if (t > 40) { Fy = Fy2; Fu = Fu2; }
-    document.getElementById('t').value = t;
 
-    const db = parseFloat(document.getElementById('boltSelect').value);
-    const Ubs = parseFloat(document.getElementById('Ubs').value);
-    const phi = parseFloat(document.getElementById('phi').value);
-    const shearWidths = document.getElementById('shearWidths').value.split(',').map(x => parseFloat(x.trim()));
-    const tensionWidth = parseFloat(document.getElementById('tensionWidth').value);
-    const shearHoleCount = parseFloat(document.getElementById('shearHoleCount').value);
-    const tensionHoleFactor = parseFloat(document.getElementById('tensionHoleFactor').value);
+    const weld_a = parseFloat(document.getElementById("weld_a").value) || 4;
+    const weld_FE = parseFloat(document.getElementById("weld_FE").value) || 550;
+    const weld_count = parseFloat(document.getElementById("weld_count").value) || 2;
 
+    const shearWidths = (document.getElementById("shearWidths").value || "")
+      .split(",")
+      .map(x => parseFloat(x.trim()))
+      .filter(v => Number.isFinite(v) && v > 0);
 
-    // Blok kırılma dayanımı (13.4.3)
+    const shearHoleCount = parseFloat(document.getElementById("shearHoleCount").value) || 2;
 
-    const dh = db + 2;
-    const Agv = shearWidths.reduce((a, b) => a + b, 0) * t;
-    const Anv = Agv - shearHoleCount * dh * t;
-    const Ant = (tensionWidth * t) - (tensionHoleFactor * dh * t);
-
-    const expr1 = 0.6 * Fu * Anv + Ubs * Fu * Ant;
-    const expr2 = 0.6 * Fy * Agv + Ubs * Fu * Ant;
-    const Rn = Math.min(expr1, expr2);
-    const Rd = phi * Rn * 2; //2 köşebentli birleşim
-
-    // Tablo özeti için kaydet
-    const Rd_block_kN = (Rd / 1000).toFixed(2);
-    setSummary("block", Rd_block_kN);
-
-
-    // çıktı alanları
-    const varsHTML = `
-      $$t = ${t}\\text{ mm},\\quad d_b = ${db}\\text{ mm},\\quad d_h = d_b + 2 = ${dh}\\text{ mm}$$
-      $$U_{bs} = ${Ubs},\\quad \\phi = ${phi}$$
-      $$F_y = ${Fy}\\text{ MPa},\\quad F_u = ${Fu}\\text{ MPa}$$
-      $$b_{kesme} = [${shearWidths.join(', ')}],\\quad b_{cekme} = ${tensionWidth}$$
-      $$n_{kesme} = ${shearHoleCount},\\quad n_{cekme} = ${tensionHoleFactor}$$
-    `;
-
-    const stepsHTML = `
-      $$A_{gv} = \\sum b_i \\cdot t = (${shearWidths.join('+')})\\times${t} = ${Agv.toFixed(1)}\\text{ mm}^2$$
-      $$A_{nv} = A_{gv} - n_{kesme}\\, d_h\\, t = ${Agv.toFixed(1)} - ${shearHoleCount}\\times${dh}\\times${t} = ${Anv.toFixed(1)}\\text{ mm}^2$$
-      $$A_{nt} = b_{cekme}\\,t - n_{cekme}\\, d_h\\, t = ${tensionWidth}\\times${t} - ${tensionHoleFactor}\\times${dh}\\times${t} = ${Ant.toFixed(1)}\\text{ mm}^2$$
-      $$R_n = \\min(0.6F_uA_{nv} + U_{bs}F_uA_{nt},\\; 0.6F_yA_{gv} + U_{bs}F_uA_{nt})$$
-      $$= \\min(${(expr1).toFixed(1)},\\; ${(expr2).toFixed(1)}) = ${Rn.toFixed(1)}\\text{ N} = ${(Rn / 1000).toFixed(2)}\\text{ kN}$$
-      $$R_d = \\phi R_n = ${phi}\\times${Rn.toFixed(1)} = ${Rd.toFixed(1)}\\text{ N} = ${(Rd / 1000).toFixed(2)}\\text{ kN}$$
-    `;
-
-    const resultsHTML = `
-      $$\\quad R_d = ${(Rd / 1000).toFixed(2)}\\text{ kN}$$
-    `;
-
-    document.getElementById('vars').innerHTML = varsHTML;
-    document.getElementById('calcSteps').innerHTML = stepsHTML;
-    document.getElementById('results').innerHTML = resultsHTML;
 
 
     // --- Bulon Deliği Ezilme Kuvveti Dayanımı (13.3.13) ------------------------
-    (function bearingCalc() {
-      // calculate() içinde zaten okuduğumuz değişkenleri kullanıyoruz:
-      // t, db, phi, Fu, shearWidths
-      const dh = db + 2; // delik çapı
-      const bolts = [];  // her bulon için: lc, Rn_i (N), R1, R2
+    (function bearingCalc46() {
+  const varsEl = document.getElementById("vars2");
+  const stepsEl = document.getElementById("calcSteps2");
+  const resultEl = document.getElementById("results2");
+  if (!varsEl || !stepsEl || !resultEl) return;
 
-      // shearWidths = [e1, p2, p3, ...]
-      for (let i = 0; i < shearWidths.length; i++) {
-        const w = Number(shearWidths[i]);
-        const lc = Math.max(i === 0 ? (w - dh / 2) : (w - dh), 0); // negatifse sıfırla
-        const R1 = 1.2 * lc * t * Fu;   // N
-        const R2 = 2.4 * db * t * Fu;   // N
-        const Rn_i = Math.min(R1, R2);  // N
-        bolts.push({ idx: i + 1, lc, R1, R2, Rn_i });
-      }
+  const num = (v) => Number(String(v).replace(",", "."));
 
-      // Toplam ve tasarım
-      const Rn_total = bolts.reduce((s, b) => s + b.Rn_i, 0); // N
-      const Rn_total_kN = Rn_total / 1000;
-      const Rd_kN = phi * Rn_total_kN;
+  const shearTxt = document.getElementById("shearWidths")?.value || "";
+  const parts = shearTxt
+    .split(",")
+    .map(s => num(s.trim()))
+    .filter(v => Number.isFinite(v) && v > 0);
 
-      // Özet için kaydet
-      const Rd_bearing_kN = Rd_kN.toFixed(2); // zaten kN ise direkt
-      setSummary("bearing", Rd_bearing_kN);
+  const e = parts.length > 0 ? parts[0] : 40;
+  const t = kt || num(document.getElementById("kosebent_t")?.value) || 10;
 
-      // 1) Değişkenler (vars2)
-      const vars2HTML = `
-    $$t = ${t}\\text{ mm},\\quad d_b = ${db}\\text{ mm},\\quad d_h = d_b + 2 = ${dh}\\text{ mm}$$
-    $$F_u = ${Fu}\\text{ MPa},\\quad \\phi = ${phi}$$
-  `;
+  const dh = db + 2;
 
-      // 2) İşlem basamakları (calcSteps2) — her bulon satır satır
-      const lines = bolts.map(b => {
-        const R1k = (b.R1 / 1000).toFixed(2);
-        const R2k = (b.R2 / 1000).toFixed(2);
-        const Rnk = (b.Rn_i / 1000).toFixed(2);
-        return String.raw`Bulon\ ${b.idx}:\
-\ l_c = ${b.lc.toFixed(2)}\ \text{mm},\ R_{n,${b.idx}} = \min(1.2\,l_c\,t\,F_u,\ 2.4\,d_b\,t\,F_u)\
-= \min(${R1k},\ ${R2k}) = ${Rnk}\ \text{kN}`;
-      }).join("<br/>");
+  const Fu = pickFuFromMaterial("kosebentMalzeme", t) || 360;
 
-      // 2) İşlem basamakları (calcSteps2) — her bulon satır satır (KaTeX aligned)
-      const lineTex = bolts.map(b => {
-        const R1k = (b.R1 / 1000).toFixed(2);
-        const R2k = (b.R2 / 1000).toFixed(2);
-        const Rnk = (b.Rn_i / 1000).toFixed(2);
-        return String.raw`\text{Bulon ${b.idx}:}\quad l_c = ${b.lc.toFixed(2)}\,\text{mm},\;
-  R_{n,${b.idx}} = \min(1.2\,l_c\,t\,F_u,\; 2.4\,d_b\,t\,F_u)
-  = \min(${R1k},\; ${R2k}) = ${Rnk}\,\text{kN}`;
-      }).join(String.raw` \\ `);
+  const lc = e - dh / 2;
 
-      const steps2HTML = String.raw`
+  const R1 = 1.2 * lc * t * Fu;
+  const R2 = 2.4 * db * t * Fu;
+  const Rn_single = Math.min(R1, R2) * 1e-3; // kN
+
+  const boltCount = 2;
+  const Rn_total = Rn_single * boltCount;
+  const Rd = phi * Rn_total;
+
+  varsEl.innerHTML = String.raw`
 $$
-\begin{aligned}
-R_n = \min(1.2\,l_c\,t\,F_u,\; 2.4\,d_b\,t\,F_u) \\
-l_{c,1} = e_1 - \frac{d_h}{2},\quad l_{c,i} = p_i - d_h\ (i\ge 2) \\
-${lineTex}
-\end{aligned}
-$$
-`;
-
-      document.getElementById('calcSteps2').innerHTML = steps2HTML;
-
-      // 3) Sonuç (results2)
-      const results2HTML = `
-    $$R_n = ${Rn_total_kN.toFixed(2)}\\text{ kN}$$
-    $$R_d = \\phi R_n = ${phi}\\times${Rn_total_kN.toFixed(2)}\
-= ${Rd_kN.toFixed(2)}\\text{ kN}$$
-  `;
-
-
-      // DOM'a yaz
-      document.getElementById('vars2').innerHTML = vars2HTML;
-      document.getElementById('calcSteps2').innerHTML = steps2HTML;
-      document.getElementById('results2').innerHTML = results2HTML;
-    })();
-
-    // 13.3.9 — Bulonların Kesme Kuvveti Dayanımı
-    (function boltShearCalc() {
-      // calculate() içinde zaten okunan: db, phi, shearWidths mevcut
-      // Fub değeri için bulon sınıfını kullan
-      const clsSel = document.getElementById('boltClass');
-      const selectedClass = clsSel ? clsSel.value : "6.8";
-      const cls = (typeof BULON_SINIFLARI !== "undefined")
-        ? BULON_SINIFLARI.find(x => x.bulonSınıfı === selectedClass)
-        : null;
-
-      const Fub = cls ? cls.Fub_MPa : 600;     // MPa (varsayılan 6.8 → 600)
-      const Fnv = 0.45 * Fub;                  // MPa (TBDY 13.3.9)
-      const Ab = Math.PI * db * db / 4;       // mm², Ab = π d_b² / 4
-      const nShearPlanes = 1;                  // tek kesme düzlemi (gerekirse input'a bağlanır)
-
-      // Bulon sayısı: shearWidths uzunluğu kadar (ör. 40,70,70 ⇒ 3)
-      const boltsCount = (Array.isArray(shearWidths) ? shearWidths : [])
-        .filter(v => Number(v) > 0).length * 2;
-
-      // Dayanımlar (N)
-      const Rn_per = nShearPlanes * Fnv * Ab;     // bir bulonun nominal kesme
-      const Rn_total = boltsCount * Rn_per;         // toplam
-      const Rd = phi * Rn_total;              // tasarım
-
-
-      // --- Kullanılan değişkenler (vars3)
-      const vars3HTML = String.raw`
-$$
-\text{Bulon sınıfı: } ${selectedClass} \\
-d_b = ${db}\,\text{mm},\quad n = ${nShearPlanes},\quad \#\text{bulon} = ${boltsCount} \\
-F_{ub} = ${Fub}\,\text{MPa},\quad F_{nv} = 0.45\,F_{ub} = ${Fnv.toFixed(0)}\,\text{MPa} \\
-A_b = \dfrac{\pi d_b^2}{4} = \dfrac{\pi\,${db}^2}{4} = ${Ab.toFixed(2)}\,\text{mm}^2,\quad \varphi = ${phi}
-$$
-`;
-
-      // --- İşlem basamakları (calcSteps3)
-      const steps3HTML = String.raw`
-$$
-\begin{aligned}
-R_n &= n\,F_{nv}\,A_b \\
-A_b &= \dfrac{\pi d_b^2}{4} = \dfrac{\pi\,${db}^2}{4} \\
-F_{nv} &= 0.45\,F_{ub} = ${Fnv.toFixed(0)}\ \text{MPa}
-\end{aligned}
-$$
-$$
-R_{n,\text{bir bulon}} = ${nShearPlanes}\times ${Fnv.toFixed(0)} \times ${Ab.toFixed(2)} \times 10^{-3}
-= ${(nShearPlanes * Fnv * Ab / 1000).toFixed(2)}\ \text{kN}
-$$
-`;
-
-      // --- Sonuçlar (results3)
-      const Rn_per_kN = (Rn_per / 1000).toFixed(2);
-      const Rn_total_kN = (Rn_total / 1000).toFixed(2);
-      const Rd_kN = (Rd / 1000).toFixed(2);
-
-      // Özet için kaydet
-      setSummary("boltShear", Rd_kN);
-
-      const results3HTML = String.raw`
-$$
-R_n = ${Rn_per_kN}\ \text{kN/bulon} \times ${boltsCount} = ${Rn_total_kN}\ \text{kN} \\
-R_d = \varphi R_n = ${phi}\times ${Rn_total_kN} = \mathbf{${Rd_kN}\ \text{kN}}
-$$
-`;
-
-      // DOM'a yaz (elemanlar yoksa sessiz geç)
-      const v3 = document.getElementById('vars3');
-      const s3 = document.getElementById('calcSteps3');
-      const r3 = document.getElementById('results3');
-      if (v3) v3.innerHTML = vars3HTML;
-      if (s3) s3.innerHTML = steps3HTML;
-      if (r3) r3.innerHTML = results3HTML;
-    })();
-
-
-    // 13.4.2 — Kayma Etkisinde Akma
-    (function shearYieldCalc() {
-      const t = Number(document.getElementById('t')?.value) || 0;
-      const phiDefault = 1.0;
-      const phi_y = Number(document.getElementById('phi_yield')?.value) || phiDefault;
-
-      // Kullanıcı girişi: [e1, p2, p3, ...]  (ör. 40,70,70)
-      const rawList = (document.getElementById('shearWidths')?.value || "")
-        .split(",")
-        .map(s => Number(String(s).trim()))
-        .filter(v => Number.isFinite(v) && v > 0);
-
-      // ---- SADECE A_gv İÇİN: son uç mesafesini ekle (e_end = e1)
-      // Kullanıcı ayrıca son ucu manuel girdiyse (ör. 40,70,70,40), aynen kullan.
-      let spansAgv = rawList.slice();
-      const userProvidedTrailing = spansAgv.length >= 2 && (spansAgv.length >= 4);
-      if (!userProvidedTrailing && spansAgv.length >= 2) {
-        spansAgv.push(spansAgv[0]); // e_end = e1 varsayımı
-      }
-
-      // A_gv = (∑b_i_full) * t
-      const sum_b_full = spansAgv.reduce((s, w) => s + w, 0);
-      const Agv = sum_b_full * t; // mm^2
-
-      // --- F_y seçimi (köşebent öncelikli; t>40 ise Fy2)
-      function pickFyFrom(id) {
-        const sel = document.getElementById(id);
-        if (!sel) return NaN;
-        const key = sel.value;
-        const db = (typeof malzemeListesi !== "undefined") ? malzemeListesi : null;
-        if (!db || !db[key]) return NaN;
-        const rec = db[key];
-        return Number(t > 40 && rec.Fy2 ? rec.Fy2 : rec.Fy);
-      }
-      let Fy = pickFyFrom('kosebentMalzeme');
-      if (!Number.isFinite(Fy)) {
-        const fyA = pickFyFrom('anaMalzeme');
-        const fyT = pickFyFrom('taliMalzeme');
-        Fy = [fyA, fyT].filter(Number.isFinite).reduce((m, v) => Math.min(m, v), NaN);
-      }
-      if (!Number.isFinite(Fy)) Fy = 355;
-
-      // Rn = 0.60 * Fy * Agv ; Rd = φ * Rn
-      const Rn = 0.60 * Fy * Agv;
-      const Rd = phi_y * Rn * 2; // 2 köşebentli birleşim
-
-      // Özet için kaydet
-      const Rd_shearYield_kN = (Rd / 1000).toFixed(2);
-      setSummary("shearYield", Rd_shearYield_kN);
-
-      // -------- KaTeX çıktı
-      const listStr = spansAgv.join(" + ");
-      const vars4HTML = String.raw`
-$$
-t = ${t}\,\text{mm},\quad F_y = ${Fy}\,\text{MPa},\quad
-\sum b_i = ${listStr} = ${sum_b_full}\,\text{mm},\quad
-A_{gv} = \left(\sum b_i\right) t = ${sum_b_full}\times ${t} = ${Agv.toFixed(0)}\,\text{mm}^2,\quad
-\varphi = ${phi_y.toFixed(2)}
-$$
-`;
-      const steps4HTML = String.raw`
-$$
-\begin{aligned}
-R_n &= 0.60\,F_y\,A_{gv} \\
-&= 0.60 \times ${Fy} \times ${Agv.toFixed(0)} \times 10^{-3}
-= ${(0.60 * Fy * Agv / 1000).toFixed(2)}\ \text{kN}
-\end{aligned}
-$$
-`;
-      const results4HTML = String.raw`
-$$
-R_d = \varphi R_n = ${phi_y.toFixed(2)} \times ${(Rn / 1000).toFixed(2)} \times 2 (kösebent)
-= \mathbf{${(Rd / 1000).toFixed(2)}\ \text{kN}}
-$$
-`;
-
-      const v4 = document.getElementById('vars4');
-      const s4 = document.getElementById('calcSteps4');
-      const r4 = document.getElementById('results4');
-      if (v4) v4.innerHTML = vars4HTML;
-      if (s4) s4.innerHTML = steps4HTML;
-      if (r4) r4.innerHTML = results4HTML;
-    })();
-
-
-    // 13.4.2 — Kayma Etkisinde Kırılma (A_nv ile)
-    (function shearFractureCalc() {
-      // girişler
-      const t = Number(document.getElementById('t')?.value) || 0;
-      const db = Number(document.getElementById('boltSelect')?.value) || 0;
-      const phi = Number(document.getElementById('phi')?.value) || 1;
-
-      // shearWidths: "40,70,70" → [40,70,70]
-      const rawList = (document.getElementById('shearWidths')?.value || "")
-        .split(",")
-        .map(s => Number(String(s).trim()))
-        .filter(v => Number.isFinite(v) && v > 0);
-
-      // --- Fu okuma: köşebent malzemesinden; t<40 ise Fu2, aksi halde Fu.
-      // Eğer seçilen alan yok veya değer 0/NaN ise "dolusu hangisiyse onu" kullan.
-      function pickFuFromKosebent(thk) {
-        const sel = document.getElementById('kosebentMalzeme');
-        const key = sel ? sel.value : null;
-        const dbMat = (typeof malzemeListesi !== "undefined") ? malzemeListesi : null;
-        if (!key || !dbMat || !dbMat[key]) return NaN;
-        const rec = dbMat[key];
-
-        // senin talebine göre öncelik: t<40 ⇒ Fu2
-        let fuPref = (thk > 40) ? rec.Fu2 : rec.Fu;
-
-        // veri boşsa, dolu olanı yakala (geriye dönük emniyet)
-        if (!Number.isFinite(Number(fuPref)) || Number(fuPref) === 0) {
-          fuPref = Number(rec.Fu) || Number(rec.Fu2);
-        }
-        return Number(fuPref);
-      }
-      let Fu = pickFuFromKosebent(t);
-      if (!Number.isFinite(Fu) || Fu === 0) Fu = 510; // son çare varsayılan
-
-      // ---- A_nv için: son uç mesafesini ekle (e_end = e1)
-      const spansFull = rawList.slice();
-      if (spansFull.length >= 2) {
-        const userHasTrailing = spansFull.length >= 4 && spansFull[0] === spansFull[spansFull.length - 1];
-        if (!userHasTrailing) spansFull.push(spansFull[0]);
-      }
-      const sum_b_full = spansFull.reduce((s, w) => s + w, 0); // mm
-
-      // delik sayısı
-      const holeInput = Number(document.getElementById('shearHoleCount')?.value);
-      const boltsCount = rawList.length; // 40,70,70 → 3
-      const n_h = Number.isFinite(holeInput) && holeInput > 0 ? Math.round(holeInput) : boltsCount;
-
-      const d_h = db + 2;                         // delik çapı
-      const b_net = Math.max(sum_b_full - n_h * d_h, 0);
-      const A_nv = b_net * t;                     // mm^2
-
-      // dayanımlar
-      const Rn = 0.60 * Fu * A_nv;                // N
-      const Rd = phi * Rn * 2;                        // N
-
-      // özet için kaydet
-      const Rd_shearFracture_kN = (Rd / 1000).toFixed(2);
-      setSummary("shearFracture", Rd_shearFracture_kN);
-
-      // === KaTeX çıktıları ===
-      const vars5HTML = String.raw`
-$$
-t = ${t}\,\text{mm},\quad F_u = ${Fu}\,\text{MPa},\quad
-d_b = ${db}\,\text{mm},\ d_h = d_b + 2 = ${d_h}\,\text{mm},\quad
-n_h = ${n_h} \\
-\sum b_i^{\text{full}} = ${spansFull.join(" + ")} = ${sum_b_full}\,\text{mm},\quad
-A_{nv} = \big(\sum b_i^{\text{full}} - n_h\,d_h\big)\,t
-= (${sum_b_full} - ${n_h}\times${d_h})\times${t} = ${A_nv.toFixed(0)}\,\text{mm}^2,\quad
+d_b = ${db}\,\text{mm},\quad
+d_h = d_b + 2 = ${dh}\,\text{mm} \\
+e = ${e}\,\text{mm},\quad
+t = ${t}\,\text{mm},\quad
+F_u = ${Fu}\,\text{MPa},\quad
 \varphi = ${phi}
 $$
 `;
 
-      const steps5HTML = String.raw`
+  stepsEl.innerHTML = String.raw`
 $$
-\begin{aligned}
-R_n &= 0.60\,F_u\,A_{nv} \\
-&= 0.60 \times ${Fu} \times ${A_nv.toFixed(0)} \times 10^{-3}
-= ${(0.60 * Fu * A_nv / 1000).toFixed(2)}\ \text{kN}
-\end{aligned}
+l_c = e - \frac{d_h}{2}
+= ${e} - \frac{${dh}}{2}
+= ${lc.toFixed(2)}\,\text{mm}
 $$
-`;
 
-      const results5HTML = String.raw`
 $$
-R_d = \varphi\,R_n =
-${phi} \times ${(Rn / 1000).toFixed(2)} \times 2 (kösebent)
-= \mathbf{${(Rd / 1000).toFixed(2)}\ \text{kN}}
+R_n = \min(1.2\,l_c\,t\,F_u,\; 2.4\,d_b\,t\,F_u)
 $$
-`;
 
-      // DOM yazımı
-      const v5 = document.getElementById('vars5');
-      const s5 = document.getElementById('calcSteps5');
-      const r5 = document.getElementById('results5');
-      if (v5) v5.innerHTML = vars5HTML;
-      if (s5) s5.innerHTML = steps5HTML;
-      if (r5) r5.innerHTML = results5HTML;
-    })();
-
-
-
-    // 2.4.6 — Kaynak Dayanımı (13.2.4) - Birleşim 2, çift köşebent
-    (function weldCapacityJoint2() {
-      const varsEl = document.getElementById("vars8");
-      const stepsEl = document.getElementById("calcSteps8");
-      const resEl = document.getElementById("results8");
-
-      if (!varsEl || !stepsEl || !resEl) return; // ilgili bölüm yoksa çık
-
-      // --- Girdiler ---
-
-      // Kaynak boyutları: input varsa oku, yoksa örnekten varsay
-      const a = Number(document.getElementById("weldSize")?.value) || 4;        // kaynak dikiş boyu (mm)
-
-      // Boyuna (kuvvet doğrultusunda) kaynaklar
-      const Lpar = Number(document.getElementById("weldL_parallel")?.value) || 200; // tek dikiş boyu (mm)
-      const nPar = Number(document.getElementById("weldN_parallel")?.value) || 4;   // dikiş adedi (ör: 4×200)
-
-      // Enine kaynaklar (kuvvete dik)
-      // Örnekte: (90 - 4) * 4 * 2
-      const LperpBase = Number(document.getElementById("weldL_perp")?.value) || 90; // toplam yükseklik benzeri (mm)
-      const nPerp = Number(document.getElementById("weldN_perp")?.value) || 2;      // dik dikiş adedi
-
-      // Elektrod dayanımı F_E (MPa)
-      const FE = Number(document.getElementById("Fe_weld")?.value) || 550;
-
-      // Dayanım katsayısı
-      const phi = Number(document.getElementById("phi")?.value) || 0.75;
-
-      // Köşebent sayısı (simetrik olduğu için 2)
-      const nAngles = Number(document.getElementById("weldAnglesCount")?.value) || 2;
-
-      // --- Temel kontroller ---
-      if (!a || !Lpar || !nPar || !FE || !phi) {
-        varsEl.textContent = "Girdi eksik. Kaynak boyu, uzunluklar ve elektrod dayanımı kontrol edilmeli.";
-        stepsEl.textContent = "";
-        resEl.textContent = "";
-        return;
-      }
-
-      // --- Hesaplar ---
-
-      // F_nw tasarım gerilmesi
-      const Fnw = 0.60 * FE; // MPa
-
-      // Boyuna kaynak efektif alanı (örnekte: [4 × 200] = 800 mm²)
-      const Awel = a * Lpar * nPar; // mm²
-
-      // Enine kaynak efektif alanı (örnekte: (90 - 4) × 4 × 2 = 688 mm²)
-      const LperpEff = Math.max(LperpBase - a, 0);
-      const Awet = a * LperpEff * nPerp; // mm²
-
-      // Tek köşebent için nominal dayanımlar (kN)
-      const Rnwl = Fnw * Awel * 1e-3;
-      const Rnwt = Fnw * Awet * 1e-3;
-
-      // Denklem 13.5 ve 13.6
-      const Rnw_sum = Rnwl + Rnwt;
-      const Rnw_comb = 0.85 * Rnwl + 1.5 * Rnwt;
-
-      // Tek köşebent için kontrol eden R_nw
-      const Rnw_single = Math.max(Rnw_sum, Rnw_comb);
-
-      // Çift köşebent
-      const Rnw_total = Rnw_single * nAngles; // kN
-
-      // Tasarım dayanımı
-      const Rd = phi * Rnw_total; // kN
-
-      // --- KaTeX: Kullanılan Değişkenler ---
-      const varsTex = String.raw`
 $$
-a = ${a}\,\text{mm},\quad
-L_{\parallel} = ${Lpar}\,\text{mm},\ n_{\parallel} = ${nPar},\quad
-L_{\perp,\text{baz}} = ${LperpBase}\,\text{mm},\ n_{\perp} = ${nPerp} \\
-F_E = ${FE}\,\text{MPa},\quad
-F_{nw} = 0.60 F_E = ${Fnw.toFixed(0)}\,\text{MPa},\quad
-\varphi = ${phi},\quad
-n_{\text{köşebent}} = ${nAngles}
+= \min(
+${(1.2 * lc * t * Fu * 1e-3).toFixed(2)},\;
+${(2.4 * db * t * Fu * 1e-3).toFixed(2)}
+)
+= ${Rn_single.toFixed(2)}\,\text{kN}
 $$
 `;
 
-      // --- KaTeX: İşlem Basamakları ---
-      const stepsTex = String.raw`
+  resultEl.innerHTML = String.raw`
 $$
-\begin{aligned}
-A_{wel} &= a\,L_{\parallel}\,n_{\parallel}
-= ${a}\times${Lpar}\times${nPar}
-= ${Awel.toFixed(0)}\ \text{mm}^2 \\
-A_{wet} &= a\,(L_{\perp,\text{baz}} - a)\,n_{\perp}
-= ${a}\times(${LperpBase}-${a})\times${nPerp}
-= ${Awet.toFixed(0)}\ \text{mm}^2 \\
-R_{nwl} &= F_{nw}\,A_{wel}
-= ${Fnw.toFixed(0)}\times${Awel.toFixed(0)}\times10^{-3}
-= ${Rnwl.toFixed(2)}\ \text{kN} \\
-R_{nwt} &= F_{nw}\,A_{wet}
-= ${Fnw.toFixed(0)}\times${Awet.toFixed(0)}\times10^{-3}
-= ${Rnwt.toFixed(2)}\ \text{kN} \\
-R_{nw,1} &= R_{nwl} + R_{nwt}
-= ${Rnw_sum.toFixed(2)}\ \text{kN} \\
-R_{nw,2} &= 0.85R_{nwl} + 1.5R_{nwt}
-= 0.85\times${Rnwl.toFixed(2)} + 1.5\times${Rnwt.toFixed(2)}
-= ${Rnw_comb.toFixed(2)}\ \text{kN} \\
-R_{nw,\text{tek}} &= \max(R_{nw,1}, R_{nw,2})
-= ${Rnw_single.toFixed(2)}\ \text{kN} \\
-R_{nw} &= n_{\text{köşebent}}\,R_{nw,\text{tek}}
-= ${nAngles}\times${Rnw_single.toFixed(2)}
-= ${Rnw_total.toFixed(2)}\ \text{kN}
-\end{aligned}
+R_d = \varphi R_n \times 2
+= ${phi}\times ${Rn_single.toFixed(2)} \times 2
+= \mathbf{${Rd.toFixed(2)}\,\text{kN}}
 $$
 `;
 
-      // --- KaTeX: Sonuç ---
-      const resTex = String.raw`
+  if (typeof setSummary === "function") {
+    setSummary("bearing", Rd);
+  }
+})();
+
+    // 13.3.9 — Bulonların Kesme Kuvveti Dayanımı
+    (function boltShear46() {
+      const varsEl = document.getElementById("vars3");
+      const stepsEl = document.getElementById("calcSteps3");
+      const resultEl = document.getElementById("results3");
+      if (!varsEl || !stepsEl || !resultEl) return;
+
+      const num = (v) => Number(String(v).replace(",", "."));
+
+      // --- Input ---
+      const phi = num(document.getElementById("phi")?.value) || 0.75;
+
+      const boltCount =
+        num(document.getElementById("boltCount")?.value) || 2;
+
+      // --- Sabit ---
+      const Fnv = 270; // MPa (görsele göre sabit)
+
+      // --- Alan ---
+      const Ab = Math.PI * Math.pow(db, 2) / 4;
+
+      // --- TEK bulon kapasitesi ---
+      const n = 1; // tek kesme düzlemi
+
+      const Rn_single = n * Fnv * Ab * 1e-3; // kN
+
+      // --- TOPLAM ---
+      const Rd = phi * Rn_single * boltCount;
+
+      // =========================
+      // KaTeX
+      // =========================
+
+      varsEl.innerHTML = String.raw`
 $$
-R_d = \varphi R_{nw}
-= ${phi}\times${Rnw_total.toFixed(2)}
+d_b = ${db}\,\text{mm},\quad
+A_b = \frac{\pi d_b^2}{4}
+= ${Ab.toFixed(2)}\,\text{mm}^2 \\
+F_{nv} = ${Fnv}\,\text{MPa},\quad
+n = ${n},\quad
+\varphi = ${phi}
+$$
+`;
+
+      stepsEl.innerHTML = String.raw`
+$$
+R_n = n\,F_{nv}\,A_b
+= ${n}\times ${Fnv}\times ${Ab.toFixed(2)}\times 10^{-3}
+= ${Rn_single.toFixed(2)}\ \text{kN}
+$$
+`;
+
+      resultEl.innerHTML = String.raw`
+$$
+R_d = \varphi R_n \times ${boltCount}
+= ${phi}\times ${Rn_single.toFixed(2)} \times ${boltCount}
 = \mathbf{${Rd.toFixed(2)}\ \text{kN}}
 $$
 `;
 
-      // DOM yaz
-      varsEl.innerHTML = varsTex;
-      stepsEl.innerHTML = stepsTex;
-      resEl.innerHTML = resTex;
+      if (typeof setSummary === "function") {
+        setSummary("boltShear", Rd);
+      }
+    })();
 
-      // Hesaplama özetine gönder
-      if (typeof setSummary === "function" && isFinite(Rd)) {
+
+    // 2.4.6 — Kaynak Dayanımı (13.2.4) - Birleşim 2, çift köşebent
+    (function weld46() {
+      const varsEl = document.getElementById("vars8");
+      const stepsEl = document.getElementById("calcSteps8");
+      const resultEl = document.getElementById("results8");
+      if (!varsEl || !stepsEl || !resultEl) return;
+
+      const num = (v) => Number(String(v).replace(",", "."));
+
+      // --- Inputlar (mevcut description.html ile uyumlu) ---
+      const phi = num(document.getElementById("phi")?.value) || 0.75;
+      const a = num(document.getElementById("weld_a")?.value) || 4;
+      const Fe = num(document.getElementById("weld_FE")?.value) || 550;
+      const weldCount = num(document.getElementById("weld_count")?.value) || 2;
+
+      // Köşebent kol boyu
+      const k = num(document.getElementById("kosebent_1")?.value) || 90;
+
+      // --- Modül 46 için iç hesap ---
+      // Kitap örneğiyle uyumlu etkin boy: 81 mm / dikiş (90x90x10 ve a=4 için)
+      // Genel ifade olarak:
+      const leSingle = k - 2 * a - 1;   // mm
+      const leTotal = weldCount * leSingle;
+      const Awe = a * leTotal;          // mm²
+
+      const Fnw = 0.60 * Fe;            // MPa
+      const Rnw = Fnw * Awe * 1e-3;     // kN
+      const Rd = phi * Rnw;             // kN
+
+      varsEl.innerHTML = String.raw`
+$$
+a = ${a}\,\text{mm},\quad
+k = ${k}\,\text{mm},\quad
+n_{\text{dikiş}} = ${weldCount} \\
+F_E = ${Fe}\,\text{MPa},\quad
+F_{nw} = 0.60F_E = ${Fnw.toFixed(0)}\,\text{MPa},\quad
+\varphi = ${phi}
+$$
+`;
+
+      stepsEl.innerHTML = String.raw`
+$$
+l_{e,\text{tek}} = k - 2a - 1
+= ${k} - 2\times ${a} - 1
+= ${leSingle.toFixed(2)}\,\text{mm}
+$$
+
+$$
+l_e = n_{\text{dikiş}} \, l_{e,\text{tek}}
+= ${weldCount}\times ${leSingle.toFixed(2)}
+= ${leTotal.toFixed(2)}\,\text{mm}
+$$
+
+$$
+A_{we} = a\,l_e
+= ${a}\times ${leTotal.toFixed(2)}
+= ${Awe.toFixed(2)}\,\text{mm}^2
+$$
+
+$$
+R_{nw} = F_{nw}A_{we}
+= ${Fnw.toFixed(0)} \times ${Awe.toFixed(2)} \times 10^{-3}
+= ${Rnw.toFixed(2)}\ \text{kN}
+$$
+`;
+
+      resultEl.innerHTML = String.raw`
+$$
+R_d = \varphi R_{nw}
+= ${phi} \times ${Rnw.toFixed(2)}
+= \mathbf{${Rd.toFixed(2)}\ \text{kN}}
+$$
+`;
+
+      if (typeof setSummary === "function") {
         setSummary("weld", Rd);
       }
     })();
@@ -732,7 +626,9 @@ $$
   }
 
   document.getElementById('calcBtn').addEventListener('click', calculate);
-  document.getElementById('resetBtn').addEventListener('click', () => location.reload());
+  document.getElementById("resetBtn")?.addEventListener("click", () => {
+    location.reload();
+  });
 
 })();
 

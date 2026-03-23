@@ -112,8 +112,6 @@
     boltShear: "Bulon kesme kuvveti",
     shearYield: "Kayma etkisinde akma",
     shearFracture: "Kayma etkisinde kırılma",
-    bendYield: "Eğilmede akma",
-    bendFracture: "Eğilmede kırılma",
     weld: "Kaynak dayanımı"
   };
 
@@ -193,6 +191,7 @@
       return;
     }
 
+    //blok kırılma hesabı (13.3.12) -------------------------------------------
     // zayıf malzeme belirle
     let zayıfMalzeme = (malzemeListesi[anaMalzeme].Fy < malzemeListesi[taliMalzeme].Fy)
       ? anaMalzeme : taliMalzeme;
