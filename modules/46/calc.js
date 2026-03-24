@@ -370,58 +370,71 @@
 
   // Tabloyu güncelle
   function renderSummaryTable() {
-    const tbody = document.getElementById("summaryBody");
-    const minSpan = document.getElementById("summaryMin");
+    const tbody = $("summaryBody");
+    const vuSpan = $("summaryVu");
     if (!tbody) return;
 
     tbody.innerHTML = "";
 
-    let minKey = null;
-    let minVal = Infinity;
-    const rows = [];
+    const vu = getVu();
 
+    const rows = [];
     Object.keys(LIMIT_LABELS).forEach((key) => {
       const val = LIMIT_SUMMARY[key];
-      if (!isFinite(val)) return; // hesaplanmamış ise satır yok
-
-      if (val < minVal) {
-        minVal = val;
-        minKey = key;
-      }
-
+      if (!Number.isFinite(val)) return;
       rows.push({ key, label: LIMIT_LABELS[key], val });
     });
 
     if (!rows.length) {
       tbody.innerHTML = `
       <tr>
-        <td colspan="2" style="text-align:center; color:var(--muted);">
+        <td colspan="2" style="text-align:center;color:var(--muted);">
           Henüz hesaplama yapılmadı.
         </td>
-      </tr>`;
-      if (minSpan) minSpan.textContent = "-";
+      </tr>
+    `;
+      if (vuSpan) vuSpan.textContent = Number.isFinite(vu) ? `${vu.toFixed(2)} kN` : "-";
       return;
     }
 
     rows.forEach((row) => {
       const tr = document.createElement("tr");
-      if (row.key === minKey) tr.classList.add("critical");
 
-      const tdName = document.createElement("td");
-      tdName.textContent = row.label;
+      const isOk = Number.isFinite(vu) ? vu <= row.val : false;
+      if (Number.isFinite(vu)) {
+        tr.classList.add(isOk ? "ok" : "fail");
+      }
 
-      const tdVal = document.createElement("td");
-      tdVal.textContent = row.val.toFixed(3) + " kN";
+      const td1 = document.createElement("td");
+      td1.textContent = row.label;
 
-      tr.appendChild(tdName);
-      tr.appendChild(tdVal);
+      const td2 = document.createElement("td");
+      td2.textContent = `${row.val.toFixed(2)} kN`;
+
+      tr.appendChild(td1);
+      tr.appendChild(td2);
       tbody.appendChild(tr);
     });
 
-    if (minSpan && isFinite(minVal)) {
-      minSpan.textContent = `${LIMIT_LABELS[minKey]} — ${minVal.toFixed(3)} kN`;
+    if (vuSpan) {
+      vuSpan.textContent = Number.isFinite(vu) ? `${vu.toFixed(2)} kN` : "-";
     }
   }
+
+  // --- Yardımcı fonksiyonlar ------------------------------------------------
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  function num(v, defaultVal = NaN) {
+    const n = Number(String(v).replace(",", "."));
+    return Number.isFinite(n) ? n : defaultVal;
+  }
+  function getVu() {
+    return num($("vu")?.value, NaN);
+  }
+
+
 
   function pickFyFromMaterial(selectId, thk) {
     const sel = document.getElementById(selectId);
