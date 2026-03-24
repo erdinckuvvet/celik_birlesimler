@@ -180,3 +180,121 @@ button.secondary {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Pdf export styles */
+.pdf-report {
+    position: absolute;
+    left: -99999px;
+    top: 0;
+    width: 794px;
+    background: #ffffff;
+    color: #111827;
+}
+
+.pdf-page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 56px 40px 56px 40px;
+    /* üst-alt boşluk arttı */
+    box-sizing: border-box;
+    background: #ffffff;
+    margin: 0;
+    overflow: visible;
+}
+
+.pdf-report *,
+.pdf-report *::before,
+.pdf-report *::after {
+    box-sizing: border-box;
+}
+
+.pdf-header {
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.pdf-meta {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.pdf-section {
+    margin-bottom: 22px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.pdf-section h2 {
+    margin: 0 0 10px 0;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+.pdf-subtitle {
+    margin: 10px 0 6px 0;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+.pdf-math {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.pdf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    page-break-inside: auto;
+}
+
+.pdf-table tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.pdf-table th,
+.pdf-table td {
+    border: 1px solid #d1d5db;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.pdf-table th {
+    background: #eff6ff;
+    font-weight: 600;
+}
+
+.pdf-status-ok td {
+    background: #dcfce7;
+    color: #166534;
+    font-weight: 600;
+}
+
+.pdf-status-fail td {
+    background: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+}
+
+.pdf-report h1,
+.pdf-report h2,
+.pdf-report h3,
+.pdf-report p,
+.pdf-report table,
+.pdf-report .pdf-section,
+.pdf-report .pdf-header,
+.pdf-report .pdf-math {
+    margin-left: 0 !important;
+    left: auto !important;
+    transform: none !important;
+}

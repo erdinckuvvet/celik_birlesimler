@@ -351,7 +351,7 @@
 
 
 
-  //Tabloyu dolduran yardımcılar
+  //Tabloyu dolduran helper fonksiyonlar ve limit durumları için özet tutan yapı
   // Limit durum isimleri
   const LIMIT_LABELS = {
     bearing: "Bulon deliği ezilme",
@@ -377,8 +377,8 @@
     tbody.innerHTML = "";
 
     const vu = getVu();
-
     const rows = [];
+
     Object.keys(LIMIT_LABELS).forEach((key) => {
       const val = LIMIT_SUMMARY[key];
       if (!Number.isFinite(val)) return;
@@ -399,7 +399,6 @@
 
     rows.forEach((row) => {
       const tr = document.createElement("tr");
-
       const isOk = Number.isFinite(vu) ? vu <= row.val : false;
       if (Number.isFinite(vu)) {
         tr.classList.add(isOk ? "ok" : "fail");
@@ -407,16 +406,14 @@
 
       const td1 = document.createElement("td");
       td1.textContent = row.label;
-      const status = adequacyText(row.val);
-
 
       const td2 = document.createElement("td");
       td2.innerHTML = `
-            ${row.val.toFixed(2)} kN
-        <span style="margin-left:20%;font-weight:600;">
-          ${status}
-        </span>
-      `;
+      ${row.val.toFixed(2)} kN
+      <span style="margin-left:8px;font-weight:600;">
+        (${adequacyText(row.val)})
+      </span>
+    `;
 
       tr.appendChild(td1);
       tr.appendChild(td2);
@@ -441,10 +438,32 @@
     return num($("vu")?.value, NaN);
   }
 
+  function fmt(v, digits = 2) {
+    const n = Number(v);
+    if (!Number.isFinite(n)) return "-";
+    return n.toFixed(digits);
+  }
+
   function adequacyText(Rd) {
     const vu = getVu();
     if (!Number.isFinite(vu) || !Number.isFinite(Rd)) return "";
     return vu <= Rd ? "Yeterli" : "Yetersiz";
+  }
+
+  function getVu() {
+    return num($("vu")?.value, NaN);
+  }
+
+  function adequacyText(Rd) {
+    const vu = getVu();
+    if (!Number.isFinite(vu) || !Number.isFinite(Rd)) return "";
+    return vu <= Rd ? "Yeterli" : "Yetersiz";
+  }
+
+  function adequacyClass(Rd) {
+    const vu = getVu();
+    if (!Number.isFinite(vu) || !Number.isFinite(Rd)) return "";
+    return vu <= Rd ? "pdf-status-ok" : "pdf-status-fail";
   }
 
 
@@ -737,7 +756,231 @@ $$
     renderSummaryTable();
   }
 
+  function fillReportInputs() {
+    const tbody = $("reportInputsTable")?.querySelector("tbody");
+    if (!tbody) return;
+
+    const rows = [
+      ["Gerekli Kesme Kuvveti (Vu)", `${fmt(getVu())} kN`],
+      ["Ana Kiriş", $("anaProfil")?.value || "-"],
+      ["Ana Kiriş Malzemesi", $("anaMalzeme")?.value || "-"],
+      ["Aşık", $("taliProfil")?.value || "-"],
+      ["Aşık Malzemesi", $("taliMalzeme")?.value || "-"],
+      ["Köşebent", `L${$("kosebent_1")?.value || "-"}x${$("kosebent_2")?.value || "-"}x${$("kosebent_t")?.value || "-"}`],
+      ["Köşebent Malzemesi", $("kosebentMalzeme")?.value || "-"],
+      ["Bulon", $("boltSelect")?.selectedOptions?.[0]?.textContent || "-"],
+      ["Bulon Sınıfı", $("boltClass")?.value || "-"],
+      ["Kaynak Kalınlığı", `${$("weld_a")?.value || "-"} mm`],
+      ["Elektrod Mukavemeti", `${$("weld_FE")?.value || "-"} MPa`],
+      ["Dikiş Sayısı", $("weld_count")?.value || "-"],
+      ["Kesme Yolu Girdisi", $("shearWidths")?.value || "-"]
+    ];
+
+    tbody.innerHTML = rows.map(
+      ([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`
+    ).join("");
+  }
+
+  function copyMathBlocksToReport() {
+    const map = [
+      ["vars2", "reportVars2"],
+      ["calcSteps2", "reportSteps2"],
+      ["results2", "reportResults2"],
+      ["vars3", "reportVars3"],
+      ["calcSteps3", "reportSteps3"],
+      ["results3", "reportResults3"],
+      ["vars8", "reportVars8"],
+      ["calcSteps8", "reportSteps8"],
+      ["results8", "reportResults8"]
+    ];
+
+    map.forEach(([srcId, targetId]) => {
+      const src = $(srcId);
+      const target = $(targetId);
+      if (src && target) {
+        target.innerHTML = src.innerHTML;
+      }
+    });
+
+    console.log("reportVars2:", $("reportVars2")?.innerHTML);
+    console.log("reportSteps2:", $("reportSteps2")?.innerHTML);
+    console.log("reportResults2:", $("reportResults2")?.innerHTML);
+  }
+
+  function fillReportSummary() {
+    const tbody = $("reportSummaryTable")?.querySelector("tbody");
+    if (!tbody) return;
+
+    const vu = getVu();
+    const rows = [];
+
+    Object.keys(LIMIT_LABELS).forEach((key) => {
+      const val = LIMIT_SUMMARY[key];
+      if (!Number.isFinite(val)) return;
+      rows.push({ key, label: LIMIT_LABELS[key], val });
+    });
+
+    tbody.innerHTML = "";
+
+    rows.forEach((row) => {
+      const tr = document.createElement("tr");
+      const cls = adequacyClass(row.val);
+      if (cls) tr.classList.add(cls);
+
+      tr.innerHTML = `
+      <td>${row.label}</td>
+      <td>${row.val.toFixed(2)} kN</td>
+      <td>${Number.isFinite(vu) ? vu.toFixed(2) + " kN" : "-"}</td>
+      <td>${adequacyText(row.val)}</td>
+    `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function buildPdfReport() {
+    $("reportDate").textContent = new Date().toLocaleDateString("tr-TR");
+    fillReportInputs();
+    copyMathBlocksToReport();
+    fillReportSummary();
+    paginatePdfReport();
+
+  }
+
+  function paginatePdfReport() {
+    const report = $("pdfReport");
+    if (!report) return;
+
+    const originalPage = report.querySelector(".pdf-page");
+    if (!originalPage) return;
+
+    const sections = Array.from(originalPage.querySelectorAll(".pdf-section"));
+    const header = originalPage.querySelector(".pdf-header");
+
+    // Eski içeriği temizle
+    report.innerHTML = "";
+
+    const PAGE_HEIGHT = 1123; // px
+    const PAGE_PADDING_TOP = 56;
+    const PAGE_PADDING_BOTTOM = 56;
+    const USABLE_HEIGHT = PAGE_HEIGHT - PAGE_PADDING_TOP - PAGE_PADDING_BOTTOM;
+
+    function createPage(includeHeader = false) {
+      const page = document.createElement("div");
+      page.className = "pdf-page";
+
+      if (includeHeader && header) {
+        page.appendChild(header.cloneNode(true));
+      }
+
+      report.appendChild(page);
+      return page;
+    }
+
+    let currentPage = createPage(true);
+    let currentHeight = header ? header.offsetHeight + 24 : 0;
+
+    sections.forEach((section) => {
+      const clone = section.cloneNode(true);
+
+      // Ölçüm için geçici ekle
+      clone.style.visibility = "hidden";
+      clone.style.position = "absolute";
+      clone.style.left = "-99999px";
+      clone.style.top = "0";
+      report.appendChild(clone);
+
+      const sectionHeight = clone.offsetHeight;
+      report.removeChild(clone);
+
+      // Sığmıyorsa yeni sayfa
+      if (currentHeight + sectionHeight > USABLE_HEIGHT) {
+        currentPage = createPage(false);
+        currentHeight = 0;
+      }
+
+      currentPage.appendChild(section.cloneNode(true));
+      currentHeight += sectionHeight + 22;
+    });
+  }
+
+  async function exportPdfReport() {
+    buildPdfReport();
+
+    const sourceEl = $("pdfReport");
+    if (!sourceEl) return;
+
+    const stage = document.createElement("div");
+    stage.style.position = "fixed";
+    stage.style.left = "0";
+    stage.style.top = "0";
+    stage.style.width = "794px";
+    stage.style.background = "#fff";
+    stage.style.zIndex = "999999";
+    stage.style.opacity = "1";
+    stage.style.pointerEvents = "none";
+    stage.style.overflow = "visible";
+
+    const clone = sourceEl.cloneNode(true);
+    clone.id = "pdfReportClone";
+    clone.style.position = "static";
+    clone.style.left = "auto";
+    clone.style.top = "auto";
+    clone.style.width = "794px";
+    clone.style.background = "#fff";
+    clone.style.opacity = "1";
+    clone.style.pointerEvents = "auto";
+    clone.style.margin = "0";
+    clone.style.padding = "0";
+    clone.style.overflow = "visible";
+
+    stage.appendChild(clone);
+    document.body.appendChild(stage);
+
+    await new Promise((resolve) => requestAnimationFrame(resolve));
+    await new Promise((resolve) => setTimeout(resolve, 250));
+
+    try {
+      const pdf = new window.jspdf.jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: "a4"
+      });
+
+      const pages = Array.from(clone.querySelectorAll(".pdf-page"));
+
+      for (let i = 0; i < pages.length; i++) {
+        const pageEl = pages[i];
+
+        const canvas = await html2canvas(pageEl, {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: "#ffffff",
+          scrollX: 0,
+          scrollY: 0,
+          width: pageEl.scrollWidth,
+          height: pageEl.scrollHeight,
+          windowWidth: pageEl.scrollWidth,
+          windowHeight: pageEl.scrollHeight
+        });
+
+        const imgData = canvas.toDataURL("image/jpeg", 0.98);
+
+        if (i > 0) pdf.addPage();
+
+        pdf.addImage(imgData, "JPEG", 0, 0, 210, 297);
+      }
+
+      pdf.save("Birlesim_46_Hesap_Raporu.pdf");
+    } catch (err) {
+      console.error("PDF oluşturma hatası:", err);
+    } finally {
+      document.body.removeChild(stage);
+    }
+  }
+
   document.getElementById('calcBtn').addEventListener('click', calculate);
+  $("pdfBtn")?.addEventListener("click", exportPdfReport);
+
   document.getElementById("resetBtn")?.addEventListener("click", () => {
     location.reload();
   });

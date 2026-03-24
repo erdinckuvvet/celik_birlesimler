@@ -158,6 +158,7 @@
                 <div class="row" style="margin-top:12px">
                     <button id="calcBtn">Hesapla</button>
                     <button id="resetBtn" class="secondary">Sıfırla</button>
+                    <button id="pdfBtn" class="secondary">PDF Rapor Al</button>
                 </div>
             </div>
 
@@ -238,6 +239,75 @@
         </div>
     </div>
 
+
+    <!-- PDF Raporu için HTML yapısı (başlangıçta gizli) -->
+    <div id="pdfReport" class="pdf-report">
+        <div class="pdf-page">
+            <div class="pdf-header">
+                <h2>Birleşim 46 - Hesap Raporu</h2>
+                <div class="pdf-meta">
+                    <div>Tarih: <span id="reportDate"></span></div>
+                    <div>Modül: Birleşim 46</div>
+                </div>
+            </div>
+
+            <div class="pdf-section">
+                <h3>1. Girdi Bilgileri</h3>
+                <table class="pdf-table" id="reportInputsTable">
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="pdf-section">
+                <h3>2. Bulon Deliği Ezilme Kuvveti Dayanımı</h3>
+                <div class="pdf-subtitle">Kullanılan Değişkenler</div>
+                <div id="reportVars2" class="pdf-math"></div>
+                <div class="pdf-subtitle">İşlem Basamakları</div>
+                <div id="reportSteps2" class="pdf-math"></div>
+                <div class="pdf-subtitle">Sonuçlar</div>
+                <div id="reportResults2" class="pdf-math"></div>
+            </div>
+
+            <div class="pdf-section">
+                <h3>3. Bulonların Kesme Kuvveti Dayanımı</h3>
+                <div class="pdf-subtitle">Kullanılan Değişkenler</div>
+                <div id="reportVars3" class="pdf-math"></div>
+                <div class="pdf-subtitle">İşlem Basamakları</div>
+                <div id="reportSteps3" class="pdf-math"></div>
+                <div class="pdf-subtitle">Sonuçlar</div>
+                <div id="reportResults3" class="pdf-math"></div>
+            </div>
+
+            <div class="pdf-section">
+                <h3>4. Kaynak Dayanımı</h3>
+                <div class="pdf-subtitle">Kullanılan Değişkenler</div>
+                <div id="reportVars8" class="pdf-math"></div>
+                <div class="pdf-subtitle">İşlem Basamakları</div>
+                <div id="reportSteps8" class="pdf-math"></div>
+                <div class="pdf-subtitle">Sonuçlar</div>
+                <div id="reportResults8" class="pdf-math"></div>
+            </div>
+
+            <div class="pdf-section">
+                <h3>5. Hesap Özeti ve Yeterlilik Kontrolü</h3>
+                <table class="pdf-table" id="reportSummaryTable">
+                    <thead>
+                        <tr>
+                            <th>Sınır Durum</th>
+                            <th>Tasarım Kesme Kuvveti R<sub>d</sub> (kN)</th>
+                            <th>Gerekli Kesme Kuvveti V<sub>u</sub> (kN)</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="calc.js" defer></script>
     <script>
         // KaTeX otomatik render tetikleyicisi (ilk açılışta)
@@ -252,6 +322,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
