@@ -407,9 +407,16 @@
 
       const td1 = document.createElement("td");
       td1.textContent = row.label;
+      const status = adequacyText(row.val);
+
 
       const td2 = document.createElement("td");
-      td2.textContent = `${row.val.toFixed(2)} kN`;
+      td2.innerHTML = `
+            ${row.val.toFixed(2)} kN
+        <span style="margin-left:20%;font-weight:600;">
+          ${status}
+        </span>
+      `;
 
       tr.appendChild(td1);
       tr.appendChild(td2);
@@ -434,6 +441,11 @@
     return num($("vu")?.value, NaN);
   }
 
+  function adequacyText(Rd) {
+    const vu = getVu();
+    if (!Number.isFinite(vu) || !Number.isFinite(Rd)) return "";
+    return vu <= Rd ? "Yeterli" : "Yetersiz";
+  }
 
 
   function pickFyFromMaterial(selectId, thk) {
