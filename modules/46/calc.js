@@ -614,35 +614,45 @@ $$
       const num = (v) => Number(String(v).replace(",", "."));
 
       // --- Input ---
+      const db = num(document.getElementById("boltSelect")?.value) || 20;
       const phi = num(document.getElementById("phi")?.value) || 0.75;
+      const boltCount = num(document.getElementById("boltCount")?.value) || 2;
+      const boltClass = document.getElementById("boltClass")?.value || "6.8";
 
-      const boltCount =
-        num(document.getElementById("boltCount")?.value) || 2;
+      // --- Bulon sınıfı verisi ---
+      const boltRec = BULON_SINIFLARI.find(b => b.bulonSınıfı === boltClass);
+      if (!boltRec) {
+        console.error("Geçersiz bulon sınıfı:", boltClass);
+        varsEl.innerHTML = "Bulon sınıfı verisi bulunamadı.";
+        stepsEl.innerHTML = "-";
+        resultEl.innerHTML = "-";
+        return;
+      }
 
-      // --- Sabit ---
-      const Fnv = 270; // MPa (görsele göre sabit)
+      const Fub = Number(boltRec.Fub_MPa);   // MPa
+      const Fnv = 0.45 * Fub;                // MPa
 
       // --- Alan ---
       const Ab = Math.PI * Math.pow(db, 2) / 4;
 
-      // --- TEK bulon kapasitesi ---
+      // --- Tek bulon kapasitesi ---
       const n = 1; // tek kesme düzlemi
-
       const Rn_single = n * Fnv * Ab * 1e-3; // kN
 
-      // --- TOPLAM ---
+      // --- Toplam tasarım dayanımı ---
       const Rd = phi * Rn_single * boltCount;
 
       // =========================
       // KaTeX
       // =========================
-
       varsEl.innerHTML = String.raw`
 $$
 d_b = ${db}\,\text{mm},\quad
 A_b = \frac{\pi d_b^2}{4}
 = ${Ab.toFixed(2)}\,\text{mm}^2 \\
-F_{nv} = ${Fnv}\,\text{MPa},\quad
+\text{Bulon sınıfı} = ${boltClass},\quad
+F_{ub} = ${Fub}\,\text{MPa},\quad
+F_{nv} = 0.45F_{ub} = ${Fnv.toFixed(2)}\,\text{MPa} \\
 n = ${n},\quad
 \varphi = ${phi}
 $$
@@ -651,7 +661,7 @@ $$
       stepsEl.innerHTML = String.raw`
 $$
 R_n = n\,F_{nv}\,A_b
-= ${n}\times ${Fnv}\times ${Ab.toFixed(2)}\times 10^{-3}
+= ${n}\times ${Fnv.toFixed(2)}\times ${Ab.toFixed(2)}\times 10^{-3}
 = ${Rn_single.toFixed(2)}\ \text{kN}
 $$
 `;
